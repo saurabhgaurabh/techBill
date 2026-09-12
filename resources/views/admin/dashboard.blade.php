@@ -1,6 +1,6 @@
 @extends('admin.layouts.app')
 
-@section('title', 'TechBill')
+@section('title', 'TechNest Accounting Software - Dashboard')
 
 
 
