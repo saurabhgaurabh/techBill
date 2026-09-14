@@ -6,8 +6,12 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::get('/', function () {
-    return view('admin.dashboard');
+Route::get('/', function(){
+    return view('admin.auth.signIn');
 });
+
+Route::get('/dashboard', function () {
+    return view('admin.dashboard');
+})->name('dashboard');
 
 // require __DIR__.'/api.php';
