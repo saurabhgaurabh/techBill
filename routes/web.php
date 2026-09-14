@@ -14,4 +14,8 @@ Route::get('/dashboard', function () {
     return view('admin.dashboard');
 })->name('dashboard');
 
+Route::get('/customers', function () {
+    return view('admin.customers.index');
+})->name('customers');
+
 // require __DIR__.'/api.php';
