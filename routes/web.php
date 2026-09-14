@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Api\CustomerController;
+use App\Models\Customers;
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -15,7 +17,12 @@ Route::get('/dashboard', function () {
 })->name('dashboard');
 
 Route::get('/customers', function () {
-    return view('admin.customers.index');
+    $customers = Customers::latest()->get();
+    return view('admin.customers.index', compact('customers'));
 })->name('customers');
+
+
+// Route::post('/customers/store',[CustomerController::class,'store'])->name('customers.store');
+
 
 // require __DIR__.'/api.php';

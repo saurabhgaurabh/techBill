@@ -4,12 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\CustomerController;
 
-Route::post('/customers', [CustomerController::class, 'store']);
-// Route::post('/api/customers', [CustomerController::class, 'store'])->middleware('api.auth');
-// Route::middleware('api.auth')->group(function () {
-
-//     Route::post('/api/customers', [CustomerController::class, 'store']);
-
-// });
+Route::get('/customers', [CustomerController::class, 'index'])->name('customers.index');
+Route::post('/customers/store',[CustomerController::class,'store'])->name('customers.store');
 
 ?>

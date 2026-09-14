@@ -18,6 +18,8 @@
 
 </div>
 
+{{-- @yield('customer-modal') --}}
+
 @include('admin.layouts.footer')
 
 <script src="{{ asset('assets/js/app.js') }}"></script>
