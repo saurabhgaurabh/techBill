@@ -12,7 +12,11 @@ class VenderController extends Controller
 {
     public function index()
     {
-        return view('admin.venders.index');
+        // return view('admin.venders.index'); // only show the index page
+    //   $venders = VendersModal::latest()->get();
+    $venders = VendersModal::orderBy('vendor_id', 'asc')->get();
+    return view('admin.venders.index', compact('venders'));
+
     }
 
     public function store(Request $request)

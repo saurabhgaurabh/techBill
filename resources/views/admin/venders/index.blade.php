@@ -49,20 +49,20 @@
                       <tr>
                         <th><button class="table-sort" data-sort="sort-name">Id</button></th>
                         <th><button class="table-sort" data-sort="sort-name">Name</button></th>
+                        <th><button class="table-sort" data-sort="sort-type">Company Name</button></th>
                         <th><button class="table-sort" data-sort="sort-city">Mobile</button></th>
-                        <th><button class="table-sort" data-sort="sort-type">Email</button></th>
                       </tr>
                     </thead>
-                    {{-- <tbody class="table-tbody">  
-                      @foreach ($customers->sortBy('customer_id') as $item)                    
+                    <tbody class="table-tbody">  
+                      @foreach ($venders->sortBy('vendors_id') as $item)                    
                         <tr>
-                            <td>{{ $item->customer_id }}</td>
+                            <td>{{ $item->vendor_id }}</td>
                             <td>{{ $item->name }}</td>
+                            <td>{{ $item->company_name }}</td>
                             <td>{{ $item->mobile }}</td>
-                            <td>{{ $item->email }}</td>
                         </tr>
                         @endforeach
-                    </tbody> --}}
+                    </tbody>
                   </table>
                 </div>
               </div>
