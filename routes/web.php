@@ -24,12 +24,13 @@ Route::get('/customers', function () {
 
 
 Route::resource('venders', VenderController::class);
+// Route::post('/venders/store', [VenderController::class,'store'])->name('venders.store');
 // Route::get('/venders', function () {
 //     return view('admin.venders.index');
 // })->name('venders');
 
 // Route::prefix('venders')->name('venders.')->group(function () {
-//         Route::resource('vendors', VendorController::class);
+//         Route::resource('vendors', VenderController::class);
 //     });
 
 // Route::post('/customers/store',[CustomerController::class,'store'])->name('customers.store');

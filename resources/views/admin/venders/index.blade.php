@@ -74,7 +74,7 @@
 <div class="modal modal-blur fade" id="customer-modal-report" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
-            <form action="{{ route('customers.store') }}" method="POST">
+            <form action="{{ route('venders.store') }}" method="POST">
             @csrf
             <div class="modal-header">
             <h5 class="modal-title">Create Customer</h5>
@@ -83,16 +83,20 @@
             <div class="modal-body">
             <div class="mb-2">
                 <label class="form-label">Name</label>
-                <input type="text" class="form-control" name="name" placeholder="YourCustomer Name">
+                <input type="text" class="form-control" name="name" placeholder="Your Company Name">
             </div>
             <div class="mb-2">
-                <label class="form-label">Mobile</label>
-                <input type="number" class="form-control" name="mobile" placeholder="Your Customer Mobile">
+                <label class="form-label">Company Name</label>
+                <input type="text" class="form-control" name="company_name" placeholder="Your Company Name">
             </div>
             <div class="mb-2">
+                <label class="form-label">Mobile</label>    
+                <input type="number" class="form-control" name="mobile" placeholder="Your Mobile">
+            </div>
+            {{-- <div class="mb-2">
                 <label class="form-label">E-Mail</label>    
                 <input type="email" class="form-control" name="email" placeholder="Your Customer E-Mail">
-            </div>
+            </div> --}}
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-link link-secondary" data-bs-dismiss="modal">
