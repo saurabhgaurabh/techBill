@@ -22,6 +22,7 @@ Route::get('/customers', function () {
 })->name('customers');
 
 
+
 // Route::post('/customers/store',[CustomerController::class,'store'])->name('customers.store');
 
 

@@ -46,14 +46,16 @@
                   <table class="table">
                     <thead>
                       <tr>
+                        <th><button class="table-sort" data-sort="sort-name">Id</button></th>
                         <th><button class="table-sort" data-sort="sort-name">Name</button></th>
                         <th><button class="table-sort" data-sort="sort-city">Mobile</button></th>
                         <th><button class="table-sort" data-sort="sort-type">Email</button></th>
                       </tr>
                     </thead>
                     <tbody class="table-tbody">  
-                      @foreach ($customers as $item)                     
+                      @foreach ($customers->sortBy('customer_id') as $item)                    
                         <tr>
+                            <td>{{ $item->customer_id }}</td>
                             <td>{{ $item->name }}</td>
                             <td>{{ $item->mobile }}</td>
                             <td>{{ $item->email }}</td>

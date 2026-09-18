@@ -10,9 +10,11 @@ class CustomerController extends Controller
 {
     public function index()
     {
-        $customers = Customers::all();
-        return response()->json($customers);
+        $Customers = Customers::all();
+
+        return view('admin.customers', compact('Customers'));
     }
+
     public function store(Request $request)
     {
         $validated  = $request->validate([
