@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\CustomerController;
+use App\Http\Controllers\Admin\VenderController;
 use App\Models\Customers;
 
 // Route::get('/', function () {
@@ -22,6 +23,14 @@ Route::get('/customers', function () {
 })->name('customers');
 
 
+Route::resource('venders', VenderController::class);
+// Route::get('/venders', function () {
+//     return view('admin.venders.index');
+// })->name('venders');
+
+// Route::prefix('venders')->name('venders.')->group(function () {
+//         Route::resource('vendors', VendorController::class);
+//     });
 
 // Route::post('/customers/store',[CustomerController::class,'store'])->name('customers.store');
 
