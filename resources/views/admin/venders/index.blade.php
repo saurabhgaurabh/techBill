@@ -4,6 +4,7 @@
     <title>@yield('title')</title>
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 </head>
 
 <body>
@@ -57,7 +58,7 @@ Swal.fire({
                 <div id="table-default" class="table-responsive">
                   <table class="table">
                     <thead>
-                      <tr>
+                      <tr class="table-primary">
                         <th><button class="table-sort" data-sort="sort-name">Id</button></th>
                         <th><button class="table-sort" data-sort="sort-name">Name</button></th>
                         <th><button class="table-sort" data-sort="sort-type">Company Name</button></th>
@@ -70,7 +71,7 @@ Swal.fire({
                         <th><button class="table-sort" data-sort="sort-city">Action</button></th>
                       </tr>
                     </thead>
-                    <tbody class="table-tbody">  
+                    {{-- <tbody class="table-tbody">  
                       @foreach ($venders->sortBy('vendors_id') as $item)                    
                         <tr>
                             <td>{{ $item->vendor_id }}</td>
@@ -84,26 +85,53 @@ Swal.fire({
                             <td>{{ $item->notes }}</td>
                         </tr>
                         @endforeach
+                    </tbody> --}}
+                    <tbody class="table-tbody">
+                        @forelse ($venders->sortBy('vendors_id') as $item)  
+                            <tr>
+                                <td>{{ $item->vendor_id }}</td>
+                                    <td>{{ $item->name }}</td>
+                                    <td>{{ $item->company_name }}</td>
+                                    <td>{{ $item->mobile }}</td>
+                                    <td>{{ $item->email }}</td>
+                                    <td>{{ $item->gstin }}</td>
+                                    <td>{{ $item->pan }}</td>`
+                                    <td>{{ $item->address_line1 }}</td>
+                                    <td>{{ $item->notes }}</td>
+                                    <td>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <a href="{{ route('venders.edit', $item->vendor_id) }}"
+                                        class="btn btn-sm btn-warning">
+                                            <i class="ti ti-edit"></i> Edit
+                                        </a>
+                                        <form action="{{ route('venders.destroy', $item->vendor_id) }}"
+                                            method="POST"
+                                            onsubmit="return confirm('Are you sure you want to delete this vendor?');">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button
+                                                class="btn btn-danger btn-sm deleteVendor"
+                                                data-id="{{ $item->vendor_id }}">
+                                                Delete
+                                            </button>
+                                        </form>
+                                    </div>
+                                </td>
+                            </tr>
+                        @empty
+                            <tr>
+                                <td colspan="12" class="text-center">
+                                    No Data Found
+                                </td>
+                            </tr>
+                        @endforelse
                     </tbody>
                   </table>
                 </div>
-              </div>
-                {{-- <div class="card-footer d-flex align-items-center justify-content-between">
-                    <p class="m-0 text-muted">
-                        Showing 
-                        <span>{{ $venders->firstItem() ?? 0 }}</span>
-                        to 
-                        <span>{{ $venders->lastItem() ?? 0 }}</span>
-                        of 
-                        <span>{{ $venders->total() }}</span>
-                        entries
-                    </p> --}}
-                    
-                  <div class="d-flex justify-content-end mt-3">
-    {{ $venders->links() }}
-</div>
-
-                {{-- </div> --}}
+              </div>                    
+                <div class="d-flex justify-content-end mt-3">
+                    {{ $venders->links() }}
+                </div>
             </div>
           </div>
         </div>
@@ -184,3 +212,30 @@ Swal.fire({
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>
+
+<script>
+$(document).on('click', '.deleteVendor', function () {
+
+    let id = $(this).data('id');
+
+    if (!confirm('Are you sure you want to delete this vendor?')) {
+        return;
+    }
+
+    $.ajax({
+        url: '/venders/' + id,
+        type: 'DELETE',
+        data: {
+            _token: $('meta[name="csrf-token"]').attr('content')
+        },
+        success: function (response) {
+            alert(response.message);
+            location.reload();
+        },
+        error: function () {
+            alert('Something went wrong.');
+        }
+    });
+
+});
+</script>
