@@ -18,14 +18,8 @@
               <div class="col-12 col-lg-auto mt-3 mt-lg-0">
                 <ul class="list-inline list-inline-dots mb-0">
                   <li class="list-inline-item">
-                    Copyright &copy; 2023
-                    <a href="." class="link-secondary">Tabler</a>.
-                    All rights reserved.
-                  </li>
-                  <li class="list-inline-item">
-                    <a href="./changelog.html" class="link-secondary" rel="noopener">
-                      v1.0.0-beta19
-                    </a>
+                    Copyright &copy; <script>document.write(new Date().getFullYear())</script> All Rights Reserved
+                    <a href="." class="link-secondary">TechNest Services.</a>
                   </li>
                 </ul>
               </div>
@@ -138,13 +132,13 @@
       </div>
     </div>
     <!-- Libs JS -->
-    <script src="./dist/libs/apexcharts/dist/apexcharts.min.js?1684106062" defer></script>
-    <script src="./dist/libs/jsvectormap/dist/js/jsvectormap.min.js?1684106062" defer></script>
-    <script src="./dist/libs/jsvectormap/dist/maps/world.js?1684106062" defer></script>
-    <script src="./dist/libs/jsvectormap/dist/maps/world-merc.js?1684106062" defer></script>
+    <script src="{{ asset('dist/libs/apexcharts/dist/apexcharts.min.js?1684106062') }}" defer></script>
+    <script src="{{ asset('dist/libs/jsvectormap/dist/js/jsvectormap.min.js?1684106062') }}" defer></script>
+    <script src="{{ asset('dist/libs/jsvectormap/dist/maps/world.js?1684106062') }}" defer></script>
+    <script src="{{ asset('dist/libs/jsvectormap/dist/maps/world-merc.js?1684106062') }}" defer></script>
     <!-- Tabler Core -->
-    <script src="./dist/js/tabler.min.js?1684106062" defer></script>
-    <script src="./dist/js/demo.min.js?1684106062" defer></script>
+    <script src="{{ asset('dist/js/tabler.min.js?1684106062') }}" defer></script>
+    <script src="{{ asset('dist/js/demo.min.js?1684106062') }}" defer></script>
     <script>
       // @formatter:off
       document.addEventListener("DOMContentLoaded", function () {

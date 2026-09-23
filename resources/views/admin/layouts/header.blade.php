@@ -1,12 +1,5 @@
 <!doctype html>
-<!--
-* Tabler - Premium and Open Source dashboard template with responsive and high quality UI.
-* @version 1.0.0-beta19
-* @link https://tabler.io
-* Copyright 2018-2023 The Tabler Authors
-* Copyright 2018-2023 codecalm.net Paweł Kuna
-* Licensed under MIT (https://github.com/tabler/tabler/blob/master/LICENSE)
--->
+
 <html lang="en">
   <head>
     <meta charset="utf-8"/>
@@ -14,11 +7,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <title>Dashboard - Tabler - Premium and Open Source dashboard template with responsive and high quality UI.</title>
     <!-- CSS files -->
-    <link href="./dist/css/tabler.min.css?1684106062" rel="stylesheet"/>
-    <link href="./dist/css/tabler-flags.min.css?1684106062" rel="stylesheet"/>
-    <link href="./dist/css/tabler-payments.min.css?1684106062" rel="stylesheet"/>
-    <link href="./dist/css/tabler-vendors.min.css?1684106062" rel="stylesheet"/>
-    <link href="./dist/css/demo.min.css?1684106062" rel="stylesheet"/>
+    
+    <link href="{{ asset('dist/css/tabler.min.css?1684106062') }}" rel="stylesheet"/>
+    <link href="{{ asset('dist/css/tabler-flags.min.css?1684106062') }}" rel="stylesheet"/>
+    <link href="{{ asset('dist/css/tabler-payments.min.css?1684106062') }}" rel="stylesheet"/>
+    <link href="{{ asset('dist/css/tabler-vendors.min.css?1684106062') }}" rel="stylesheet"/>
+    <link href="{{ asset('dist/css/demo.min.css?1684106062') }}" rel="stylesheet"/>
     <style>
       @import url('https://rsms.me/inter/inter.css');
       :root {
@@ -30,7 +24,7 @@
     </style>
   </head>
   <body  class=" layout-fluid">
-    <script src="./dist/js/demo-theme.min.js?1684106062"></script>
+    <script src="{{ asset('dist/js/demo-theme.min.js?1684106062') }}"></script>
     <div class="page">
       <!-- Navbar -->
       <header class="navbar navbar-expand-md d-print-none" >
@@ -229,11 +223,11 @@
                           <div class="dropdown-menu">
                             <a href="{{ route('customers') }}" class="dropdown-item">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-inline me-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" /><path d="M9 14l6 0" /></svg>
-                              Customer
+                              Customer/Clients
                             </a>
                             <a href="{{ route('venders.index') }}" class="dropdown-item">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-inline me-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" /><path d="M9 14l6 0" /></svg>
-                              Vender
+                              Vender/Suppliers
                             </a>
                           </div>
                         </div>

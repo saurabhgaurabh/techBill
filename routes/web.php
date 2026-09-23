@@ -24,6 +24,11 @@ Route::get('/customers', function () {
 
 
 Route::resource('venders', VenderController::class);
+// Route::get('venders/create',[VenderController::class,'create']);
+
+// Route::get('/venders', function() {
+//     return view('admin.venders.create');
+// })->name('venders');
 // Route::post('/venders/store', [VenderController::class,'store'])->name('venders.store');
 // Route::get('/venders', function () {
 //     return view('admin.venders.index');

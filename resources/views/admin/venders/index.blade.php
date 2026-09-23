@@ -46,6 +46,13 @@ Swal.fire({
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 5l0 14" /><path d="M5 12l14 0" /></svg>
                     </a> --}}
                 </div>
+                <div class="btn-list">
+                 <a href="{{ route('venders.create') }}" class="btn btn-primary"> Add Vendor</a>
+                    {{-- <a href="#" class="btn btn-primary d-sm-none btn-icon" data-bs-toggle="modal" data-bs-target="#modal-report" aria-label="Create new report">
+                    <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 5l0 14" /><path d="M5 12l14 0" /></svg>
+                    </a> --}}
+                </div>
                 </div>
             </div>
         </div>
@@ -150,29 +157,32 @@ Swal.fire({
             <h5 class="modal-title">Create Customer</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body">
-                <div class="row">            
-                    <div class="col-md-6 mb-2">
+            <div class="modal-body">   
+                <h2 class="card-title">Basic Information</h2>
+                <div class="row">        
+                    <div class="col-md-3 mb-2">
                         <label class="form-label">Name</label>
-                        <input type="text" class="form-control" name="name" placeholder="Your Company Name">
+                        <input type="text" class="form-control" name="name" placeholder="Your Name">
                     </div>
-                    <div class="col-md-6 mb-2">
+                    <div class="col-md-3 mb-2">
                         <label class="form-label">Company Name</label>
                         <input type="text" class="form-control" name="company_name" placeholder="Your Company Name">
                     </div>
             </div>
+              </br>
             <div class="row">
-
-                <div class="col-lg-6 mb-2">
+                <h2 class="card-title">Contact Information</h2>
+                <div class="col-lg-4 mb-2">
                     <label class="form-label">Mobile</label>    
                     <input type="number" class="form-control" name="mobile" placeholder="Your Mobile">
                 </div>
-                <div class="col-lg-6 mb-2">
+                <div class="col-lg-4 mb-2">
                     <label class="form-label">E-Mail</label>    
                     <input type="email" class="form-control" name="email" placeholder="Your Customer E-Mail">
                 </div>
-            </div>
+            </div></br>
             <div class="row">
+                <h2 class="card-title">GST/Tax/Identity</h2>
             <div class="col-lg-6 mb-2">
                 <label class="form-label">GSTIN</label>    
                 <input type="text" class="form-control" name="gstin" placeholder="Your Customer GSTIN Number">
@@ -181,15 +191,42 @@ Swal.fire({
                 <label class="form-label">Pan</label>    
                 <input type="text" class="form-control" name="pan" placeholder="Your Permanent Account Number">
             </div>
+            <div class=" col-lg-6 mb-2">
+                <label class="form-label">Document ID</label>    
+                <input type="file" class="form-control" name="document_id" placeholder="Your Document ID">
             </div>
-            <div class="mb-2">
-                <label class="form-label">Address</label>    
-                <input type="longtext" class="form-control" name="address_line1" placeholder="Your Address">
-            </div>
-            <div class="mb-2">
-                <label class="form-label">Notes</label>    
-                <input type="longtext" class="form-control" name="notes" placeholder="Your Notes ">
-            </div>
+            </div></br>
+            <div class="row">
+                <h2 class="card-title">Address Information</h2>
+                <div class="col-lg-6 mb-2">
+                    <label class="form-label">Address Line1</label>    
+                    <input type="longtext" class="form-control" name="address_line1" placeholder="Your AddressLine1">
+                </div>
+                <div class="col-lg-6 mb-2">
+                    <label class="form-label">Address Line2</label>    
+                    <input type="longtext" class="form-control" name="address_line2" placeholder="Your AddressLine2">
+                </div>
+                <div class="col-lg-6 mb-2">
+                    <label class="form-label">City</label>    
+                    <input type="text" class="form-control" name="city" placeholder="Your City">
+                </div>
+                <div class="col-lg-6 mb-2">
+                    <label class="form-label">State</label>    
+                    <input type="text" class="form-control" name="state" placeholder="Your State">
+                </div>
+                <div class="col-lg-6 mb-2">
+                    <label class="form-label">State Code</label>    
+                    <input type="number" class="form-control" name="state_code" placeholder="Your State Code">
+                </div>
+                <div class="col-lg-6 mb-2">
+                    <label class="form-label">Pin Code</label>    
+                    <input type="number" class="form-control" name="pin_code" placeholder="Your Pin Code">
+                </div>
+                <div class="mb-2">
+                    <label class="form-label">Notes</label>    
+                    <input type="longtext" class="form-control" name="notes" placeholder="Your Notes ">
+                </div>
+            </div>  
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-link link-secondary" data-bs-dismiss="modal">

@@ -19,7 +19,7 @@ class CustomerController extends Controller
         $validated  = $request->validate([
             'name'=>'required',
             'mobile'=>'required',
-            'email'=>'required|email|unique:customers,email'
+            // 'email'=>'required|email|unique:customers,email'
         ]);
 
         $customers = Customers::create($validated );

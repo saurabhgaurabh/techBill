@@ -20,17 +20,22 @@ class VenderController extends Controller
         return view('admin.venders.index', compact('venders'));
     }
 
+    public function create()
+    {
+        return view('admin.venders.create');
+    }
+
     public function store(Request $request)
     {
         $validated  = $request->validate([
             'name' => 'required',
-            'company_name' => 'required',
             'mobile' => 'required',
-            'email'=>'required|email|unique:vendors,email',
-            'gstin' => 'required',
-            'pan' => 'required',
-            'address_line1' => 'required',
-            'notes' => 'required',
+            // 'company_name' => 'required',
+            // 'email'=>'required|email|unique:vendors,email',
+            // 'gstin' => 'required',
+            // 'pan' => 'required',
+            // 'address_line1' => 'required',
+            // 'notes' => 'required',
         ]);
         try {
             $venders = VendersModal::create($validated);
@@ -39,24 +44,24 @@ class VenderController extends Controller
             dd($e->getMessage());
         }
     }
-    public function update(Request $request, $id)
-    {
-        $request->validae([
-            'name' => 'required',
-            'company_name' => 'required',
-            'mobile' => 'required',
-        ]);
-        $vender = VendersModal::findOrFail($id);
-        $vender->update([
-            'name' => $request->name,
-            'company_name' => $request->company_name,
-            'mobile' => $request->mobile,
-        ]);
-         return redirect()
-        ->route('venders.index')
-        ->with('success', 'Vendor updated successfully.');
+    // public function update(Request $request, $id)
+    // {
+    //     $request->validae([
+    //         'name' => 'required',
+    //         'company_name' => 'required',
+    //         'mobile' => 'required',
+    //     ]);
+    //     $vender = VendersModal::findOrFail($id);
+    //     $vender->update([
+    //         'name' => $request->name,
+    //         'company_name' => $request->company_name,
+    //         'mobile' => $request->mobile,
+    //     ]);
+    //      return redirect()
+    //     ->route('venders.index')
+    //     ->with('success', 'Vendor updated successfully.');
 
-    }
+    // }
     public function destroy($vendor_id)
     {
         $vender = VendersModal::findOrFail($vendor_id);
