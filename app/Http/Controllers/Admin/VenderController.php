@@ -39,7 +39,8 @@ class VenderController extends Controller
         ]);
         try {
             $venders = VendersModal::create($validated);
-            return redirect()->back()->with('success', 'Customer created successfully.');
+            // return redirect()->back()->with('success', 'Customer created successfully.');
+            return redirect()->route('venders.index')->with('success', 'Vender Created Successfully.');
         } catch (\Exception $e) {
             dd($e->getMessage());
         }

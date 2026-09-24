@@ -1,27 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>@yield('title')</title>
-    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-</head>
+@extends('admin.layouts.app')
+@section('title','Vendors')
+@section('content')
 
-<body>
-@include('admin.layouts.header')
-
-{{-- middle content section  starts --}}
-
-@if(session('success'))
-<script>
-Swal.fire({
-    icon: 'success',
-    title: 'Success!',
-    text: '{{ session('success') }}',
-    confirmButtonText: 'OK'
-});
-</script>
-@endif
 
 <div class="page-wrapper">
     <div class="page-header d-print-none">      
@@ -35,23 +15,17 @@ Swal.fire({
                 </div>
                 <!-- Page title actions -->
                 <div class="col-auto ms-auto d-print-none">
-                <div class="btn-list">
+                {{-- <div class="btn-list">
                     <a href="#" class="btn btn-primary d-none d-sm-inline-block" data-bs-toggle="modal" data-bs-target="#customer-modal-report">
                     <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 5l0 14" /><path d="M5 12l14 0" /></svg>
                     Create Customer
                     </a>
-                    {{-- <a href="#" class="btn btn-primary d-sm-none btn-icon" data-bs-toggle="modal" data-bs-target="#modal-report" aria-label="Create new report">
-                    <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 5l0 14" /><path d="M5 12l14 0" /></svg>
-                    </a> --}}
-                </div>
+                </div> --}}
                 <div class="btn-list">
-                 <a href="{{ route('venders.create') }}" class="btn btn-primary"> Add Vendor</a>
-                    {{-- <a href="#" class="btn btn-primary d-sm-none btn-icon" data-bs-toggle="modal" data-bs-target="#modal-report" aria-label="Create new report">
-                    <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 5l0 14" /><path d="M5 12l14 0" /></svg>
-                    </a> --}}
+                 <a href="{{ route('venders.create') }}" class="btn btn-primary">
+                     <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 5l0 14" /><path d="M5 12l14 0" /></svg>
+                    Create Vender</a>
                 </div>
                 </div>
             </div>
@@ -102,7 +76,7 @@ Swal.fire({
                                     <td>{{ $item->mobile }}</td>
                                     <td>{{ $item->email }}</td>
                                     <td>{{ $item->gstin }}</td>
-                                    <td>{{ $item->pan }}</td>`
+                                    <td>{{ $item->pan }}</td>
                                     <td>{{ $item->address_line1 }}</td>
                                     <td>{{ $item->notes }}</td>
                                     <td>
@@ -242,9 +216,9 @@ Swal.fire({
         </div>
     </div>
 </div>
-{{-- middle content section  ends --}}
 
-@include('admin.layouts.footer')
+@endsection
+
 <script src="{{ asset('assets/js/app.js') }}"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
@@ -258,7 +232,6 @@ $(document).on('click', '.deleteVendor', function () {
     if (!confirm('Are you sure you want to delete this vendor?')) {
         return;
     }
-
     $.ajax({
         url: '/venders/' + id,
         type: 'DELETE',

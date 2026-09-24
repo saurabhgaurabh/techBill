@@ -5,6 +5,7 @@
     {{-- <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}"> --}}
     <link href="{{ asset('dist/css/tabler.min.css') }}" rel="stylesheet">
      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+     <meta name="csrf-token" content="{{ csrf_token() }}">
     @yield('css')
 </head>
 
@@ -24,8 +25,8 @@
 {{-- @yield('customer-modal') --}}
 
 @include('admin.layouts.footer')
-@if(session('success'))
 
+@if(session('success'))
 <script>
     window.onload=function(){
         Swal.fire({
@@ -34,6 +35,7 @@
         text:"{{ session('success') }}"
         });
     }
+
 </script>
 
 @endif
