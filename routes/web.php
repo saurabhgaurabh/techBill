@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\UnregisterVendorController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\CustomerController;
 use App\Http\Controllers\Admin\VenderController;
@@ -24,6 +25,7 @@ Route::get('/customers', function () {
 
 
 Route::resource('venders', VenderController::class);
+Route::resource('withoutgst', UnregisterVendorController::class );
 // Route::get('venders/create',[VenderController::class,'create']);
 
 // Route::get('/venders', function() {

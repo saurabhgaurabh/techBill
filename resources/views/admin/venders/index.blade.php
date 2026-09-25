@@ -25,7 +25,14 @@ tbody tr:hover{
 table td{
     font-size: 0.8rem
 }
+.custom-pagination .page-item.active .page-link {
+    background-color: #eb5a25;
+    border-color: #f76707;
+}
 
+.custom-pagination .page-link {
+    color: #f3a877;
+}
 </style>
 
 @endpush
@@ -177,8 +184,8 @@ table td{
                         </table>
                     </div>
                 {{-- </div>                     --}}
-                <div class="d-flex justify-content-end mt-3">
-                    {{ $venders->links() }}
+                <div class="d-flex justify-content-end mt-3 custom-pagination">
+                    {{ $venders->links()}}
                 </div>
             </div>
         </div>
