@@ -35,7 +35,8 @@
                         <div class="row">        
                             <div class="col-md-3 mb-2">
                                 <label class="form-label">Name*</label>
-                                <input type="text" class="form-control" name="name" placeholder="Your Name">
+                                <input type="text" class="form-control @error('name') is-invalid @enderror" value="{{ old('name') }}" name="name" placeholder="Your Name">
+                                    @error('name') <span class="text-danger"> {{ $message }} </span>  @enderror
                             </div>
                             <div class="col-md-3 mb-2">
                                 <label class="form-label">Company Name</label>
@@ -43,7 +44,8 @@
                             </div>
                             <div class="col-lg-3 mb-2">
                                 <label class="form-label">Mobile*</label>    
-                                <input type="number" class="form-control" name="mobile" placeholder="Your Mobile">
+                                <input type="number" class="form-control @error('mobile')vis-invalid @enderror" maxlength="10" name="mobile" placeholder="Your Mobile">
+                                @error('mobile') <span class="text-danger">{{$message}}</span> @enderror
                             </div>
                             <div class="col-lg-3 mb-2">
                                 <label class="form-label">E-Mail</label>    
@@ -90,7 +92,7 @@
                         </div> --}}
                         <div class="col-lg-2 mb-2">
                             <label class="form-label">Pin Code</label>    
-                            <input type="number" class="form-control" name="pin_code" placeholder="Your Pin Code">
+                            <input type="number" class="form-control" name="pincode" placeholder="Your Pin Code">
                         </div>
                         <div class="col-lg-6 mb-2">
                             <label class="form-label">Notes</label>    

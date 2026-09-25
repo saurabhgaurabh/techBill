@@ -17,8 +17,12 @@ class VendersModal extends Model
         'company_name',
         'email',
         'gstin',
-        // 'address_line1',
-        // 'pan',
-        // 'notes',
+        'pan',
+        'address_line1',
+        'address_line2',
+        'city',
+        'state',
+        'pincode',
+        'notes',
     ];
 }

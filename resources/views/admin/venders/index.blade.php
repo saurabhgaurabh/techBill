@@ -1,55 +1,105 @@
 @extends('admin.layouts.app')
 @section('title','Vendors')
 @section('content')
+@push('styles')
+
+<style>
+  
+thead th{
+    position:sticky;
+    top:0;
+    background:#fff;
+    z-index:100;
+}
+.table td,
+.table th{
+    border:1px solid #e5e7eb;
+}
+tbody tr:nth-child(even){
+    background:#fafafa;
+}
+
+tbody tr:hover{
+    background:#fff2ee;
+}
+table td{
+    font-size: 0.8rem
+}
+
+</style>
+
+@endpush
 
 
-<div class="page-wrapper">
-    <div class="page-header d-print-none">      
-        <div class="container-xl">
-            <div class="row g-2 align-items-center">
-                <div class="col">
-                <!-- Page pre-title -->
-                <h2 class="page-title">
-                    Customers
-                </h2>
-                </div>
-                <!-- Page title actions -->
-                <div class="col-auto ms-auto d-print-none">
-                {{-- <div class="btn-list">
-                    <a href="#" class="btn btn-primary d-none d-sm-inline-block" data-bs-toggle="modal" data-bs-target="#customer-modal-report">
-                    <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 5l0 14" /><path d="M5 12l14 0" /></svg>
-                    Create Customer
-                    </a>
-                </div> --}}
-                <div class="btn-list">
-                 <a href="{{ route('venders.create') }}" class="btn btn-primary">
-                     <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 5l0 14" /><path d="M5 12l14 0" /></svg>
-                    Create Vender</a>
-                </div>
-                </div>
-            </div>
-        </div>
-    </div>
+<div class="page-wrapper"> 
         <!-- Page body -->
         <div class="page-body">
           <div class="container-xl">
             <div class="card">
+                <div class="page-header d-print-none">      
+                    <div class="container-xl">
+                        <div class="row g-2 align-items-center">
+                            <div class="col-md-4">
+                                <h2 class="page-title">
+                                    Venders
+                                </h2>
+                                <span>Venders Description</span>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="input-icon">
+                                    <span class="input-icon-addon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" 
+                                            class="icon" 
+                                            width="24" 
+                                            height="24" 
+                                            viewBox="0 0 24 24" 
+                                            stroke-width="2" 
+                                            stroke="currentColor" 
+                                            fill="none" 
+                                            stroke-linecap="round" 
+                                            stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z"/>
+                                            <circle cx="10" cy="10" r="7"/>
+                                            <line x1="21" y1="21" x2="15" y2="15"/>
+                                        </svg>
+                                    </span>
+                                    <input type="text" 
+                                        class="form-control" 
+                                        placeholder="Search vendor..."
+                                        id="searchVendor">
+                                </div>
+                            </div>
+                            <!-- Page title actions -->
+                            <div class="col-auto ms-auto d-print-none"> 
+                                <div class="btn-list col-md-4">
+                                <a href="{{ route('venders.create') }}" class="btn btn-primary">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 5l0 14" /><path d="M5 12l14 0" /></svg>
+                                    Create Vender</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
               <div class="card-body">
                 <div id="table-default" class="table-responsive">
                   <table class="table">
                     <thead>
                       <tr class="table-primary">
-                        <th><button class="table-sort" data-sort="sort-name">Id</button></th>
-                        <th><button class="table-sort" data-sort="sort-name">Name</button></th>
-                        <th><button class="table-sort" data-sort="sort-type">Company Name</button></th>
-                        <th><button class="table-sort" data-sort="sort-city">Mobile</button></th>
-                        <th><button class="table-sort" data-sort="sort-city">Email</button></th>
-                        <th><button class="table-sort" data-sort="sort-city">GSTIN</button></th>
-                        <th><button class="table-sort" data-sort="sort-city">Pan</button></th>
-                        <th><button class="table-sort" data-sort="sort-city">Address</button></th>
-                        <th><button class="table-sort" data-sort="sort-city">Notes</button></th>
-                        <th><button class="table-sort" data-sort="sort-city">Action</button></th>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Company Name</th>
+                        <th>Mobile</th>
+                        <th>Email</th>
+                        <th>GSTIN</th>
+                        <th>Pan</th>
+                        <th>Address One</th>
+                        <th>Address Two</th>
+                        <th>City</th>
+                        <th>State</th>
+                        <th>Pin Code</th>
+                        <th>Notes</th>
+                        <th>Status</th>
+                        <th>Actions</th>
                       </tr>
                     </thead>
                     {{-- <tbody class="table-tbody">  
@@ -78,7 +128,12 @@
                                     <td>{{ $item->gstin }}</td>
                                     <td>{{ $item->pan }}</td>
                                     <td>{{ $item->address_line1 }}</td>
+                                    <td>{{ $item->address_line2 }}</td>
+                                    <td>{{ $item->city }}</td>
+                                    <td>{{ $item->state }}</td>
+                                    <td>{{ $item->pincode }}</td>
                                     <td>{{ $item->notes }}</td>
+                                    <td>{{ $item->status }}</td>
                                     <td class="align-middle text-center">
                                     <div class="d-inline-flex align-items-center gap-2"">
                                         <a href="{{ route('venders.edit', $item->vendor_id) }}"
@@ -226,27 +281,94 @@
 </html>
 
 <script>
-$(document).on('click', '.deleteVendor', function () {
+// $(document).on('click', '.deleteVendor', function () {
 
-    let id = $(this).data('id');
+//     let id = $(this).data('id');
 
-    if (!confirm('Are you sure you want to delete this vendor?')) {
-        return;
-    }
-    $.ajax({
-        url: '/venders/' + id,
-        type: 'DELETE',
-        data: {
-            _token: $('meta[name="csrf-token"]').attr('content')
-        },
-        success: function (response) {
-            alert(response.message);
-            location.reload();
-        },
-        error: function () {
-            alert('Something went wrong.');
-        }
+//     if (!confirm('Are you sure you want to delete this vendor?')) {
+//         return;
+//     }
+//     $.ajax({
+//         url: '/venders/' + id,
+//         type: 'DELETE',
+//         data: {
+//             _token: $('meta[name="csrf-token"]').attr('content')
+//         },
+//         success: function (response) {
+//             alert(response.message);
+//             location.reload();
+//         },
+//         error: function () {
+//             alert('Something went wrong.');
+//         }
+//     });
+
+// });
+
+<script>
+$(document).ready(function () {
+
+    $('.deleteVendor').click(function () {
+
+        let vendorId = $(this).data('id');
+        let row = $(this).closest('tr');
+
+        Swal.fire({
+            title: 'Delete Vendor?',
+            text: "This action cannot be undone!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#d33',
+            cancelButtonColor: '#6c757d',
+            confirmButtonText: 'Yes, Delete',
+            cancelButtonText: 'Cancel'
+        }).then((result) => {
+
+            if (result.isConfirmed) {
+
+                $.ajax({
+                    url: '/venders/' + vendorId,
+                    type: 'POST',
+                    data: {
+                        _token: $('meta[name="csrf-token"]').attr('content'),
+                        _method: 'DELETE'
+                    },
+
+                    success: function (response) {
+
+                        row.fadeOut(300, function () {
+                            $(this).remove();
+                        });
+
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Deleted!',
+                            text: response.message,
+                            timer: 1800,
+                            showConfirmButton: false
+                        });
+
+                    },
+
+                    error: function () {
+
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Oops...',
+                            text: 'Something went wrong!'
+                        });
+
+                    }
+
+                });
+
+            }
+
+        });
+
     });
 
 });
+</script>
+
 </script>

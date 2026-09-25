@@ -28,14 +28,18 @@ class VenderController extends Controller
     public function store(Request $request)
     {
         $validated  = $request->validate([
-            'name' => 'required',
-            'mobile' => 'required',
-            'company_name' => 'required',
-            'email'=>'required|email|unique:vendors,email',
-            'gstin' => 'required',
-            // 'pan' => 'required',
-            // 'address_line1' => 'required',
-            // 'notes' => 'required',
+        'name' => ['required','regex:/^[a-zA-Z\s]+$/'],
+        'company_name' => 'nullable',
+        'mobile' => ['required', 'digits:10' ],
+        'email'=>'nullable|email|unique:vendors,email',
+        'gstin' => 'required',
+        'pan' => 'required',
+        'address_line1' => 'nullable',
+        'address_line2' => 'nullable',
+        'city' => 'nullable',
+        'state' => 'nullable',
+        'pincode' => 'nullable',
+        'notes' => 'nullable',
         ]);
         try {
             $venders = VendersModal::create($validated);
