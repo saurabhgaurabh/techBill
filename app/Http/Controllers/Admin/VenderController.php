@@ -30,9 +30,9 @@ class VenderController extends Controller
         $validated  = $request->validate([
             'name' => 'required',
             'mobile' => 'required',
-            // 'company_name' => 'required',
-            // 'email'=>'required|email|unique:vendors,email',
-            // 'gstin' => 'required',
+            'company_name' => 'required',
+            'email'=>'required|email|unique:vendors,email',
+            'gstin' => 'required',
             // 'pan' => 'required',
             // 'address_line1' => 'required',
             // 'notes' => 'required',

@@ -79,18 +79,19 @@
                                     <td>{{ $item->pan }}</td>
                                     <td>{{ $item->address_line1 }}</td>
                                     <td>{{ $item->notes }}</td>
-                                    <td>
-                                    <div class="d-flex align-items-center gap-2">
+                                    <td class="align-middle text-center">
+                                    <div class="d-inline-flex align-items-center gap-2"">
                                         <a href="{{ route('venders.edit', $item->vendor_id) }}"
-                                        class="btn btn-sm btn-warning">
+                                        class="btn btn-warning btn-sm">
                                             <i class="ti ti-edit"></i> Edit
                                         </a>
                                         <form action="{{ route('venders.destroy', $item->vendor_id) }}"
-                                            method="POST"
+                                            method="POST" class="m-0 p-0"
                                             onsubmit="return confirm('Are you sure you want to delete this vendor?');">
                                             @csrf
                                             @method('DELETE')
                                             <button
+                                               type="submit"
                                                 class="btn btn-danger btn-sm deleteVendor"
                                                 data-id="{{ $item->vendor_id }}">
                                                 Delete

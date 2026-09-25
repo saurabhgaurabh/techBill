@@ -14,9 +14,9 @@ class VendersModal extends Model
     protected $fillable = [
         'name',
         'mobile',
-        // 'company_name',
-        // 'email',
-        // 'gstin',
+        'company_name',
+        'email',
+        'gstin',
         // 'address_line1',
         // 'pan',
         // 'notes',
