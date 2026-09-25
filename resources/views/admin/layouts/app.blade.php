@@ -17,10 +17,7 @@
 {{-- @include('admin.layouts.sidebar') --}}
 
 <div class="content">
-
     @yield('content')
-
-
 </div>
 
 {{-- @yield('customer-modal') --}}
