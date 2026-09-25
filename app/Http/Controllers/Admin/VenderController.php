@@ -11,14 +11,40 @@ use App\Models\VendersModal;
 
 class VenderController extends Controller
 {
-    public function index()
-    {
+    // public function index()
+    // {
         // return view('admin.venders.index'); // only show the index page
         //   $venders = VendersModal::latest()->get(); // to get the all data
         // $venders = VendersModal::orderBy('vendor_id', 'asc')->get(); // to get the 
-        $venders = VendersModal::orderBy('vendor_id', 'asc')->paginate(10); // 10 records per page 
+        // $venders = VendersModal::orderBy('vendor_id', 'asc')->paginate(10); // 10 records per page 
+        // return view('admin.venders.index', compact('venders'));
+    // }
+    public function index(Request $request)
+    {
+        $query = VendersModal::query();
+
+        if ($request->filled('search')) {
+            $query->where('name', 'like', '%' . $request->search . '%')
+                ->orWhere('mobile', 'like', '%' . $request->search . '%')
+                ->orWhere('company_name', 'like', '%' . $request->search . '%');
+        }
+
+        $venders = $query->paginate(10);
+
         return view('admin.venders.index', compact('venders'));
     }
+    public function search(Request $request)
+{
+    $search = $request->search;
+
+    $venders = VendersModal::where('name', 'like', "%$search%")
+        ->orWhere('mobile', 'like', "%$search%")
+        ->orWhere('company_name', 'like', "%$search%")
+        ->get();
+
+
+    return view('admin.venders.partials.table', compact('venders'));
+}
 
     public function create()
     {

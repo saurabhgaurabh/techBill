@@ -52,28 +52,33 @@ table td{
                             </div>
                             <!-- Search + Create Button -->
                             <div class="col-auto ms-auto d-print-none">
+                                <form action="{{ route('venders.index') }}" method="GET">
                                 <div class="d-flex align-items-center gap-2">
-                                    <!-- Search Bar -->
-                                    <div class="input-icon">
-                                        <span class="input-icon-addon">
-                                            <svg xmlns="http://www.w3.org/2000/svg" 
-                                                class="icon" 
-                                                width="18" 
-                                                height="18" 
-                                                viewBox="0 0 24 24" 
-                                                stroke-width="2" 
-                                                stroke="currentColor" 
-                                                fill="none">
-                                                <circle cx="10" cy="10" r="7"/>
-                                                <line x1="21" y1="21" x2="15" y2="15"/>
-                                            </svg>
-                                        </span>
-                                        <input type="text" 
-                                            class="form-control"
-                                            placeholder="Search vendor..."
-                                            id="searchVendor"
-                                            style="width:250px;">
-                                    </div>
+                                        <div class="input-icon">
+                                            <span class="input-icon-addon">
+                                                {{-- <i class="ti ti-search"></i> --}}
+                                                    <svg xmlns="http://www.w3.org/2000/svg" 
+                                                    class="icon" 
+                                                    width="18" 
+                                                    height="18" 
+                                                    viewBox="0 0 24 24" 
+                                                    stroke-width="2" 
+                                                    stroke="currentColor" 
+                                                    fill="none">
+                                                    <circle cx="10" cy="10" r="7"/>
+                                                    <line x1="21" y1="21" x2="15" y2="15"/>
+                                                </svg>
+                                            </span>
+                                            <input
+                                                type="text"
+                                                name="search"
+                                                id="searchVendor"
+                                                class="form-control"
+                                                placeholder="Search vendor..."
+                                                value="{{ request('search') }}">
+
+                                            </form>
+                                        </div >
                                     <!-- Create Button -->
                                     <a href="{{ route('venders.create') }}" class="btn btn-orange">
                                         <svg xmlns="http://www.w3.org/2000/svg" 
@@ -132,7 +137,7 @@ table td{
                             </tr>
                             @endforeach
                         </tbody> --}}
-                        <tbody class="table-tbody">
+                        <tbody class="table-tbody" id="vendorTable">
                             @forelse ($venders->sortBy('vendors_id') as $item)  
                                 <tr>
                                     <td>{{ $item->vendor_id }}</td>
@@ -185,7 +190,8 @@ table td{
                     </div>
                 {{-- </div>                     --}}
                 <div class="d-flex justify-content-end mt-3 custom-pagination">
-                    {{ $venders->links()}}
+                    {{-- {{ $venders->links()}} --}}
+                    {{ $venders->withQueryString()->links() }}
                 </div>
             </div>
         </div>
@@ -319,6 +325,29 @@ $(document).on('click', '.deleteVendor', function () {
         error: function () {
             alert('Something went wrong.');
         }
+    });
+
+});
+
+
+
+document.getElementById('searchVendor').addEventListener('keyup', function () {
+
+    let value = this.value.toLowerCase();
+
+    let rows = document.querySelectorAll('#vendorTable tr');
+
+    rows.forEach(function(row) {
+
+        let text = row.innerText.toLowerCase();
+
+        if(text.includes(value)) {
+            row.style.display = "";
+        } 
+        else {
+            row.style.display = "none";
+        }
+
     });
 
 });

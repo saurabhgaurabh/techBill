@@ -26,6 +26,8 @@ Route::get('/customers', function () {
 
 Route::resource('venders', VenderController::class);
 Route::resource('withoutgst', UnregisterVendorController::class );
+Route::get('/venders/search', [VenderController::class, 'search'])
+    ->name('venders.search');
 // Route::get('venders/create',[VenderController::class,'create']);
 
 // Route::get('/venders', function() {
