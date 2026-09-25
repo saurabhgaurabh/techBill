@@ -32,147 +32,158 @@ table td{
 
 
 <div class="page-wrapper"> 
-        <!-- Page body -->
-        <div class="page-body">
-          <div class="container-xl">
+    <div class="page-body">
+        <div class="container-xl">
             <div class="card">
                 <div class="page-header d-print-none">      
                     <div class="container-xl">
                         <div class="row g-2 align-items-center">
-                            <div class="col-md-4">
+                            <div class="col">
                                 <h2 class="page-title">
-                                    Venders
+                                    Vendors 
                                 </h2>
-                                <span>Venders Description</span>
                             </div>
-                            <div class="col-md-3">
-                                <div class="input-icon">
-                                    <span class="input-icon-addon">
+                            <!-- Search + Create Button -->
+                            <div class="col-auto ms-auto d-print-none">
+                                <div class="d-flex align-items-center gap-2">
+                                    <!-- Search Bar -->
+                                    <div class="input-icon">
+                                        <span class="input-icon-addon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" 
+                                                class="icon" 
+                                                width="18" 
+                                                height="18" 
+                                                viewBox="0 0 24 24" 
+                                                stroke-width="2" 
+                                                stroke="currentColor" 
+                                                fill="none">
+                                                <circle cx="10" cy="10" r="7"/>
+                                                <line x1="21" y1="21" x2="15" y2="15"/>
+                                            </svg>
+                                        </span>
+                                        <input type="text" 
+                                            class="form-control"
+                                            placeholder="Search vendor..."
+                                            id="searchVendor"
+                                            style="width:250px;">
+                                    </div>
+                                    <!-- Create Button -->
+                                    <a href="{{ route('venders.create') }}" class="btn btn-orange">
                                         <svg xmlns="http://www.w3.org/2000/svg" 
                                             class="icon" 
-                                            width="24" 
-                                            height="24" 
+                                            width="18" 
+                                            height="18" 
                                             viewBox="0 0 24 24" 
                                             stroke-width="2" 
                                             stroke="currentColor" 
-                                            fill="none" 
-                                            stroke-linecap="round" 
-                                            stroke-linejoin="round">
+                                            fill="none">
                                             <path stroke="none" d="M0 0h24v24H0z"/>
-                                            <circle cx="10" cy="10" r="7"/>
-                                            <line x1="21" y1="21" x2="15" y2="15"/>
+                                            <path d="M12 5l0 14"/>
+                                            <path d="M5 12l14 0"/>
                                         </svg>
-                                    </span>
-                                    <input type="text" 
-                                        class="form-control" 
-                                        placeholder="Search vendor..."
-                                        id="searchVendor">
+                                        Create Vendor
+                                    </a>
                                 </div>
                             </div>
-                            <!-- Page title actions -->
-                            <div class="col-auto ms-auto d-print-none"> 
-                                <div class="btn-list col-md-4">
-                                <a href="{{ route('venders.create') }}" class="btn btn-primary">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 5l0 14" /><path d="M5 12l14 0" /></svg>
-                                    Create Vender</a>
-                                </div>
-                            </div>
-                        </div>
+                        </div></br>
                     </div>
                 </div>
-              <div class="card-body">
-                <div id="table-default" class="table-responsive">
-                  <table class="table">
-                    <thead>
-                      <tr class="table-primary">
-                        <th>ID</th>
-                        <th>Name</th>
-                        <th>Company Name</th>
-                        <th>Mobile</th>
-                        <th>Email</th>
-                        <th>GSTIN</th>
-                        <th>Pan</th>
-                        <th>Address One</th>
-                        <th>Address Two</th>
-                        <th>City</th>
-                        <th>State</th>
-                        <th>Pin Code</th>
-                        <th>Notes</th>
-                        <th>Status</th>
-                        <th>Actions</th>
-                      </tr>
-                    </thead>
-                    {{-- <tbody class="table-tbody">  
-                      @foreach ($venders->sortBy('vendors_id') as $item)                    
-                        <tr>
-                            <td>{{ $item->vendor_id }}</td>
-                            <td>{{ $item->name }}</td>
-                            <td>{{ $item->company_name }}</td>
-                            <td>{{ $item->mobile }}</td>
-                            <td>{{ $item->email }}</td>
-                            <td>{{ $item->gstin }}</td>
-                            <td>{{ $item->pan }}</td>
-                            <td>{{ $item->address_line1 }}</td>
-                            <td>{{ $item->notes }}</td>
-                        </tr>
-                        @endforeach
-                    </tbody> --}}
-                    <tbody class="table-tbody">
-                        @forelse ($venders->sortBy('vendors_id') as $item)  
+                {{-- <div class="card-body"> --}}
+                    <div id="table-default" class="table-responsive">
+                        <table class="table">
+                        <thead>
+                            <tr class="table-primary">
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Company Name</th>
+                            <th>Mobile</th>
+                            <th>Email</th>
+                            <th>GSTIN</th>
+                            <th>Pan</th>
+                            <th>Address One</th>
+                            <th>Address Two</th>
+                            <th>City</th>
+                            <th>State</th>
+                            <th>Pin Code</th>
+                            <th>Notes</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                            </tr>
+                        </thead>
+                        {{-- <tbody class="table-tbody">  
+                            @foreach ($venders->sortBy('vendors_id') as $item)                    
                             <tr>
                                 <td>{{ $item->vendor_id }}</td>
-                                    <td>{{ $item->name }}</td>
-                                    <td>{{ $item->company_name }}</td>
-                                    <td>{{ $item->mobile }}</td>
-                                    <td>{{ $item->email }}</td>
-                                    <td>{{ $item->gstin }}</td>
-                                    <td>{{ $item->pan }}</td>
-                                    <td>{{ $item->address_line1 }}</td>
-                                    <td>{{ $item->address_line2 }}</td>
-                                    <td>{{ $item->city }}</td>
-                                    <td>{{ $item->state }}</td>
-                                    <td>{{ $item->pincode }}</td>
-                                    <td>{{ $item->notes }}</td>
-                                    <td>{{ $item->status }}</td>
-                                    <td class="align-middle text-center">
-                                    <div class="d-inline-flex align-items-center gap-2"">
-                                        <a href="{{ route('venders.edit', $item->vendor_id) }}"
-                                        class="btn btn-warning btn-sm">
-                                            <i class="ti ti-edit"></i> Edit
-                                        </a>
-                                        <form action="{{ route('venders.destroy', $item->vendor_id) }}"
-                                            method="POST" class="m-0 p-0"
-                                            onsubmit="return confirm('Are you sure you want to delete this vendor?');">
-                                            @csrf
-                                            @method('DELETE')
-                                            <button
-                                               type="submit"
-                                                class="btn btn-danger btn-sm deleteVendor"
-                                                data-id="{{ $item->vendor_id }}">
-                                                Delete
-                                            </button>
-                                        </form>
-                                    </div>
-                                </td>
+                                <td>{{ $item->name }}</td>
+                                <td>{{ $item->company_name }}</td>
+                                <td>{{ $item->mobile }}</td>
+                                <td>{{ $item->email }}</td>
+                                <td>{{ $item->gstin }}</td>
+                                <td>{{ $item->pan }}</td>
+                                <td>{{ $item->address_line1 }}</td>
+                                <td>{{ $item->notes }}</td>
                             </tr>
-                        @empty
-                            <tr>
-                                <td colspan="12" class="text-center">
-                                    No Data Found
-                                </td>
-                            </tr>
-                        @endforelse
-                    </tbody>
-                  </table>
-                </div>
-              </div>                    
+                            @endforeach
+                        </tbody> --}}
+                        <tbody class="table-tbody">
+                            @forelse ($venders->sortBy('vendors_id') as $item)  
+                                <tr>
+                                    <td>{{ $item->vendor_id }}</td>
+                                        <td>{{ $item->name }}</td>
+                                        <td>{{ $item->company_name }}</td>
+                                        <td>{{ $item->mobile }}</td>
+                                        <td>{{ $item->email }}</td>
+                                        <td>{{ $item->gstin }}</td>
+                                        <td>{{ $item->pan }}</td>
+                                        <td>{{ $item->address_line1 }}</td>
+                                        <td>{{ $item->address_line2 }}</td>
+                                        <td>{{ $item->city }}</td>
+                                        <td>{{ $item->state }}</td>
+                                        <td>{{ $item->pincode }}</td>
+                                        <td>{{ $item->notes }}</td>
+                                        <td>{{ $item->status }}</td>
+                                        <td class="align-middle text-center">
+                                           {{-- <td class="text-end"> --}}
+                                            <span class="dropdown">
+                                                <button class="btn dropdown-toggle align-text-top" data-bs-boundary="viewport" data-bs-toggle="dropdown">Actions</button>
+                                                    <div class="dropdown-menu dropdown-menu-end">
+                                                        <a class="dropdown-item" href="{{route('venders.edit', $item->vendor_id)}}" class="btn btn-warning btn-sm">Update</a>
+                                                            <a class="dropdown-item">
+                                                            <form action="{{ route('venders.destroy', $item->vendor_id) }}"
+                                                                method="POST" class="m-0 p-0"
+                                                                onsubmit="return confirm('Are you sure you want to delete this vendor?');">
+                                                                @csrf
+                                                                @method('DELETE')
+                                                                <button
+                                                                    type="submit"
+                                                                    class="btn btn-danger btn-sm deleteVendor"
+                                                                    data-id="{{ $item->vendor_id }}">
+                                                                    Delete
+                                                                </button>
+                                                            </form>
+                                                        </a>
+                                                    </div>
+                                            </span>
+                                        </td>
+                                    </tr>
+                            @empty
+                                <tr>
+                                    <td colspan="12" class="text-center">
+                                        No Data Found
+                                    </td>
+                                </tr>
+                            @endforelse
+                        </tbody>
+                        </table>
+                    </div>
+                {{-- </div>                     --}}
                 <div class="d-flex justify-content-end mt-3">
                     {{ $venders->links() }}
                 </div>
             </div>
-          </div>
         </div>
-      </div>
+    </div>
+</div>
       
 
 <div class="modal modal-blur fade" id="customer-modal-report" tabindex="-1" role="dialog" aria-hidden="true">
@@ -281,94 +292,29 @@ table td{
 </html>
 
 <script>
-// $(document).on('click', '.deleteVendor', function () {
+$(document).on('click', '.deleteVendor', function () {
 
-//     let id = $(this).data('id');
+    let id = $(this).data('id');
 
-//     if (!confirm('Are you sure you want to delete this vendor?')) {
-//         return;
-//     }
-//     $.ajax({
-//         url: '/venders/' + id,
-//         type: 'DELETE',
-//         data: {
-//             _token: $('meta[name="csrf-token"]').attr('content')
-//         },
-//         success: function (response) {
-//             alert(response.message);
-//             location.reload();
-//         },
-//         error: function () {
-//             alert('Something went wrong.');
-//         }
-//     });
-
-// });
-
-<script>
-$(document).ready(function () {
-
-    $('.deleteVendor').click(function () {
-
-        let vendorId = $(this).data('id');
-        let row = $(this).closest('tr');
-
-        Swal.fire({
-            title: 'Delete Vendor?',
-            text: "This action cannot be undone!",
-            icon: 'warning',
-            showCancelButton: true,
-            confirmButtonColor: '#d33',
-            cancelButtonColor: '#6c757d',
-            confirmButtonText: 'Yes, Delete',
-            cancelButtonText: 'Cancel'
-        }).then((result) => {
-
-            if (result.isConfirmed) {
-
-                $.ajax({
-                    url: '/venders/' + vendorId,
-                    type: 'POST',
-                    data: {
-                        _token: $('meta[name="csrf-token"]').attr('content'),
-                        _method: 'DELETE'
-                    },
-
-                    success: function (response) {
-
-                        row.fadeOut(300, function () {
-                            $(this).remove();
-                        });
-
-                        Swal.fire({
-                            icon: 'success',
-                            title: 'Deleted!',
-                            text: response.message,
-                            timer: 1800,
-                            showConfirmButton: false
-                        });
-
-                    },
-
-                    error: function () {
-
-                        Swal.fire({
-                            icon: 'error',
-                            title: 'Oops...',
-                            text: 'Something went wrong!'
-                        });
-
-                    }
-
-                });
-
-            }
-
-        });
-
+    if (!confirm('Are you sure you want to delete this vendor?')) {
+        return;
+    }
+    $.ajax({
+        url: '/venders/' + id,
+        type: 'DELETE',
+        data: {
+            _token: $('meta[name="csrf-token"]').attr('content')
+        },
+        success: function (response) {
+            alert(response.message);
+            location.reload();
+        },
+        error: function () {
+            alert('Something went wrong.');
+        }
     });
 
 });
-</script>
+
 
 </script>
