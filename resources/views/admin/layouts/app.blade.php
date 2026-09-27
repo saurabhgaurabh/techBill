@@ -5,6 +5,8 @@
     {{-- <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}"> --}}
     <link href="{{ asset('dist/css/tabler.min.css') }}" rel="stylesheet">
      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+     <link rel="stylesheet" href="{{ asset('assets/iconsax/css/iconsax.css') }}">
      <meta name="csrf-token" content="{{ csrf_token() }}">
     @yield('css')
     @stack('styles')

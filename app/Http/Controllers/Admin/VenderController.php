@@ -22,29 +22,27 @@ class VenderController extends Controller
     public function index(Request $request)
     {
         $query = VendersModal::query();
-
         if ($request->filled('search')) {
             $query->where('name', 'like', '%' . $request->search . '%')
                 ->orWhere('mobile', 'like', '%' . $request->search . '%')
                 ->orWhere('company_name', 'like', '%' . $request->search . '%');
         }
-
         $venders = $query->paginate(10);
-
         return view('admin.venders.index', compact('venders'));
     }
+
     public function search(Request $request)
-{
-    $search = $request->search;
+    {
+        $search = $request->search;
 
-    $venders = VendersModal::where('name', 'like', "%$search%")
-        ->orWhere('mobile', 'like', "%$search%")
-        ->orWhere('company_name', 'like', "%$search%")
-        ->get();
+        $venders = VendersModal::where('name', 'like', "%$search%")
+            ->orWhere('mobile', 'like', "%$search%")
+            ->orWhere('company_name', 'like', "%$search%")
+            ->get();
 
 
-    return view('admin.venders.partials.table', compact('venders'));
-}
+        return view('admin.venders.partials.table', compact('venders'));
+    }
 
     public function create()
     {

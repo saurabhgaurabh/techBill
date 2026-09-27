@@ -2,7 +2,6 @@
 @section('title','Vendors')
 @section('content')
 @push('styles')
-
 <style>
   
 thead th{
@@ -33,6 +32,7 @@ table td{
 .custom-pagination .page-link {
     color: #f3a877;
 }
+
 </style>
 
 @endpush
@@ -57,17 +57,7 @@ table td{
                                         <div class="input-icon">
                                             <span class="input-icon-addon">
                                                 {{-- <i class="ti ti-search"></i> --}}
-                                                    <svg xmlns="http://www.w3.org/2000/svg" 
-                                                    class="icon" 
-                                                    width="18" 
-                                                    height="18" 
-                                                    viewBox="0 0 24 24" 
-                                                    stroke-width="2" 
-                                                    stroke="currentColor" 
-                                                    fill="none">
-                                                    <circle cx="10" cy="10" r="7"/>
-                                                    <line x1="21" y1="21" x2="15" y2="15"/>
-                                                </svg>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="18" height="18" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"fill="none"><circle cx="10" cy="10" r="7"/> <line x1="21" y1="21" x2="15" y2="15"/> </svg>
                                             </span>
                                             <input
                                                 type="text"
@@ -81,18 +71,7 @@ table td{
                                         </div >
                                     <!-- Create Button -->
                                     <a href="{{ route('venders.create') }}" class="btn btn-orange">
-                                        <svg xmlns="http://www.w3.org/2000/svg" 
-                                            class="icon" 
-                                            width="18" 
-                                            height="18" 
-                                            viewBox="0 0 24 24"
-                                            stroke-width="2" 
-                                            stroke="currentColor" 
-                                            fill="none">
-                                            <path stroke="none" d="M0 0h24v24H0z"/>
-                                            <path d="M12 5l0 14"/>
-                                            <path d="M5 12l14 0"/>
-                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="18" height="18" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"><path stroke="none" d="M0 0h24v24H0z"/> <path d="M12 5l0 14"/>  <path d="M5 12l14 0"/>   </svg>
                                         Create Vendor
                                     </a>
                                 </div>
@@ -153,7 +132,6 @@ table td{
                                         <td>{{ $item->state }}</td>
                                         <td>{{ $item->pincode }}</td>
                                         <td>{{ $item->notes }}</td>
-                                        {{-- <td>{{ $item->status }}</td> --}}
                                         <td>
                                             @if($item->status == 1)
                                             <span class="badge  bg-green">Active</span>
@@ -165,19 +143,19 @@ table td{
                                             <span class="badge bg-secondary">Unknown</span>
                                             @endif
                                         </td>
-                                        <td class="align-middle text-center">
-                                           {{-- <td class="text-end"> --}}
+                                        {{-- <td class="align-middle text-center">
                                             <span class="dropdown">
                                                 <button class="btn dropdown-toggle align-text-top" data-bs-boundary="viewport" data-bs-toggle="dropdown">Actions</button>
                                                     <div class="dropdown-menu dropdown-menu-end">
-                                                        <a class="dropdown-item" href="{{route('venders.edit', $item->vendor_id)}}" class="btn btn-warning btn-sm">Update</a>
+                                                        <button class="dropdown-item btn btn-success" href="{{route('venders.edit', $item->vendor_id)}}" class="btn btn-warning btn-sm">Update</button>
+                        
                                                             <a class="dropdown-item">
                                                             <form action="{{ route('venders.destroy', $item->vendor_id) }}"
                                                                 method="POST" class="m-0 p-0"
                                                                 onsubmit="return confirm('Are you sure you want to delete this vendor?');">
                                                                 @csrf
                                                                 @method('DELETE')
-                                                                <button
+                                                                <button class="btn btn-danger"
                                                                     type="submit"
                                                                     class="btn btn-danger btn-sm deleteVendor"
                                                                     data-id="{{ $item->vendor_id }}">
@@ -187,6 +165,27 @@ table td{
                                                         </a>
                                                     </div>
                                             </span>
+                                        </td> --}}
+                                        <td class="text-center">
+                                            <div class="d-flex justify-content-center align-items-center gap-2">
+                                                <a href="{{ route('venders.show',$item->vendor_id) }}" class="btn btn-sm btn-cyan" title="View">
+                                                    <i class="bi bi-eye"></i>
+                                                </a>
+                                                <a href="{{ route('venders.edit',$item->vendor_id) }}" class="btn btn-sm btn-success" title="Edit">
+                                                     <i class="bi bi-pencil"></i>
+                                                </a>
+                                                <form action="{{ route('venders.destroy',$item->vendor_id) }}" 
+                                                    method="POST"
+                                                    onsubmit="return confirm('Are you sure you want to delete this vendor?');">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <button type="submit" 
+                                                            class="btn btn-sm btn-danger"
+                                                            title="Delete">
+                                                        <i class="bi bi-trash"></i>
+                                                    </button>
+                                                </form>
+                                            </div>
                                         </td>
                                     </tr>
                             @empty
@@ -310,8 +309,7 @@ table td{
 
 @endsection
 
-<script src="{{ asset('assets/js/app.js') }}"></script>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </body>
 </html>
 
@@ -339,8 +337,6 @@ $(document).on('click', '.deleteVendor', function () {
     });
 
 });
-
-
 
 document.getElementById('searchVendor').addEventListener('keyup', function () {
     let value = this.value.toLowerCase();
