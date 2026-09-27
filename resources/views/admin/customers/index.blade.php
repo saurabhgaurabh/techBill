@@ -39,8 +39,8 @@ table td{
 
 <div class="page-wrapper"> 
     <div class="page-body">
-        <div class="container-xl">
-            <div class="card">
+        {{-- <div class="container-xl"> --}}
+            {{-- <div class="card"> --}}
                 <div class="page-header d-print-none">      
                     <div class="container-xl">
                         <div class="row g-2 align-items-center">
@@ -51,7 +51,7 @@ table td{
                             </div>
                             <!-- Search + Create Button -->
                             <div class="col-auto ms-auto d-print-none">
-                                <form action="{{ route('venders.index') }}" method="GET">
+                                <form action="{{ route('customers.index') }}" method="GET">
                                 <div class="d-flex align-items-center gap-2">
                                         <div class="input-icon">
                                             <span class="input-icon-addon">
@@ -75,17 +75,17 @@ table td{
                                     </a>
                                 </div>
                             </div>
-                        </div></br>
+                        </div>
                     </div>
-                </div>
-            </div>
+                {{-- </div> --}}
+            {{-- </div> --}}
         </div>
       </div>
         <!-- Page body -->
         <div class="page-body">
           <div class="container-xl">
             <div class="card">
-              <div class="card-body">
+              {{-- <div class="card-body"> --}}
                 <div id="table-default" class="table-responsive">
                   <div id="table-default" class="table-responsive">
                         <table class="table">

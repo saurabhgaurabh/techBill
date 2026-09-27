@@ -20,12 +20,11 @@ class CustomerController extends Controller
         return view('admin.customers.index', compact('customers'));
     }
 
-    public function store(Request $request)
-    {
-        $validated  = $request->validate([
+      public function store(Request $request){
+        $validated = $request->validate([
             'name' => ['required','regex:/^[a-zA-Z\s]+$/'],
-            'company_name' => 'nullable',
             'mobile' => ['required', 'digits:10' ],
+            'company_name' => 'nullable',
             'email'=>'nullable|email|unique:vendors,email',
             'gstin' => 'required',
             'pan' => 'required',
@@ -36,12 +35,12 @@ class CustomerController extends Controller
             'pincode' => 'nullable',
             'notes' => 'nullable',
         ]);
-        try{
-            $customers = Customers::create($validated );
-            return redirect()->route('customers.index')->with('success', 'Customer created successfully.');
-            }catch(\Exception $e){
-                dd($e->getMessage());
-            }
+        try {
+            $customers = Customers::create($validated);
+            return redirect()->route('customers.index')->with('success', 'Customers Created Successfully.');
+        } catch (\Exception $e) {
+            dd($e->getMessage());
+        }
     }
 
     public function create(Request $request)
