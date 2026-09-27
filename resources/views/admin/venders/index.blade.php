@@ -85,7 +85,7 @@ table td{
                                             class="icon" 
                                             width="18" 
                                             height="18" 
-                                            viewBox="0 0 24 24" 
+                                            viewBox="0 0 24 24"
                                             stroke-width="2" 
                                             stroke="currentColor" 
                                             fill="none">
@@ -332,24 +332,17 @@ $(document).on('click', '.deleteVendor', function () {
 
 
 document.getElementById('searchVendor').addEventListener('keyup', function () {
-
     let value = this.value.toLowerCase();
-
     let rows = document.querySelectorAll('#vendorTable tr');
-
     rows.forEach(function(row) {
-
         let text = row.innerText.toLowerCase();
-
         if(text.includes(value)) {
             row.style.display = "";
         } 
         else {
             row.style.display = "none";
         }
-
     });
-
 });
 
 
