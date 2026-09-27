@@ -197,43 +197,43 @@
                       <div class="dropdown-menu-column">        
                         <div class="dropend">
                           <a class="dropdown-item dropdown-toggle" href="#sidebar-authentication" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button" aria-expanded="false" >
-                              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-inline me-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" /><path d="M9 14l6 0" /></svg>
-                            Account Master
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-git-branch-check">	<path stroke="none" d="M0 0h24v24H0z" fill="none" />	<path d="M5 18a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />	<path d="M5 6a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />	<path d="M15 6a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />	<path d="M7 8v8" />	<path d="M7 12h8a2 2 0 0 0 2 -2v-2" />	<path d="M15 19l2 2l4 -4" /></svg>
+                                Account Master
                           </a>
                           <div class="dropdown-menu">
                             <a href="./sign-in.html" class="dropdown-item">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-inline me-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" /><path d="M9 14l6 0" /></svg>
-                              Account
+                               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-lock-dollar">	<path stroke="none" d="M0 0h24v24H0z" fill="none" />	<path d="M13 21h-6a2 2 0 0 1 -2 -2v-6a2 2 0 0 1 2 -2h10" />	<path d="M11 16a1 1 0 1 0 2 0a1 1 0 0 0 -2 0" />	<path d="M8 11v-4a4 4 0 1 1 8 0v4" />	<path d="M21 15h-2.5a1.5 1.5 0 0 0 0 3h1a1.5 1.5 0 0 1 0 3h-2.5" />	<path d="M19 21v1m0 -8v1" /></svg>
+                                Account
                             </a>
                             <a href="./sign-in-link.html" class="dropdown-item">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-inline me-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" /><path d="M9 14l6 0" /></svg>
-                              Bank
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-building-bank">	<path stroke="none" d="M0 0h24v24H0z" fill="none" />	<path d="M3 21l18 0" />	<path d="M3 10l18 0" />	<path d="M5 6l7 -3l7 3" />	<path d="M4 10l0 11" />	<path d="M20 10l0 11" />	<path d="M8 14l0 3" />	<path d="M12 14l0 3" />	<path d="M16 14l0 3" /></svg>  
+                                      Bank
                             </a>
                             <a href="./sign-in-illustration.html" class="dropdown-item">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-inline me-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" /><path d="M9 14l6 0" /></svg>
-                              Transporter
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-transform">	<path stroke="none" d="M0 0h24v24H0z" fill="none" />	<path d="M3 6a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />	<path d="M21 11v-3a2 2 0 0 0 -2 -2h-6l3 3m0 -6l-3 3" />	<path d="M3 13v3a2 2 0 0 0 2 2h6l-3 -3m0 6l3 -3" />	<path d="M15 18a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" /></svg>
+                               Transporter
                             </a>
                           </div>
                         </div>
                         <div class="dropend">
                           <a class="dropdown-item dropdown-toggle" href="#sidebar-authentication" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button" aria-expanded="false" >
-                              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-inline me-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" /><path d="M9 14l6 0" /></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chart-scatter-3d">	<path stroke="none" d="M0 0h24v24H0z" fill="none" />	<path d="M3 20l9 -7" />	<path d="M12 3v10l9 7" />	<path d="M17 12v.015" />	<path d="M17 4.015v.015" />	<path d="M21 8.015v.015" />	<path d="M12 19.015v.015" />	<path d="M3 12.015v.015" />	<path d="M7 8.015v.015" />	<path d="M3 4.015v.015" /></svg>
                             Party Master
                           </a>
                           <div class="dropdown-menu">
                             <a href="{{ route('customers') }}" class="dropdown-item">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-inline me-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" /><path d="M9 14l6 0" /></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-user-cog">	<path stroke="none" d="M0 0h24v24H0z" fill="none" />	<path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />	<path d="M6 21v-2a4 4 0 0 1 4 -4h2.5" />	<path d="M17.001 19a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />	<path d="M19.001 15.5v1.5" />	<path d="M19.001 21v1.5" />	<path d="M22.032 17.25l-1.299 .75" />	<path d="M17.27 20l-1.3 .75" />	<path d="M15.97 17.25l1.3 .75" />	<path d="M20.733 20l1.3 .75" /></svg>
                               Customer/Clients
                             </a>
                             <a href="{{ route('venders.index') }}" class="dropdown-item">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-inline me-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" /><path d="M9 14l6 0" /></svg>
-                              Vender/Suppliers
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-empathize">	<path stroke="none" d="M0 0h24v24H0z" fill="none" />	<path d="M9.5 5.5a2.5 2.5 0 1 0 5 0a2.5 2.5 0 1 0 -5 0" />	<path d="M12 21.368l5.095 -5.096a3.088 3.088 0 1 0 -4.367 -4.367l-.728 .727l-.728 -.727a3.088 3.088 0 1 0 -4.367 4.367l5.095 5.096" /></svg>
+                                  Vender/Suppliers
                             </a>
                           </div>
                         </div>
                         <div class="dropend">
                           <a class="dropdown-item dropdown-toggle" href="#sidebar-authentication" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button" aria-expanded="false" >
-                              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-inline me-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" /><path d="M9 14l6 0" /></svg>
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-building-factory-2">	<path stroke="none" d="M0 0h24v24H0z" fill="none" />	<path d="M3 21h18" />	<path d="M5 21v-12l5 4v-4l5 4h4" />	<path d="M19 21v-8l-1.436 -9.574a.5 .5 0 0 0 -.495 -.426h-1.145a.5 .5 0 0 0 -.494 .418l-1.43 8.582" />	<path d="M9 17h1" />	<path d="M14 17h1" /></svg>
                             Item Master
                           </a>
                           <div class="dropdown-menu">
@@ -282,7 +282,7 @@
                       <div class="dropdown-menu-column">        
                         <div class="dropend">
                           <a class="dropdown-item dropdown-toggle" href="#sidebar-authentication" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button" aria-expanded="false" >
-                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-backpack">	<path stroke="none" d="M0 0h24v24H0z" fill="none" />	<path d="M5 18v-6a6 6 0 0 1 6 -6h2a6 6 0 0 1 6 6v6a3 3 0 0 1 -3 3h-8a3 3 0 0 1 -3 -3" />	<path d="M10 6v-1a2 2 0 1 1 4 0v1" />	<path d="M9 21v-4a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v4" />	<path d="M11 10h2" /></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-shopping-bag-plus">	<path stroke="none" d="M0 0h24v24H0z" fill="none" />	<path d="M12.5 21h-3.926a3 3 0 0 1 -2.965 -2.544l-1.255 -8.152a2 2 0 0 1 1.977 -2.304h11.339a2 2 0 0 1 1.977 2.304l-.263 1.708" />	<path d="M16 19h6" />	<path d="M19 16v6" />	<path d="M9 11v-5a3 3 0 0 1 6 0v5" /></svg>
                             Sales
                           </a>
                           <div class="dropdown-menu">
@@ -310,7 +310,7 @@
                         </div>
                         <div class="dropend">
                           <a class="dropdown-item dropdown-toggle" href="#sidebar-authentication" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button" aria-expanded="false" >
-                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-backpack">	<path stroke="none" d="M0 0h24v24H0z" fill="none" />	<path d="M5 18v-6a6 6 0 0 1 6 -6h2a6 6 0 0 1 6 6v6a3 3 0 0 1 -3 3h-8a3 3 0 0 1 -3 -3" />	<path d="M10 6v-1a2 2 0 1 1 4 0v1" />	<path d="M9 21v-4a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v4" />	<path d="M11 10h2" /></svg>
+                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-shopping-cart-plus">	<path stroke="none" d="M0 0h24v24H0z" fill="none" />	<path d="M4 19a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />	<path d="M12.5 17h-6.5v-14h-2" />	<path d="M6 5l14 1l-.86 6.017m-2.64 .983h-10.5" />	<path d="M16 19h6" />	<path d="M19 16v6" /></svg>
                             Purchase
                           </a>
                           <div class="dropdown-menu">
@@ -434,16 +434,7 @@
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#navbar-base" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button" aria-expanded="false" >
                     <span class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/package -->
-                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-basket-down">
-	<path stroke="none" d="M0 0h24v24H0z" fill="none" />
-	<path d="M17 10l-2 -6" />
-	<path d="M7 10l2 -6" />
-	<path d="M12 20h-4.756a3 3 0 0 1 -2.965 -2.544l-1.255 -7.152a2 2 0 0 1 1.977 -2.304h13.999a2 2 0 0 1 1.977 2.304l-.349 1.989" />
-	<path d="M10 14a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
-	<path d="M19 16v6" />
-	<path d="M22 19l-3 3l-3 -3" />
-</svg>
-                    </span>
+                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-basket-down">	<path stroke="none" d="M0 0h24v24H0z" fill="none" />	<path d="M17 10l-2 -6" />	<path d="M7 10l2 -6" />	<path d="M12 20h-4.756a3 3 0 0 1 -2.965 -2.544l-1.255 -7.152a2 2 0 0 1 1.977 -2.304h13.999a2 2 0 0 1 1.977 2.304l-.349 1.989" />	<path d="M10 14a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />	<path d="M19 16v6" />	<path d="M22 19l-3 3l-3 -3" /></svg>                    </span>
                     <span class="nav-link-title">
                       Inventory
                     </span>
