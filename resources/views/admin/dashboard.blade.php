@@ -27,12 +27,12 @@
                     New view
                 </a>
                 </span>
-                <a href="#" class="btn btn-primary d-none d-sm-inline-block" data-bs-toggle="modal" data-bs-target="#modal-report">
+                <a href="#" class="btn btn-orange d-none d-sm-inline-block" data-bs-toggle="modal" data-bs-target="#modal-report">
                 <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 5l0 14" /><path d="M5 12l14 0" /></svg>
                 Create new report
                 </a>
-                <a href="#" class="btn btn-primary d-sm-none btn-icon" data-bs-toggle="modal" data-bs-target="#modal-report" aria-label="Create new report">
+                <a href="#" class="btn btn-orange d-sm-none btn-icon" data-bs-toggle="modal" data-bs-target="#modal-report" aria-label="Create new report">
                 <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 5l0 14" /><path d="M5 12l14 0" /></svg>
                 </a>
@@ -73,7 +73,7 @@
                     </div>
                 </div>
                 <div class="progress progress-sm">
-                    <div class="progress-bar bg-primary" style="width: 75%" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" aria-label="75% Complete">
+                    <div class="progress-bar bg-orange" style="width: 75%" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" aria-label="75% Complete">
                     <span class="visually-hidden">75% Complete</span>
                     </div>
                 </div>
@@ -174,7 +174,7 @@
                     <div class="card-body">
                     <div class="row align-items-center">
                         <div class="col-auto">
-                        <span class="bg-primary text-white avatar"><!-- Download SVG icon from http://tabler-icons.io/i/currency-dollar -->
+                        <span class="bg-orange text-white avatar"><!-- Download SVG icon from http://tabler-icons.io/i/currency-dollar -->
                             <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M16.7 8a3 3 0 0 0 -2.7 -2h-4a3 3 0 0 0 0 6h4a3 3 0 0 1 0 6h-4a3 3 0 0 1 -2.7 -2" /><path d="M12 3v3m0 12v3" /></svg>
                         </span>
                         </div>
@@ -282,13 +282,13 @@
                     <div class="card-body">
                     <p class="mb-3">Using Storage <strong>6854.45 MB </strong>of 8 GB</p>
                     <div class="progress progress-separated mb-3">
-                        <div class="progress-bar bg-primary" role="progressbar" style="width: 44%" aria-label="Regular"></div>
+                        <div class="progress-bar bg-orange" role="progressbar" style="width: 44%" aria-label="Regular"></div>
                         <div class="progress-bar bg-info" role="progressbar" style="width: 19%" aria-label="System"></div>
                         <div class="progress-bar bg-success" role="progressbar" style="width: 9%" aria-label="Shared"></div>
                     </div>
                     <div class="row">
                         <div class="col-auto d-flex align-items-center pe-2">
-                        <span class="legend me-2 bg-primary"></span>
+                        <span class="legend me-2 bg-orange"></span>
                         <span>Regular</span>
                         <span class="d-none d-md-inline d-lg-none d-xxl-inline ms-2 text-muted">915MB</span>
                         </div>
@@ -327,7 +327,7 @@
                             <div class="text-muted">yesterday</div>
                             </div>
                             <div class="col-auto align-self-center">
-                            <div class="badge bg-primary"></div>
+                            <div class="badge bg-orange"></div>
                             </div>
                         </div>
                         </div>
@@ -343,7 +343,7 @@
                             <div class="text-muted">2 days ago</div>
                             </div>
                             <div class="col-auto align-self-center">
-                            <div class="badge bg-primary"></div>
+                            <div class="badge bg-orange"></div>
                             </div>
                         </div>
                         </div>
@@ -359,7 +359,7 @@
                             <div class="text-muted">today</div>
                             </div>
                             <div class="col-auto align-self-center">
-                            <div class="badge bg-primary"></div>
+                            <div class="badge bg-orange"></div>
                             </div>
                         </div>
                         </div>
@@ -375,7 +375,7 @@
                             <div class="text-muted">4 days ago</div>
                             </div>
                             <div class="col-auto align-self-center">
-                            <div class="badge bg-primary"></div>
+                            <div class="badge bg-orange"></div>
                             </div>
                         </div>
                         </div>
@@ -661,7 +661,7 @@
             <div class="col-12">
             <div class="card card-md">
                 <div class="card-stamp card-stamp-lg">
-                <div class="card-stamp-icon bg-primary">
+                <div class="card-stamp-icon bg-orange">
                     <!-- Download SVG icon from http://tabler-icons.io/i/ghost -->
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 11a7 7 0 0 1 14 0v7a1.78 1.78 0 0 1 -3.1 1.4a1.65 1.65 0 0 0 -2.6 0a1.65 1.65 0 0 1 -2.6 0a1.65 1.65 0 0 0 -2.6 0a1.78 1.78 0 0 1 -3.1 -1.4v-7" /><path d="M10 10l.01 0" /><path d="M14 10l.01 0" /><path d="M10 14a3.5 3.5 0 0 0 4 0" /></svg>
                 </div>
@@ -676,7 +676,7 @@
                         download any of the 4158 icons in SVG, PNG or&nbsp;React and use them in your favourite design tools.
                     </div>
                     <div class="mt-3">
-                        <a href="https://tabler-icons.io" class="btn btn-primary" target="_blank" rel="noopener">Download icons</a>
+                        <a href="https://tabler-icons.io" class="btn btn-orange" target="_blank" rel="noopener">Download icons</a>
                     </div>
                     </div>
                 </div>
@@ -809,7 +809,7 @@
                     <td>3,550</td>
                     <td class="w-50">
                         <div class="progress progress-xs">
-                        <div class="progress-bar bg-primary" style="width: 71.0%"></div>
+                        <div class="progress-bar bg-orange" style="width: 71.0%"></div>
                         </div>
                     </td>
                     </tr>
@@ -818,7 +818,7 @@
                     <td>1,798</td>
                     <td class="w-50">
                         <div class="progress progress-xs">
-                        <div class="progress-bar bg-primary" style="width: 35.96%"></div>
+                        <div class="progress-bar bg-orange" style="width: 35.96%"></div>
                         </div>
                     </td>
                     </tr>
@@ -827,7 +827,7 @@
                     <td>1,245</td>
                     <td class="w-50">
                         <div class="progress progress-xs">
-                        <div class="progress-bar bg-primary" style="width: 24.9%"></div>
+                        <div class="progress-bar bg-orange" style="width: 24.9%"></div>
                         </div>
                     </td>
                     </tr>
@@ -836,7 +836,7 @@
                     <td>986</td>
                     <td class="w-50">
                         <div class="progress progress-xs">
-                        <div class="progress-bar bg-primary" style="width: 19.72%"></div>
+                        <div class="progress-bar bg-orange" style="width: 19.72%"></div>
                         </div>
                     </td>
                     </tr>
@@ -845,7 +845,7 @@
                     <td>854</td>
                     <td class="w-50">
                         <div class="progress progress-xs">
-                        <div class="progress-bar bg-primary" style="width: 17.08%"></div>
+                        <div class="progress-bar bg-orange" style="width: 17.08%"></div>
                         </div>
                     </td>
                     </tr>
@@ -854,7 +854,7 @@
                     <td>650</td>
                     <td class="w-50">
                         <div class="progress progress-xs">
-                        <div class="progress-bar bg-primary" style="width: 13.0%"></div>
+                        <div class="progress-bar bg-orange" style="width: 13.0%"></div>
                         </div>
                     </td>
                     </tr>
@@ -863,7 +863,7 @@
                     <td>420</td>
                     <td class="w-50">
                         <div class="progress progress-xs">
-                        <div class="progress-bar bg-primary" style="width: 8.4%"></div>
+                        <div class="progress-bar bg-orange" style="width: 8.4%"></div>
                         </div>
                     </td>
                     </tr>
@@ -1480,7 +1480,7 @@
         <a href="#" class="btn btn-link link-secondary" data-bs-dismiss="modal">
             Cancel
         </a>
-        <a href="#" class="btn btn-primary ms-auto" data-bs-dismiss="modal">
+        <a href="#" class="btn btn-orange ms-auto" data-bs-dismiss="modal">
             <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
             <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 5l0 14" /><path d="M5 12l14 0" /></svg>
             Create new report

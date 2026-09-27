@@ -153,7 +153,18 @@ table td{
                                         <td>{{ $item->state }}</td>
                                         <td>{{ $item->pincode }}</td>
                                         <td>{{ $item->notes }}</td>
-                                        <td>{{ $item->status }}</td>
+                                        {{-- <td>{{ $item->status }}</td> --}}
+                                        <td>
+                                            @if($item->status == 1)
+                                            <span class="badge  bg-green">Active</span>
+                                            @elseif($item->status == 0)
+                                            <span class="badge bg-red">Inactive</span>
+                                            @elseif($item->status == 2)
+                                            <span class="badge bg-yellow text-dark">Pending</span>
+                                            @else
+                                            <span class="badge bg-secondary">Unknown</span>
+                                            @endif
+                                        </td>
                                         <td class="align-middle text-center">
                                            {{-- <td class="text-end"> --}}
                                             <span class="dropdown">
