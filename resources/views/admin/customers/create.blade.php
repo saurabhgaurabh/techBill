@@ -12,7 +12,7 @@
                     </h2> --}}
                 </div>
                 <div class="col-auto">
-                    <a href="{{ route('customers.index') }}" class="btn btn-cyan">
+                    <a href="{{ route('customers.index') }}" class="btn btn-orange">
                         Back
                     </a>
                 </div>
@@ -37,7 +37,7 @@
             <form action="{{ route('customers.store') }}" method="POST">
                 @csrf
                 <div class="card-body">
-                    <div class="row">   
+                     <div class="row">   
                         <h2 class="card-title">Basic Information</h2>
                         <div class="row">        
                             <div class="col-md-3 mb-2">
@@ -109,6 +109,7 @@
                             Create Customer
                         </button>
                     </div>
+                </div>
             </form>     
         </div>
     </div>

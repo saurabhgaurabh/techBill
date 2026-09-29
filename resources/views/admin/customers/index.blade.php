@@ -17,7 +17,6 @@ thead th{
 tbody tr:nth-child(even){
     background:#fafafa;
 }
-
 tbody tr:hover{
     background:#fff2ee;
 }
@@ -87,8 +86,7 @@ table td{
             <div class="card">
               {{-- <div class="card-body"> --}}
                 <div id="table-default" class="table-responsive">
-                  <div id="table-default" class="table-responsive">
-                        <table class="table">
+                        <table class="table card-table table-vcenter text-nowrap datatable">
                         <thead>
                             <tr class="table-primary">
                             <th>ID</th>
@@ -108,7 +106,7 @@ table td{
                             <th>Actions</th>
                             </tr>
                         </thead>
-                        <tbody class="table-tbody" id="vendorTable">
+                        <tbody class="table-tbody " id="vendorTable">
                             @forelse ($customers->sortBy('customers_id') as $item)  
                                 <tr>
                                     <td>{{ $item->customer_id }}</td>
@@ -134,27 +132,18 @@ table td{
                                             @else
                                             <span class="badge bg-secondary">Unknown</span>
                                             @endif
-                                        </td>
-                                        <td class="text-center">
-                                            <div class="d-flex justify-content-center align-items-center gap-2">
-                                                {{-- <a href="{{ route('venders.show',$item->vendor_id) }}" class="btn btn-sm btn-cyan" title="View">
-                                                    <i class="bi bi-eye"></i>
-                                                </a> --}}
-                                                {{-- <a href="{{ route('venders.edit',$item->vendor_id) }}" class="btn btn-sm btn-success" title="Edit">
-                                                     <i class="bi bi-pencil"></i>
-                                                </a> --}}
-                                                {{-- <form action="{{ route('venders.destroy',$item->vendor_id) }}" 
-                                                    method="POST"
-                                                    onsubmit="return confirm('Are you sure you want to delete this vendor?');">
-                                                    @csrf
-                                                    @method('DELETE')
-                                                    <button type="submit" 
-                                                            class="btn btn-sm btn-danger"
-                                                            title="Delete">
-                                                        <i class="bi bi-trash"></i>
-                                                    </button>
-                                                </form> --}}
+                                          <td class="text-end">
+                                            <span class="dropdown">
+                                            <button class="btn dropdown-toggle align-text-top" data-bs-boundary="viewport" data-bs-toggle="dropdown">Actions</button>
+                                            <div class="dropdown-menu dropdown-menu-end">
+                                                <a class="dropdown-item" href="#">
+                                                Update
+                                                </a>
+                                                <a class="dropdown-item" href="#">
+                                                Destroy
+                                                </a>
                                             </div>
+                                            </span>
                                         </td>
                                     </tr>
                             @empty
@@ -173,7 +162,7 @@ table td{
                     {{-- {{ $customers->links()}} --}}
                     {{ $customers->withQueryString()->links() }}
                 </div>
-              </div>
+              {{-- </div> --}} 
             </div>
           </div>
         </div>

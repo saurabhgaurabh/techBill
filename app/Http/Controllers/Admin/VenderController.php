@@ -58,11 +58,11 @@ class VenderController extends Controller
         'email'=>'nullable|email|unique:vendors,email',
         'gstin' => 'required',
         'pan' => 'required',
-        'address_line1' => 'nullable',
+        'address_line1' => 'required',
         'address_line2' => 'nullable',
         'city' => 'nullable',
         'state' => 'nullable',
-        'pincode' => 'nullable',
+        'pincode' => 'required',
         'notes' => 'nullable',
         ]);
         try {
