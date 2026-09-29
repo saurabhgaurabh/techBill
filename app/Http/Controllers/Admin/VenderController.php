@@ -53,8 +53,8 @@ class VenderController extends Controller
     {
         $validated  = $request->validate([
         'name' => ['required','regex:/^[a-zA-Z\s]+$/'],
-        'company_name' => 'nullable',
         'mobile' => ['required', 'digits:10' ],
+        'company_name' => 'nullable',
         'email'=>'nullable|email|unique:vendors,email',
         'gstin' => 'required',
         'pan' => 'required',

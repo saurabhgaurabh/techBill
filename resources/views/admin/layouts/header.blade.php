@@ -15,10 +15,42 @@
     <link href="{{ asset('dist/css/tabler-vendors.min.css?1684106062') }}" rel="stylesheet"/>
     <link href="{{ asset('dist/css/demo.min.css?1684106062') }}" rel="stylesheet"/>
     <style>
+
       @import url('https://rsms.me/inter/inter.css');
       :root {
-      	--tblr-font-sans-serif: 'Inter Var', -apple-system, BlinkMacSystemFont, San Francisco, Segoe UI, Roboto, Helvetica Neue, sans-serif;
+        --orange-color:#eb5a25;	--tblr-font-sans-serif: 'Inter Var', -apple-system, BlinkMacSystemFont, San Francisco, Segoe UI, Roboto, Helvetica Neue, sans-serif;
       }
+
+/* Active Top Menu */
+.navbar-nav .nav-link.active{
+    color: #eb5a25 !important;
+    font-weight:600;
+}
+
+
+/* Active icon */
+.navbar-nav .nav-link.active svg{
+    stroke:#eb5a25;
+}
+
+
+/* Dropdown active item */
+.dropdown-item.active{
+    background:#fff1eb !important;
+    color:#eb5a25 !important;
+}
+
+
+/* Hover */
+.nav-link:hover{
+    color:#eb5a25 !important;
+}
+
+
+.dropdown-item:hover{
+    color:#eb5a25 !important;
+    background:#fff7f3;
+}
       body {
       	font-feature-settings: "cv03", "cv04", "cv11";
       }
@@ -168,7 +200,8 @@
             <div class="container-xl">
               <ul class="navbar-nav">
                 <li class="nav-item">
-                  <a class="nav-link" href="{{ route('dashboard') }}" >
+                  {{-- <a class="nav-link" href="{{ route('dashboard') }}" > --}}
+                    <a class="nav-link {{ request()->routeIs('dashboard') ? 'active' : '' }}" href="{{ route('dashboard') }}">
                     <span class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/home -->
                       <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l-2 0l9 -9l9 9l-2 0" /><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" /><path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" /></svg>
                     </span>
@@ -178,7 +211,7 @@
                   </a>
                 </li>
                 <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#navbar-base" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button" aria-expanded="false" >
+                  <a class="nav-link dropdown-toggle {{ request()->routeIs('customers.*','venders.*') ? 'active' : '' }}" href="#navbar-base" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button" aria-expanded="false" >
                     <span class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/package -->
                       <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 3l8 4.5l0 9l-8 4.5l-8 -4.5l0 -9l8 -4.5" /><path d="M12 12l8 -4.5" /><path d="M12 12l0 9" /><path d="M12 12l-8 -4.5" /><path d="M16 5.25l-8 4.5" /></svg>
                     </span>
@@ -215,11 +248,11 @@
                             Party Master
                           </a>
                           <div class="dropdown-menu">
-                            <a href="{{ route('customers.index') }}" class="dropdown-item">
+                            <a href="{{ route('customers.index') }}" class="dropdown-item {{ request()->routeIs('customers.*') ? 'active' : '' }}">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-user-cog">	<path stroke="none" d="M0 0h24v24H0z" fill="none" />	<path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />	<path d="M6 21v-2a4 4 0 0 1 4 -4h2.5" />	<path d="M17.001 19a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />	<path d="M19.001 15.5v1.5" />	<path d="M19.001 21v1.5" />	<path d="M22.032 17.25l-1.299 .75" />	<path d="M17.27 20l-1.3 .75" />	<path d="M15.97 17.25l1.3 .75" />	<path d="M20.733 20l1.3 .75" /></svg>
                               Customer/Clients
                             </a>
-                            <a href="{{ route('venders.index') }}" class="dropdown-item">
+                            <a href="{{ route('venders.index') }}"   class="dropdown-item {{ request()->routeIs('venders.*') ? 'active' : '' }}">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-empathize">	<path stroke="none" d="M0 0h24v24H0z" fill="none" />	<path d="M9.5 5.5a2.5 2.5 0 1 0 5 0a2.5 2.5 0 1 0 -5 0" />	<path d="M12 21.368l5.095 -5.096a3.088 3.088 0 1 0 -4.367 -4.367l-.728 .727l-.728 -.727a3.088 3.088 0 1 0 -4.367 4.367l5.095 5.096" /></svg>
                                   Vender/Suppliers
                             </a>
@@ -255,18 +288,8 @@
                 </li>
                 {{-- Transactions Start --}}
                 <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#navbar-base" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button" aria-expanded="false" >
-                    <span class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/package -->
-                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-transaction-rupee">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <path d="M21 12h-6h1a3 3 0 0 1 0 6h-1l3 3" />
-                    <path d="M15 15h6" />
-                    <path d="M3 5a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
-                    <path d="M15 5a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
-                    <path d="M7 5h8" />
-                    <path d="M7 5v8a3 3 0 0 0 3 3h1" />
-                  </svg>
-                    </span>
+                  <a class="nav-link dropdown-toggle" href="#navbar-base" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button" aria-expanded="false" >                    <span class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/package -->                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-transaction-rupee">                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />                    <path d="M21 12h-6h1a3 3 0 0 1 0 6h-1l3 3" />                    <path d="M15 15h6" />                    <path d="M3 5a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />                    <path d="M15 5a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M7 5h8" /><path d="M7 5v8a3 3 0 0 0 3 3h1" /></svg> 
+                      </span>
                     <span class="nav-link-title">
                       Transactions
                     </span>

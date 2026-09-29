@@ -43,7 +43,7 @@
                             <div class="col-md-3 mb-2">
                                 <label class="form-label">Name*</label>
                                 <input type="text" class="form-control @error('name') is-invalid @enderror" value="{{ old('name') }}" name="name" placeholder="Your Name">
-                                    @error('name') <span class="text-danger"> {{ $message }} </span>  @enderror
+                                    @error('name') <span class="text-danger"> {{$message}} </span>  @enderror
                             </div>
                             <div class="col-md-3 mb-2">
                                 <label class="form-label">Company Name</label>
@@ -51,7 +51,7 @@
                             </div>
                             <div class="col-lg-3 mb-2">
                                 <label class="form-label">Mobile*</label>    
-                                <input type="number" class="form-control @error('mobile')vis-invalid @enderror" maxlength="10" name="mobile" placeholder="Your Mobile">
+                                <input type="number" class="form-control @error('mobile') is-invalid @enderror" name="mobile" placeholder="Your Mobile">
                                 @error('mobile') <span class="text-danger">{{$message}}</span> @enderror
                             </div>
                             <div class="col-lg-3 mb-2">
@@ -64,7 +64,8 @@
                         <h2 class="card-title">GST/Tax/Identity</h2>
                         <div class="col-lg-3 mb-2">
                             <label class="form-label">GSTIN</label>    
-                            <input type="text" class="form-control" name="gstin" placeholder="Your Customer GSTIN Number">
+                            <input type="text" class="form-control @error('gstin')is-invalid @enderror" value="{{old('gstin')}}" name="gstin" placeholder="Your Customer GSTIN Number">
+                            @error('gstin') <span class="text-danger">{{$message}}</span> @enderror
                         </div>
                         <div class=" col-lg-3 mb-2">
                             <label class="form-label">Pan</label>    
@@ -104,7 +105,6 @@
                     </div>  
                     <div class="modal-footer">
                         <button type="submit" class="btn btn-orange ms-auto">
-                            <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
                             <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 5l0 14" /><path d="M5 12l14 0" /></svg>
                             Create Customer
                         </button>
@@ -121,8 +121,8 @@
             <form action="{{ route('withoutgstcustomer.store') }}" method="POST">
             @csrf
             <div class="modal-header">
-            <h5 class="modal-title">Create Unregister Customer </h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <h5 class="modal-title">Create Unregister Customer </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <div class="row">        

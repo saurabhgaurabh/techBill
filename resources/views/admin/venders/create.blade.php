@@ -57,7 +57,8 @@
                             </div>
                             <div class="col-lg-3 mb-2">
                                 <label class="form-label">E-Mail</label>    
-                                <input type="email" class="form-control" name="email" placeholder="Your Customer E-Mail">
+                                <input type="email" class="form-control @error('email') is-invalid @enderror" value="{{old('email')}}" name="email" placeholder="Your Customer E-Mail">
+                                @error('email') <span class="text-danger">{{$message}}</span> @enderror
                             </div>
                         </div>
                     </div></br>
