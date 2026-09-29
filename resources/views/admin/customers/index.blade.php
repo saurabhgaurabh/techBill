@@ -123,14 +123,14 @@ table td{
                                         <td>{{ $item->pincode }}</td>
                                         <td>{{ $item->notes }}</td>
                                         <td>
-                                            @if($item->status == 1)
-                                            <span class="badge  bg-green">Active</span>
+                                             @if($item->status == 1)
+                                            <span class="text-green">Active</span>
                                             @elseif($item->status == 0)
-                                            <span class="badge bg-red">Inactive</span>
+                                            <span class="text-red">Inactive</span>
                                             @elseif($item->status == 2)
-                                            <span class="badge bg-yellow text-dark">Pending</span>
+                                            <span class=" text-yellow">Pending</span>
                                             @else
-                                            <span class="badge bg-secondary">Unknown</span>
+                                            <span class="text-secondary">Unknown</span>
                                             @endif
                                           <td class="text-end">
                                             <span class="dropdown">

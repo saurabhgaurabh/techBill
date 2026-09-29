@@ -3,7 +3,7 @@
 @section('content')
 @push('styles')
 <style>
-  
+
 thead th{
     position:sticky;
     top:0;
@@ -14,15 +14,17 @@ thead th{
 .table th{
     border:1px solid #e5e7eb;
 }
+.table td{
+    font-family: Arial, Helvetica, sans-serif;
+}
 tbody tr:nth-child(even){
     background:#fafafa;
 }
-
 tbody tr:hover{
     background:#fff2ee;
 }
 table td{
-    font-size: 0.8rem
+    font-size: 0.8rem;
 }
 .custom-pagination .page-item.active .page-link {
     background-color: #eb5a25;
@@ -32,6 +34,40 @@ table td{
 .custom-pagination .page-link {
     color: #f3a877;
 }
+.vendor-table{
+    font-size:12.5px;
+    margin-bottom:0;
+    white-space:nowrap;
+}
+.vendor-table tbody td{
+    padding:5px 10px;
+    vertical-align:middle;
+    border-bottom:1.5px solid #ececec;
+    color:#495057;
+}
+.vendor-table-wrapper{
+    overflow-x:auto;
+    overflow-y:auto;
+    max-height:70vh;
+}
+
+/* Sticky Action Column */
+
+.vendor-table .sticky-action{
+    position:sticky;
+    right:0;
+    z-index:20;
+    background:#fff;
+    min-width:90px;
+    text-align:center;
+}
+
+/* Header */
+
+.vendor-table thead .sticky-action{
+    z-index:30;
+}
+
 
 </style>
 
@@ -45,14 +81,8 @@ table td{
                 <div class="page-header d-print-none">      
                     <div class="container-xl">
                         <div class="row g-2 align-items-center">
-                            <div class="col">
-                                <h2 class="page-title">
-                                    Vendors 
-                                </h2>
-                            </div>
-                            <!-- Search + Create Button -->
-                            <div class="col-auto ms-auto d-print-none">
-                                <form action="{{ route('venders.index') }}" method="GET">
+                            <div class="col-md-12">
+                               <form action="{{ route('venders.index') }}" method="GET">
                                 <div class="d-flex align-items-center gap-2">
                                         <div class="input-icon">
                                             <span class="input-icon-addon">
@@ -68,28 +98,32 @@ table td{
                                                 value="{{ request('search') }}">
 
                                             </form>
+                            </div>
+                            <!-- Search + Create Button -->
+                            <div class="col-auto ms-auto d-print-none">
+                            
                                         </div >
                                     <!-- Create Button -->
-                                    <a href="{{ route('venders.create') }}" class="btn btn-orange">
+                                    <a href="{{ route('venders.create') }}" class="btn btn-orange btn-quare">
                                         <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="18" height="18" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"><path stroke="none" d="M0 0h24v24H0z"/> <path d="M12 5l0 14"/>  <path d="M5 12l14 0"/>   </svg>
                                         Create Vendor
                                     </a>
                                 </div>
                             </div>
-                        </div></br>
+                        </div>
                     </div>
                 </div>
                 {{-- <div class="card-body"> --}}
-                    <div id="table-default" class="table-responsive">
-                        <table class="table">
+                    <div id="table-default" class="table-responsive  vendor-table-wrapper">
+                        <table class="table vendor-table table-hover">
                         <thead>
                             <tr class="table-primary">
-                            <th>ID</th>
+                            <th>Id</th>
                             <th>Name</th>
                             <th>Company Name</th>
                             <th>Mobile</th>
-                            <th>Email</th>
-                            <th>GSTIN</th>
+                            <th>E-mail</th>
+                            <th>Gst </th>
                             <th>Pan</th>
                             <th>Address One</th>
                             <th>Address Two</th>
@@ -98,7 +132,7 @@ table td{
                             <th>Pin Code</th>
                             <th>Notes</th>
                             <th>Status</th>
-                            <th>Actions</th>
+                            <th class="sticky-action">Actions</th>
                             </tr>
                         </thead>
                         {{-- <tbody class="table-tbody">  
@@ -134,57 +168,56 @@ table td{
                                         <td>{{ $item->notes }}</td>
                                         <td>
                                             @if($item->status == 1)
-                                            <span class="badge  bg-green">Active</span>
+                                            <span class="text-green">Active</span>
                                             @elseif($item->status == 0)
-                                            <span class="badge bg-red">Inactive</span>
+                                            <span class="text-red">Inactive</span>
                                             @elseif($item->status == 2)
-                                            <span class="badge bg-yellow text-dark">Pending</span>
+                                            <span class=" text-yellow">Pending</span>
                                             @else
-                                            <span class="badge bg-secondary">Unknown</span>
+                                            <span class="text-secondary">Unknown</span>
                                             @endif
                                         </td>
-                                        {{-- <td class="align-middle text-center">
-                                            <span class="dropdown">
-                                                <button class="btn dropdown-toggle align-text-top" data-bs-boundary="viewport" data-bs-toggle="dropdown">Actions</button>
-                                                    <div class="dropdown-menu dropdown-menu-end">
-                                                        <button class="dropdown-item btn btn-success" href="{{route('venders.edit', $item->vendor_id)}}" class="btn btn-warning btn-sm">Update</button>
-                        
-                                                            <a class="dropdown-item">
-                                                            <form action="{{ route('venders.destroy', $item->vendor_id) }}"
-                                                                method="POST" class="m-0 p-0"
-                                                                onsubmit="return confirm('Are you sure you want to delete this vendor?');">
-                                                                @csrf
-                                                                @method('DELETE')
-                                                                <button class="btn btn-danger"
-                                                                    type="submit"
-                                                                    class="btn btn-danger btn-sm deleteVendor"
-                                                                    data-id="{{ $item->vendor_id }}">
-                                                                    Delete
-                                                                </button>
-                                                            </form>
-                                                        </a>
-                                                    </div>
-                                            </span>
-                                        </td> --}}
-                                        <td class="text-center">
+                                        {{-- <td class="text-center">
                                             <div class="d-flex justify-content-center align-items-center gap-2">
-                                                <a href="{{ route('venders.show',$item->vendor_id) }}" class="btn btn-sm btn-cyan" title="View">
-                                                    <i class="bi bi-eye"></i>
+                                                  <a href="{{ route('venders.edit',$item->vendor_id) }}" class="" title="Edit">
+                                           Edit
                                                 </a>
-                                                <a href="{{ route('venders.edit',$item->vendor_id) }}" class="btn btn-sm btn-success" title="Edit">
-                                                     <i class="bi bi-pencil"></i>
-                                                </a>
-                                                <form action="{{ route('venders.destroy',$item->vendor_id) }}" 
-                                                    method="POST"
-                                                    onsubmit="return confirm('Are you sure you want to delete this vendor?');">
-                                                    @csrf
-                                                    @method('DELETE')
-                                                    <button type="submit" 
-                                                            class="btn btn-sm btn-danger"
-                                                            title="Delete">
-                                                        <i class="bi bi-trash"></i>
-                                                    </button>
-                                                </form>
+                                            </div>
+                                        </td> --}}
+                                        <td class="sticky-action text-center">
+                                            <div class="dropdown">
+                                                <!-- Three Dots Toggle Button -->
+                                                <button class="btn btn-light btn-icon" type="button" data-bs-toggle="dropdown" aria-expanded="false" title="Actions">
+                                                    <svg xmlns="http://w3.org" class="icon icon-tabler icon-tabler-dots-vertical" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                        <circle cx="12" cy="12" r="1"></circle>
+                                                        <circle cx="12" cy="19" r="1"></circle>
+                                                        <circle cx="12" cy="5" r="1"></circle>
+                                                    </svg>
+                                                </button>                      
+                                                <div class="dropdown-menu dropdown-menu-end">
+                                                    <a class="dropdown-item" href="{{ route('venders.show', $item->vendor_id) }}">
+                                                        <svg xmlns="http://w3.org" class="icon dropdown-item-icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" /><path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" /></svg>
+                                                        View
+                                                    </a>
+                                                    <a class="dropdown-item" >
+                                                        <svg xmlns="http://w3.org" class="icon dropdown-item-icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" /><path d="M13.5 6.5l4 4" /></svg>
+                                                        Edit
+                                                    </a>
+                                                    <a class="dropdown-item" >
+                                                        <svg xmlns="http://w3.org" class="icon dropdown-item-icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" /><path d="M7 11l5 5l5 -5" /><path d="M12 4v12" /></svg>
+                                                        Download
+                                                    </a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <form action="{{ route('venders.destroy', $item->vendor_id) }}" method="POST" onsubmit="return confirm('Are you sure you want to delete this vendor?');">
+                                                        @csrf
+                                                        @method('DELETE')
+                                                        <button type="submit" class="dropdown-item text-danger w-100 text-start">
+                                                            <svg xmlns="http://w3.org" class="icon dropdown-item-icon text-danger" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 7l16 0" /><path d="M10 11l0 6" /><path d="M14 11l0 6" /><path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" /><path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" /></svg>
+                                                            Delete
+                                                        </button>
+                                                    </form>
+                                                </div>
                                             </div>
                                         </td>
                                     </tr>
