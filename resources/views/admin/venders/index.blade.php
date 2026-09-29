@@ -30,7 +30,6 @@ table td{
     background-color: #eb5a25;
     border-color: #f76707;
 }
-
 .custom-pagination .page-link {
     color: #f3a877;
 }
@@ -50,9 +49,6 @@ table td{
     overflow-y:auto;
     max-height:70vh;
 }
-
-/* Sticky Action Column */
-
 .vendor-table .sticky-action{
     position:sticky;
     right:0;
@@ -61,16 +57,10 @@ table td{
     min-width:90px;
     text-align:center;
 }
-
-/* Header */
-
 .vendor-table thead .sticky-action{
     z-index:30;
 }
-
-
 </style>
-
 @endpush
 
 
