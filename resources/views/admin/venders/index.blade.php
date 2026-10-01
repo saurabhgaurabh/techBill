@@ -2,65 +2,7 @@
 @section('title','Vendors')
 @section('content')
 @push('styles')
-<style>
-
-thead th{
-    position:sticky;
-    top:0;
-    background:#fff;
-    z-index:100;
-}
-.table td,
-.table th{
-    border:1px solid #e5e7eb;
-}
-.table td{
-    font-family: Arial, Helvetica, sans-serif;
-}
-tbody tr:nth-child(even){
-    background:#fafafa;
-}
-tbody tr:hover{
-    background:#fff2ee;
-}
-table td{
-    font-size: 0.8rem;
-}
-.custom-pagination .page-item.active .page-link {
-    background-color: #eb5a25;
-    border-color: #f76707;
-}
-.custom-pagination .page-link {
-    color: #f3a877;
-}
-.vendor-table{
-    font-size:12.5px;
-    margin-bottom:0;
-    white-space:nowrap;
-}
-.vendor-table tbody td{
-    padding:5px 10px;
-    vertical-align:middle;
-    border-bottom:1.5px solid #ececec;
-    color:#495057;
-}
-.vendor-table-wrapper{
-    overflow-x:auto;
-    overflow-y:auto;
-    max-height:70vh;
-}
-.vendor-table .sticky-action{
-    position:sticky;
-    right:0;
-    z-index:20;
-    background:#fff;
-    min-width:90px;
-    text-align:center;
-}
-.vendor-table thead .sticky-action{
-    z-index:30;
-}
-</style>
+<link href="{{asset('dist/css/vendors.css')}}" rel="stylesheet">
 @endpush
 
 
@@ -90,14 +32,12 @@ table td{
                                             </form>
                             </div>
                             <!-- Search + Create Button -->
-                            <div class="col-auto ms-auto d-print-none">
-                            
-                                        </div >
-                                    <!-- Create Button -->
+                            <div class="col-auto ms-auto d-print-none">   
                                     <a href="{{ route('venders.create') }}" class="btn btn-orange btn-quare">
                                         <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="18" height="18" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"><path stroke="none" d="M0 0h24v24H0z"/> <path d="M12 5l0 14"/>  <path d="M5 12l14 0"/>   </svg>
                                         Create Vendor
                                     </a>
+                                      </div >
                                 </div>
                             </div>
                         </div>

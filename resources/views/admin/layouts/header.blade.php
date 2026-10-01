@@ -288,7 +288,10 @@
                 </li>
                 {{-- Transactions Start --}}
                 <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#navbar-base" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button" aria-expanded="false" >                    <span class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/package -->                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-transaction-rupee">                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />                    <path d="M21 12h-6h1a3 3 0 0 1 0 6h-1l3 3" />                    <path d="M15 15h6" />                    <path d="M3 5a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />                    <path d="M15 5a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M7 5h8" /><path d="M7 5v8a3 3 0 0 0 3 3h1" /></svg> 
+                     <a class="nav-link dropdown-toggle {{ request()->routeIs('sales.*') ? 'active' : '' }}" href="#navbar-base" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button" aria-expanded="false" >
+                  {{-- <a class="nav-link dropdown-toggle" href="#navbar-base" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button" aria-expanded="false" >      --}}
+                    <span class="nav-link-icon d-md-none d-lg-inline-block">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-transaction-rupee">  <path stroke="none" d="M0 0h24v24H0z" fill="none" /> <path d="M21 12h-6h1a3 3 0 0 1 0 6h-1l3 3" />                    <path d="M15 15h6" />                    <path d="M3 5a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M15 5a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M7 5h8" /><path d="M7 5v8a3 3 0 0 0 3 3h1" /></svg> 
                       </span>
                     <span class="nav-link-title">
                       Transactions
@@ -303,7 +306,7 @@
                             Sales
                           </a>
                           <div class="dropdown-menu">
-                            <a href="{{route('sales.index')}}" class="dropdown-item">
+                            <a href="{{route('sales.index')}}" class="dropdown-item {{ request()->routeIs('sales.*') ? 'active' : '' }}">
                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-invoice">	<path stroke="none" d="M0 0h24v24H0z" fill="none" />	<path d="M14 3v4a1 1 0 0 0 1 1h4" />	<path d="M19 12v7a1.78 1.78 0 0 1 -3.1 1.4a1.65 1.65 0 0 0 -2.6 0a1.65 1.65 0 0 1 -2.6 0a1.65 1.65 0 0 0 -2.6 0a1.78 1.78 0 0 1 -3.1 -1.4v-14a2 2 0 0 1 2 -2h7l5 5v4.25" /></svg>
                               Sales Invoice
                             </a>

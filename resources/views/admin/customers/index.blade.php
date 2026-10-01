@@ -2,38 +2,7 @@
 @section('title','Vendors')
 @section('content')
 @push('styles')
-<style>
-  
-thead th{
-    position:sticky;
-    top:0;
-    background:#fff;
-    z-index:100;
-}
-.table td,
-.table th{
-    border:1px solid #e5e7eb;
-}
-tbody tr:nth-child(even){
-    background:#fafafa;
-}
-tbody tr:hover{
-    background:#fff2ee;
-}
-table td{
-    font-size: 0.8rem
-}
-.custom-pagination .page-item.active .page-link {
-    background-color: #eb5a25;
-    border-color: #f76707;
-}
-
-.custom-pagination .page-link {
-    color: #f3a877;
-}
-
-</style>
-
+<link href="{{asset('dist/css/customers.css')}}" rel="stylesheet">
 @endpush
 
 <div class="page-wrapper"> 

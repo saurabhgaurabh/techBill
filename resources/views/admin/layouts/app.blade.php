@@ -3,6 +3,7 @@
 <head>
     <title>@yield('title')</title>
     {{-- <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}"> --}}
+      <link href="{{ asset('dist/css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('dist/css/tabler.min.css') }}" rel="stylesheet">
      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -19,7 +20,9 @@
 {{-- @include('admin.layouts.sidebar') --}}
 
 <div class="content">
+    {{-- <div style="background-color: #e7ebfb; min-height: 100vh; padding: 20px;"> --}}
     @yield('content')
+    {{-- </div> --}}
 </div>
 
 {{-- @yield('customer-modal') --}}
