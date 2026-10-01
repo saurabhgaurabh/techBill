@@ -68,7 +68,7 @@
           <h1 class="navbar-brand navbar-brand-autodark d-none-navbar-horizontal pe-0 pe-md-3">
             <a href="." >
               <img src="{{asset('/dist/img/favicon.jpeg')}}" width="110" height="32" alt="TechNest Billing" class="navbar-brand-image">
-            </a>TechNest Billing
+            </a><span style="color: #0b1b3f !important; font-weight:600;">TechNest Billing</span>
           </h1>
           <div class="navbar-nav flex-row order-md-last">
             

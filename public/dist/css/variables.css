@@ -1,0 +1,25 @@
+:root{
+
+    --primary:#eb5a25;
+    --primary-dark:#c9481a;
+
+    --secondary:#17324d;
+
+    --success:#2fb344;
+
+    --danger:#d63939;
+
+    --warning:#f59f00;
+
+    --bg:#f5f7fb;
+
+    --border:#e5e7eb;
+
+    --text:#1f2937;
+
+    --radius:10px;
+
+    --original-darkblue: #0b1b3f;
+    --original-orange: #eb5a25;
+
+}

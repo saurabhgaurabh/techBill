@@ -5,7 +5,7 @@
 <link href="{{asset('dist/css/vendors.css')}}" rel="stylesheet">
 @endpush
 
-
+<div style="background-color: #f2f4ff; ">
 <div class="page-wrapper"> 
     <div class="page-body">
         <div class="container-xl">
@@ -171,7 +171,6 @@
     </div>
 </div>
       
-
 <div class="modal modal-blur fade" id="customer-modal-report" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="
     modal-dialog modal-lg modal-dialog-centered
@@ -269,7 +268,7 @@
         </div>
     </div>
 </div>
-
+</div>
 @endsection
 
 

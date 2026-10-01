@@ -1,42 +1,42 @@
 thead th{
     position:sticky;
     top:0;
-    background:#fff;
+    /* background:#fff; */
     z-index:100;
 }
 .table td,
 .table th{
-    border:1px solid #e5e7eb;
+    border:1.5px solid #e5e7eb;
 }
 .table td{
     font-family: Arial, Helvetica, sans-serif;
 }
 tbody tr:nth-child(even){
-    background:#fafafa;
+    background:#f2f4ff;
 }
 tbody tr:hover{
-    background:#fff2ee;
+    background:#cbcbff;
 }
 table td{
     font-size: 0.8rem;
 }
 .custom-pagination .page-item.active .page-link {
-    background-color: #eb5a25;
+    background-color: #eb5a25; 
     border-color: #f76707;
 }
 .custom-pagination .page-link {
     color: #f3a877;
 }
 .vendor-table{
-    font-size:12.5px;
+    font-size:10.5px;
     margin-bottom:0;
     white-space:nowrap;
 }
 .vendor-table tbody td{
-    padding:5px 10px;
+    padding:2px 5px;
     vertical-align:middle;
     border-bottom:1.5px solid #ececec;
-    color:#495057;
+    color:#0b1b3f ;
 }
 .vendor-table-wrapper{
     overflow-x:auto;
