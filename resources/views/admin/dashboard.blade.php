@@ -5,21 +5,17 @@
 
 
 @section('content')
- <div class="page-wrapper">
+ <div class="page-wrapper" style="background-color: #e2e6ff; min-height: 100vh; padding: 5px;"  >
     <!-- Page header -->
-    <div class="page-header d-print-none">
-        <div class="container-xl">
-        <div class="row g-2 align-items-center">
-            <div class="col">
-            <!-- Page pre-title -->
-            <div class="page-pretitle">
-                Overview
+    <div class="card">
+        <div class="page-header d-print-none">
+            <div class="container-xl">
+                <div class="row g-2 align-items-center">
+                    <div class="col">
+                        <h3 class="h3">Dashboard</h3>
+                    </div>
+                </div>
             </div>
-            <h2 class="page-title">
-                Dashboard
-            </h2>
-            </div>
-        </div>
         </div>
     </div>
 
@@ -86,7 +82,6 @@
                     <div class="row align-items-center">
                         <div class="col-10">
                         <h3 class="h3">Business Operations</h3>
-                        <div class="row row-card"></div>
                         <div class="row row-cards">
                             <div class="col-sm-6 col-lg-3">
                                 <div class="card ">
@@ -129,7 +124,7 @@
                                                 <div class="text-secondary small">
                                                     Today
                                                 </div>
-                                                <div class="fw-bold fs-3 text-orange">
+                                                <div class="fw-bold fs-3 text-success">
                                                     ₹18.5K
                                                 </div>
                                             </div>
@@ -178,7 +173,7 @@
                                                     <div class="text-secondary small">
                                                         Today
                                                     </div>
-                                                    <div class="fw-bold fs-3 text-orange">
+                                                    <div class="fw-bold fs-3 text-primary">
                                                         ₹18.5K
                                                     </div>
                                                 </div>
@@ -200,7 +195,7 @@
                                                 </div>
                                             </div>
                                             <div class="ms-auto">
-                                                <span class="avatar avatar-sm bg-orange-lt">
+                                                <span class="avatar avatar-sm bg-danger-lt">
                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-stack-middle">	<path stroke="none" d="M0 0h24v24H0z" fill="none" />	<path d="M16 10l4 -2l-8 -4l-8 4l4 2" />	<path d="M12 12l-4 -2l-4 2l8 4l8 -4l-4 -2l-4 2" fill="currentColor" />	<path d="M8 14l-4 2l8 4l8 -4l-4 -2" /></svg>
                                                 </span>
                                             </div>
@@ -227,7 +222,7 @@
                                                 <div class="text-secondary small">
                                                     Today
                                                 </div>
-                                                <div class="fw-bold fs-3 text-orange">
+                                                <div class="fw-bold fs-3 text-danger">
                                                     ₹18.5K
                                                 </div>
                                             </div>
@@ -235,109 +230,17 @@
                                     </div>
                                 </div>
                             </div>
-                            {{-- <div class="col-sm-6 col-lg-3">
-                            <div class="card card-sm">
-                                <div class="card-body p-3">
-                                <div class="row align-items-center">
-                                    <div class="col-auto">
-                                    <span class="bg-primary-lt avatar avatar-square">
-                                        <!-- Download SVG icon from http://tabler.io/icons/icon/currency-dollar -->
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" class="icon">
-                                        <path d="M16.7 8a3 3 0 0 0 -2.7 -2h-4a3 3 0 0 0 0 6h4a3 3 0 0 1 0 6h-4a3 3 0 0 1 -2.7 -2"></path>
-                                        <path d="M12 3v3m0 12v3"></path>
-                                        </svg>
-                                    </span>
-                                    </div>
-
-                                    <div class="col">
-                                    <div class="subheader">MRR</div>
-                                    <div class="h3 m-0 p-0">$92.4K</div>
-                                    </div>
-
-                                    <div class="col-auto">
-                                    <span class="text-green d-inline-flex align-items-center lh-1">
-                                        <span class="visually-hidden">Increased by </span>+9.5%
-                                        <!-- Download SVG icon from http://tabler.io/icons/icon/arrow-up -->
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" class="icon ms-0 icon-sm">
-                                        <path d="M12 5l0 14"></path>
-                                        <path d="M18 11l-6 -6"></path>
-                                        <path d="M6 11l6 -6"></path>
-                                        </svg>
-                                    </span>
-                                    </div>
-                                </div>
-                                </div>
-                            </div>
-                            </div>
-                            <div class="col-sm-6 col-lg-3">
-                            <div class="card card-sm">
-                                <div class="card-body p-3">
-                                <div class="row align-items-center">
-                                    <div class="col-auto">
-                                    <span class="bg-azure-lt avatar avatar-square">
-                                        <!-- Download SVG icon from http://tabler.io/icons/icon/filter -->
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" class="icon">
-                                        <path d="M4 4h16v2.172a2 2 0 0 1 -.586 1.414l-4.414 4.414v7l-6 2v-8.5l-4.48 -4.928a2 2 0 0 1 -.52 -1.345v-2.227"></path>
-                                        </svg>
-                                    </span>
-                                    </div>
-
-                                    <div class="col">
-                                    <div class="subheader">Pipeline</div>
-                                    <div class="h3 m-0 p-0">$2.4M</div>
-                                    </div>
-
-                                    <div class="col-auto">
-                                    <span class="text-green d-inline-flex align-items-center lh-1">
-                                        <span class="visually-hidden">Increased by </span>+14%
-                                        <!-- Download SVG icon from http://tabler.io/icons/icon/arrow-up -->
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" class="icon ms-0 icon-sm">
-                                        <path d="M12 5l0 14"></path>
-                                        <path d="M18 11l-6 -6"></path>
-                                        <path d="M6 11l6 -6"></path>
-                                        </svg>
-                                    </span>
-                                    </div>
-                                </div>
-                                </div>
-                            </div>
-                            </div>
-                            <div class="col-sm-6 col-lg-3">    </div>
-                            <div class="col-sm-6 col-lg-3">
-                            <div class="card card-sm">
-                                <div class="card-body p-3">
-                                <div class="row align-items-center">
-                                    <div class="col-auto">
-                                    <span class="bg-purple-lt avatar avatar-square">
-                                        <!-- Download SVG icon from http://tabler.io/icons/icon/percentage -->
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" class="icon">
-                                        <path d="M16 17a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
-                                        <path d="M6 7a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
-                                        <path d="M6 18l12 -12"></path>
-                                        </svg>
-                                    </span>
-                                    </div>
-
-                                    <div class="col">
-                                    <div class="subheader">Conversion</div>
-                                    <div class="h3 m-0 p-0">5.97%</div>
-                                    </div>
-
-                                    <div class="col-auto">
-                                    <span class="text-green d-inline-flex align-items-center lh-1">
-                                        <span class="visually-hidden">Increased by </span>+0.4%
-                                        <!-- Download SVG icon from http://tabler.io/icons/icon/arrow-up -->
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" class="icon ms-0 icon-sm">
-                                        <path d="M12 5l0 14"></path>
-                                        <path d="M18 11l-6 -6"></path>
-                                        <path d="M6 11l6 -6"></path>
-                                        </svg>
-                                    </span>
-                                    </div>
-                                </div>
-                                </div>
-                            </div>
-                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card card-sm">
+                <div class="card-body">
+                    <div class="row align-items-center">
+                        <div class="col-12">
+                        <h3 class="h3">Revenue Projection</h3>
+                        <div class="row row-cards">
                             <div class="col-sm-6 col-lg-3">
                             <div class="card card-sm">
                                 <div class="card-body p-3">
@@ -472,7 +375,7 @@
                                 </div>
                                 </div>
                             </div>
-                            </div> --}}
+                            </div>
                         </div>
                         </div>
                     </div>
