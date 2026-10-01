@@ -19,7 +19,7 @@
 
 {{-- @include('admin.layouts.sidebar') --}}
 
-<div class="content">
+<div class="content" style="background-color: #e2e6ff">
     {{-- <div style="background-color: #e7ebfb; min-height: 100vh; padding: 20px;"> --}}
     @yield('content')
     {{-- </div> --}}

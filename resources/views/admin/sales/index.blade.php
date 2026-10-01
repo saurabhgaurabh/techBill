@@ -1,7 +1,7 @@
 @extends('admin.layouts.app')
 @section('title','Sales Invoices')
 @section('content')
-<div style="background-color: #f2f4ff; min-height: 100vh; padding: 5px;">
+<div style="background-color: #e2e6ff; min-height: 100vh; padding: 5px;">
     <div class="">
         <div class="card">
             <div class="card-header">
@@ -104,4 +104,6 @@
 
     
 </div>
+
+
 @endsection
