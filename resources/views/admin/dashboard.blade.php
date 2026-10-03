@@ -13,97 +13,29 @@
         <div class="col-md-9">
             <div class="dashboard-header card border-0 shadow-sm rounded-4 mb-3">
                 <div class="card-body py-3 px-4">
-                    <div class="row align-items-center g-3">
-
+                    <div class="row align-items-center g-2">
                         <!-- Left -->
                         <div class="col-lg-6 col-md-12">
-
                             <span class="badge bg-orange-lt text-orange mb-2">
                                 Welcome Back
                             </span>
-
                             <h2 class="fw-bold mb-1">
                                 Good Morning,
                                 <span style="color:#eb5a25;">
                                     Saurabh 👋
                                 </span>
                             </h2>
-
                             <div class="text-secondary">
-
                                 {{ now()->format('l, d F Y') }}
-
                             </div>
-
                         </div>
-
                         <!-- Right -->
-
                         <div class="col-lg-6">
-
                             <div class="d-flex justify-content-lg-end align-items-center gap-2 flex-wrap">
-
-                                <div class="input-icon">
-
-                                    <span class="input-icon-addon">
-
-                                        <svg xmlns="http://www.w3.org/2000/svg"
-                                            class="icon"
-                                            width="20"
-                                            height="20"
-                                            viewBox="0 0 24 24"
-                                            stroke="currentColor"
-                                            fill="none">
-
-                                            <circle cx="10" cy="10" r="7"/>
-
-                                            <path d="M21 21l-6-6"/>
-
-                                        </svg>
-
-                                    </span>
-
-                                    <input
-                                        type="text"
-                                        class="form-control"
-                                        placeholder="Search anything...">
-
-                                </div>
-
-                                <button class="btn btn-light">
-
-                                    🔔
-
-                                </button>
-
-                                <button class="btn btn-light">
-
-                                    🔄
-
-                                </button>
-
-                                <button class="btn btn-orange">
-
-                                    <svg xmlns="http://www.w3.org/2000/svg"
-                                        class="icon"
-                                        width="18"
-                                        height="18"
-                                        viewBox="0 0 24 24"
-                                        stroke="currentColor"
-                                        fill="none">
-
-                                        <circle cx="12" cy="7" r="4"/>
-
-                                        <path d="M5.5 21a6.5 6.5 0 0 1 13 0"/>
-
-                                    </svg>
-
-                                </button>
-
+                                <button class="btn btn-light">Buy Now</button>
+                                <button class="btn btn-light">2026-27 TechNest Services</button>
                             </div>
-
                         </div>
-
                     </div>
                 </div>
             </div>
