@@ -5,7 +5,7 @@
 <link href="{{asset('dist/css/vendors.css')}}" rel="stylesheet">
 @endpush
 
-<div style="background-color: #e2e6ff; ">
+<div style="background-color: #ebf1ff; ">
 <div class="page-wrapper"> 
     <div class="page-body">
         <div class="container-xl">
