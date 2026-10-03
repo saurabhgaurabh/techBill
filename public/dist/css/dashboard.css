@@ -122,3 +122,51 @@
 .card:hover {
     transform: translateY(-5px);
 }
+.quick-card{
+    text-decoration:none;
+}
+
+
+.quick-card .card{
+
+    transition:0.25s ease;
+
+    border:1px solid #e5e7eb;
+
+    background:#fff;
+
+}
+
+
+.quick-card:hover .card{
+
+    transform:translateY(-5px);
+
+    border-color:#eb5a25;
+
+    box-shadow:0 8px 20px rgba(235,90,37,.15);
+
+}
+
+
+.quick-card .quick-icon{
+
+    transition:0.25s ease;
+
+}
+
+
+.quick-card:hover .quick-icon{
+
+    background:#f7c5b2 !important;
+
+    color:white;
+
+}
+
+
+/* .quick-card:hover .text-secondary{
+
+    color:#eb5a25 !important;
+
+} */

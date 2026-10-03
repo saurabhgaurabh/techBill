@@ -32,8 +32,8 @@
                         <!-- Right -->
                         <div class="col-lg-6">
                             <div class="d-flex justify-content-lg-end align-items-center gap-2 flex-wrap">
-                                <button class="btn btn-light">Buy Now</button>
-                                <button class="btn btn-light">2026-27 TechNest Services</button>
+                                <button class="btn btn-light">Explore Plan</button>
+                                <button class="btn btn-light">TechNest Services (2026-27)</button>
                             </div>
                         </div>
                     </div>
@@ -63,9 +63,9 @@
                                                     </div>
                                                 </div>
                                                 <div class="ms-auto">
-                                                    <span class="avatar bg-success-lt rounded-4">
-                                                      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-lg text-success" width="18" height="18" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 5h-8" /><path d="M15 9h-8" /> <path d="M9 5c3 0 5 2 5 4s-2 4-5 4h-1l6 6" /></svg>
-                                                    </span>
+                                                      <div class="mini-icon bg-green-lt">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-lg text-success" width="18" height="18" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 5h-8" /><path d="M15 9h-8" /> <path d="M9 5c3 0 5 2 5 4s-2 4-5 4h-1l6 6" /></svg>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="row text-center mt-4">
@@ -111,9 +111,9 @@
                                                     </div>
                                                 </div>
                                                 <div class="ms-auto">
-                                                    <span class="avatar bg-primary-lt rounded-4">
-                                                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-shopping-bag">	<path stroke="none" d="M0 0h24v24H0z" fill="none" />	<path d="M6.331 8h11.339a2 2 0 0 1 1.977 2.304l-1.255 8.152a3 3 0 0 1 -2.966 2.544h-6.852a3 3 0 0 1 -2.965 -2.544l-1.255 -8.152a2 2 0 0 1 1.977 -2.304" />	<path d="M9 11v-5a3 3 0 0 1 6 0v5" /></svg>                     
-                                                    </span>
+                                                     <div class="mini-icon bg-primary-lt">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-shopping-bag">	<path stroke="none" d="M0 0h24v24H0z" fill="none" />	<path d="M6.331 8h11.339a2 2 0 0 1 1.977 2.304l-1.255 8.152a3 3 0 0 1 -2.966 2.544h-6.852a3 3 0 0 1 -2.965 -2.544l-1.255 -8.152a2 2 0 0 1 1.977 -2.304" />	<path d="M9 11v-5a3 3 0 0 1 6 0v5" /></svg>                     
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="row text-center mt-4">
@@ -147,7 +147,7 @@
                                 </div>
                                 <!-- Expenses -->
                                 <div class="col-12 col-md-6 col-xl-4">
-                                    <div class="card rounded-4 h-100" style="background-color: #fff1f3">
+                                    <div class="card rounded-4 h-100" >
                                         <div class="card-body">
                                             <div class="d-flex align-items-center">
                                                 <div >
@@ -159,9 +159,9 @@
                                                     </div>
                                                 </div>
                                                 <div class="ms-auto">
-                                                    <span class="avatar bg-danger-lt rounded-4">
-                                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-shopping-bag">	<path stroke="none" d="M0 0h24v24H0z" fill="none" />	<path d="M6.331 8h11.339a2 2 0 0 1 1.977 2.304l-1.255 8.152a3 3 0 0 1 -2.966 2.544h-6.852a3 3 0 0 1 -2.965 -2.544l-1.255 -8.152a2 2 0 0 1 1.977 -2.304" />	<path d="M9 11v-5a3 3 0 0 1 6 0v5" /></svg>                     
-                                                    </span>
+                                                    <div class="mini-icon bg-danger-lt">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-shopping-bag">	<path stroke="none" d="M0 0h24v24H0z" fill="none" />	<path d="M6.331 8h11.339a2 2 0 0 1 1.977 2.304l-1.255 8.152a3 3 0 0 1 -2.966 2.544h-6.852a3 3 0 0 1 -2.965 -2.544l-1.255 -8.152a2 2 0 0 1 1.977 -2.304" />	<path d="M9 11v-5a3 3 0 0 1 6 0v5" /></svg> 
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="row text-center mt-4">
@@ -400,124 +400,155 @@
                     </div>
                     
                     {{-- quick access  --}}
-                    <div class="card card-sm rounded-3 mt-1 mb-4">
-                        <div class="card rounded-3">
-                            <div class="card-body p-3">
-                                <h3 class="card-title">Need help? We've got your back</h3>
-                                <h5 class="card-subtitle text-muted">Perhaps you can find the answers in our collections.</h5>
+                   <div class="card card-sm rounded-4 mt-2 mb-4">
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <h3 class="card-title mb-1">
+                                Quick Access
+                            </h3>
+                            <h5 class="card-subtitle text-muted">
+                                Get started quickly with these common actions.
+                            </h5>
+                        </div>
+                        <div class="row row-cards g-3">
+                            <!-- Create Account -->
+                            <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                                <a href="#" class="quick-card">
+                                    <div class="card rounded-4 h-100">
+                                        <div class="card-body text-center p-3">
+                                            <span class="avatar bg-primary-lt rounded-4 mb-2 quick-icon">
+                                               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-invoice"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M19 12v7a1.78 1.78 0 0 1 -3.1 1.4a1.65 1.65 0 0 0 -2.6 0a1.65 1.65 0 0 1 -2.6 0a1.65 1.65 0 0 0 -2.6 0a1.78 1.78 0 0 1 -3.1 -1.4v-14a2 2 0 0 1 2 -2h7l5 5v4.25" /></svg> 
+                                            </span>
+                                             <div class="fw-bold text-secondary small">
+                                                 Create Account
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
                             </div>
-                            {{-- Card Row --}}
-                            <div class="row row-cards align-items-center g-2 p-2">
-                                <div class="col-md-2 col-sm-2 col-lg-2">
-                                    <div class="card rounded-3">
-                                        <div class="card-body text-center p-2">
-                                            <span class="avatar avatar-sm bg-primary-lt mx-auto mb-2 rounded-4">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"fill="none"stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"class="icon icon-tabler icon-tabler-calendar-event"> <path stroke="none" d="M0 0h24v24H0z" fill="none"/> <path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"/><path d="M16 3v4"/><path d="M8 3v4"/> <path d="M4 11h16"/> <path d="M8 15h2v2h-2z"/></svg>
+                            <!-- Create Items -->
+                            <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                                <a href="#" class="quick-card">
+                                    <div class="card rounded-4 h-100">
+                                        <div class="card-body text-center p-3">
+                                            <span class="avatar bg-purple-lt rounded-4 mb-2 quick-icon">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-duplicate"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M7 9.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667v-8.666" /><path d="M11 14h6" /><path d="M14 11v6" /><path d="M4.012 16.737a2 2 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" /></svg>
                                             </span>
-                                            <span class="text-secondary fw-bold">
-                                            Create Account
-                                            </span>
+                                            <div class="fw-bold text-secondary small">
+                                                Create Items
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-md-2 col-sm-2 col-lg-2">
-                                    <div class="card rounded-3">
-                                        <div class="card-body text-center p-2">
-                                            <span class="avatar avatar-sm bg-purple-lt mx-auto mb-2 rounded-4">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-hipchat">	<path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M17.802 17.292s.077 -.055 .2 -.149c1.843 -1.425 3 -3.49 3 -5.789c0 -4.286 -4.03 -7.764 -9 -7.764c-4.97 0 -9 3.478 -9 7.764c0 4.288 4.03 7.646 9 7.646c.424 0 1.12 -.028 2.088 -.084c1.262 .82 3.104 1.493 4.716 1.493c.499 0 .734 -.41 .414 -.828c-.486 -.596 -1.156 -1.551 -1.416 -2.29l-.002 .001" /><path d="M7.5 13.5c2.5 2.5 6.5 2.5 9 0" /></svg>                                </span>
-                                            <span class="text-secondary fw-bold">
-                                            Create Items
+                                </a>
+                            </div>
+                            <!-- Sales -->
+                            <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                                <a href="#" class="quick-card">
+                                    <div class="card rounded-4 h-100">
+                                        <div class="card-body text-center p-3">
+                                            <span class="avatar bg-green-lt rounded-4 mb-2 quick-icon">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-receipt"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M5 21v-16a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v16l-3 -2l-2 2l-2 -2l-2 2l-2 -2l-3 2m4 -14h6m-6 4h6m-2 4h2" /></svg>
                                             </span>
+                                            <div class="fw-bold text-secondary small">
+                                                Create Sales Invoice
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-md-2 col-sm-2 col-lg-2">
-                                    <div class="card rounded-3">
-                                        <div class="card-body text-center p-2">
-                                            <span class="avatar avatar-sm bg-cyan-lt mx-auto mb-2 rounded-4">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-video">   <path stroke="none" d="M0 0h24v24H0z" fill="none" />  <path d="M15 10l4.553 -2.276a1 1 0 0 1 1.447 .894v6.764a1 1 0 0 1 -1.447 .894l-4.553 -2.276v-4" />  <path d="M3 8a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2l0 -8" />  </svg>
+                                </a>
+                            </div>
+                            <!-- Purchase -->
+                            <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                                <a href="#" class="quick-card">
+                                    <div class="card rounded-4 h-100">
+                                        <div class="card-body text-center p-3">
+                                            <span class="avatar bg-orange-lt rounded-4 mb-2 quick-icon">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-shopping-bag"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M6.331 8h11.339a2 2 0 0 1 1.977 2.304l-1.255 8.152a3 3 0 0 1 -2.966 2.544h-6.852a3 3 0 0 1 -2.965 -2.544l-1.255 -8.152a2 2 0 0 1 1.977 -2.304" /><path d="M9 11v-5a3 3 0 0 1 6 0v5" /></svg>
                                             </span>
-                                            <span class="text-secondary fw-bold">
-                                            Create Sales Invoice
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-2 col-sm-2 col-lg-2">
-                                    <div class="card rounded-3">
-                                        <div class="card-body text-center p-2">
-                                            <span class="avatar avatar-sm bg-cyan-lt mx-auto mb-2 rounded-4">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-video">   <path stroke="none" d="M0 0h24v24H0z" fill="none" />  <path d="M15 10l4.553 -2.276a1 1 0 0 1 1.447 .894v6.764a1 1 0 0 1 -1.447 .894l-4.553 -2.276v-4" />  <path d="M3 8a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2l0 -8" />  </svg>
-                                            </span>
-                                            <span class="text-secondary fw-bold">
+                                            <div class="fw-bold text-secondary small">
                                                 Create Purchase Invoice
-                                            </span>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-md-2 col-sm-2 col-lg-2">
-                                    <div class="card rounded-3">
-                                        <div class="card-body text-center p-2">
-                                            <span class="avatar avatar-sm bg-cyan-lt mx-auto mb-2 rounded-4">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-video">   <path stroke="none" d="M0 0h24v24H0z" fill="none" />  <path d="M15 10l4.553 -2.276a1 1 0 0 1 1.447 .894v6.764a1 1 0 0 1 -1.447 .894l-4.553 -2.276v-4" />  <path d="M3 8a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2l0 -8" />  </svg>
-                                            </span>
-                                            <span class="text-secondary fw-bold">
-                                            Create Receipt
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-2 col-sm-2 col-lg-2">
-                                    <div class="card rounded-3">
-                                        <div class="card-body text-center p-2">
-                                            <span class="avatar avatar-sm bg-cyan-lt mx-auto mb-2 rounded-4">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-video">   <path stroke="none" d="M0 0h24v24H0z" fill="none" />  <path d="M15 10l4.553 -2.276a1 1 0 0 1 1.447 .894v6.764a1 1 0 0 1 -1.447 .894l-4.553 -2.276v-4" />  <path d="M3 8a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2l0 -8" />  </svg>
-                                            </span>
-                                            <span class="text-secondary fw-bold">
-                                            Create Payment
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-2 col-sm-2 col-lg-2">
-                                    <div class="card rounded-3">
-                                        <div class="card-body text-center p-2">
-                                            <span class="avatar avatar-sm bg-cyan-lt mx-auto mb-2 rounded-4">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-video">   <path stroke="none" d="M0 0h24v24H0z" fill="none" />  <path d="M15 10l4.553 -2.276a1 1 0 0 1 1.447 .894v6.764a1 1 0 0 1 -1.447 .894l-4.553 -2.276v-4" />  <path d="M3 8a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2l0 -8" />  </svg>
-                                            </span>
-                                            <span class="text-secondary fw-bold">
-                                            Create Expense
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-2 col-sm-2 col-lg-2">
-                                    <div class="card rounded-3">
-                                        <div class="card-body text-center p-2">
-                                            <span class="avatar avatar-sm bg-cyan-lt mx-auto mb-2 rounded-4">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-video">   <path stroke="none" d="M0 0h24v24H0z" fill="none" />  <path d="M15 10l4.553 -2.276a1 1 0 0 1 1.447 .894v6.764a1 1 0 0 1 -1.447 .894l-4.553 -2.276v-4" />  <path d="M3 8a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2l0 -8" />  </svg>
-                                            </span>
-                                            <span class="text-secondary fw-bold">
-                                            Create Contra
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-2 col-sm-2 col-lg-2">
-                                    <div class="card rounded-3">
-                                        <div class="card-body text-center p-2">
-                                            <span class="avatar avatar-sm bg-cyan-lt mx-auto mb-2 rounded-4">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-video">   <path stroke="none" d="M0 0h24v24H0z" fill="none" />  <path d="M15 10l4.553 -2.276a1 1 0 0 1 1.447 .894v6.764a1 1 0 0 1 -1.447 .894l-4.553 -2.276v-4" />  <path d="M3 8a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2l0 -8" />  </svg>
-                                            </span>
-                                            <span class="text-secondary fw-bold">
-                                            Create Journal
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
+                                </a>
                             </div>
-                        </div>   
+                            <!-- Receipt -->
+                            <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                                <a href="#" class="quick-card">
+                                    <div class="card rounded-4 h-100">
+                                        <div class="card-body text-center p-3">
+                                            <span class="avatar bg-cyan-lt rounded-4 mb-2 quick-icon">
+                                               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-file-invoice">	<path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2" /><path d="M9 7l1 0" /><path d="M9 13l6 0" /><path d="M13 17l2 0" /></svg>
+                                            </span>
+                                            <div class="fw-bold text-secondary small">
+                                                Create Receipt
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- Payment -->
+                            <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                                <a href="#" class="quick-card">
+                                    <div class="card rounded-4 h-100">
+                                        <div class="card-body text-center p-3">
+                                            <span class="avatar bg-success-lt rounded-4 mb-2 quick-icon">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-receipt-rupee"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M5 21v-16a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v16l-3 -2l-2 2l-2 -2l-2 2l-2 -2l-3 2" /><path d="M15 7h-6h1a3 3 0 0 1 0 6h-1l3 3" /><path d="M9 10h6" /></svg>
+                                            </span>
+                                            <div class="fw-bold text-secondary small">
+                                                Create Payment
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- Expense -->
+                            <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                                <a href="#" class="quick-card">
+                                    <div class="card rounded-4 h-100">
+                                        <div class="card-body text-center p-3">
+                                            <span class="avatar bg-red-lt rounded-4 mb-2 quick-icon">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-database-leak"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M4 6c0 1.657 3.582 3 8 3s8 -1.343 8 -3s-3.582 -3 -8 -3s-8 1.343 -8 3" /><path d="M4 6v12c0 1.657 3.582 3 8 3s8 -1.343 8 -3v-12" /><path d="M4 15a2.4 2.4 0 0 0 2 -1a2.4 2.4 0 0 1 2 -1a2.4 2.4 0 0 1 2 1a2.4 2.4 0 0 0 2 1a2.4 2.4 0 0 0 2 -1a2.4 2.4 0 0 1 2 -1a2.4 2.4 0 0 1 2 1a2.4 2.4 0 0 0 2 1" /></svg>
+                                            </span>
+                                            <div class="fw-bold text-secondary small">
+                                                Create Expense
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- Contra -->
+                            <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                                <a href="#" class="quick-card">
+                                    <div class="card rounded-4 h-100">
+                                        <div class="card-body text-center p-3">
+                                            <span class="avatar bg-yellow-lt rounded-4 mb-2 quick-icon">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-contrast-2"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M3 5a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2l0 -14" /><path d="M3 19h2.25c3.728 0 6.75 -3.134 6.75 -7s3.022 -7 6.75 -7h2.25" /></svg>
+                                            </span>
+                                            <div class="fw-bold text-secondary small">
+                                                Create Contra
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- Journal -->
+                            <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                                <a href="#" class="quick-card">
+                                    <div class="card rounded-4 h-100">
+                                        <div class="card-body text-center p-3">
+                                            <span class="avatar bg-indigo-lt rounded-4 mb-2 quick-icon">
+                                               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-notebook"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M6 4h11a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-11a1 1 0 0 1 -1 -1v-14a1 1 0 0 1 1 -1m3 0v18" /><path d="M13 8l2 0" /><path d="M13 12l2 0" /></svg>
+                                            </span>
+                                            <div class="fw-bold text-secondary small">
+                                                Create Journal
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
                     </div>
+                </div>
                 </div>
             </div>
         </div>
