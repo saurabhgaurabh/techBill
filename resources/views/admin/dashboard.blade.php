@@ -5,7 +5,6 @@
 <link href="{{asset('dist/css/dashboard.css')}}" rel="stylesheet">    
 @endpush
 @php
-
 $quickActions = [
 
     [
@@ -73,6 +72,113 @@ $quickActions = [
 
 ];
 
+$businessCards = [
+
+    [
+        'title'=>'Total Sales',
+        'amount'=>'₹2,45,680',
+        'color'=>'green',
+
+        'svg'=>'
+        <svg xmlns="http://www.w3.org/2000/svg" 
+        width="24" height="24" 
+        viewBox="0 0 24 24" 
+        fill="none" 
+        stroke="currentColor" 
+        stroke-width="2" 
+        stroke-linecap="round" 
+        stroke-linejoin="round">
+
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+
+        <path d="M15 5h-8"/>
+
+        <path d="M15 9h-8"/>
+
+        <path d="M9 5c3 0 5 2 5 4s-2 4-5 4h-1l6 6"/>
+
+        </svg>
+        ',
+
+        'stats'=>[
+            ['label'=>'Invoice','value'=>'356'],
+            ['label'=>'Growth','value'=>'+18%'],
+            ['label'=>'Today','value'=>'₹18.5K'],
+        ]
+
+    ],
+
+
+
+    [
+        'title'=>'Total Purchase',
+        'amount'=>'₹1,85,420',
+        'color'=>'primary',
+
+        'svg'=>'
+        <svg xmlns="http://www.w3.org/2000/svg"
+        width="24" height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round">
+
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+
+        <path d="M6.331 8h11.339a2 2 0 0 1 1.977 2.304l-1.255 8.152a3 3 0 0 1 -2.966 2.544h-6.852a3 3 0 0 1 -2.965 -2.544l-1.255 -8.152a2 2 0 0 1 1.977 -2.304"/>
+
+        <path d="M9 11v-5a3 3 0 0 1 6 0v5"/>
+
+        </svg>
+        ',
+
+        'stats'=>[
+            ['label'=>'Bills','value'=>'120'],
+            ['label'=>'Growth','value'=>'+12%'],
+            ['label'=>'Today','value'=>'₹12K'],
+        ]
+
+    ],
+
+
+
+    [
+        'title'=>'Total Expenses',
+        'amount'=>'₹45,680',
+        'color'=>'danger',
+
+        'svg'=>'
+        <svg xmlns="http://www.w3.org/2000/svg"
+        width="24" height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round">
+
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+
+        <path d="M12 3v18"/>
+
+        <path d="M17 7h-6a3 3 0 0 0 0 6h2a3 3 0 0 1 0 6h-6"/>
+
+        </svg>
+        ',
+
+        'stats'=>[
+            ['label'=>'Entries','value'=>'85'],
+            ['label'=>'Month','value'=>'₹45K'],
+            ['label'=>'Today','value'=>'₹2.5K'],
+        ]
+
+    ],
+
+];
+
+
 @endphp
 
 
@@ -111,161 +217,52 @@ $quickActions = [
 
             <div class="page-body">
                 <div class="col-auto">
-                    <div class="card card-sm rounded-4 mb-3">
-                        <div class="card-body">
-                            <h3 class="h3 mb-3">
-                                Business Operations
-                            </h3>
-                            <div class="row row-cards">
-                                <!-- Sales -->
-                                <div class="col-12 col-md-6 col-xl-4">
-                                    <div class="card rounded-4 h-100">
-                                        <div class="card-body">
-                                            <div class="d-flex align-items-center">
-                                                <div>
-                                                    <div class="text-secondary text-uppercase fw-bold small">
-                                                        Total Sales
-                                                    </div>
-
-                                                    <div class="fs-1 fw-bold mt-1">
-                                                        ₹2,45,680
-                                                    </div>
+                    {{-- Business Operations --}}
+                 <div class="card card-sm rounded-4 mb-3">
+                    <div class="card-body">
+                        <h3 class="h3 mb-3">
+                        Business Operations
+                        </h3>
+                        <div class="row row-cards">
+                        @foreach($businessCards as $card)
+                            <div class="col-12 col-md-6 col-xl-4">
+                                <div class="card rounded-4 h-100">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center">
+                                            <div>
+                                                <div class="text-secondary text-uppercase fw-bold small">
+                                                {{ $card['title'] }}
                                                 </div>
-                                                <div class="ms-auto">
-                                                      <div class="mini-icon bg-green-lt">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-lg text-success" width="18" height="18" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 5h-8" /><path d="M15 9h-8" /> <path d="M9 5c3 0 5 2 5 4s-2 4-5 4h-1l6 6" /></svg>
-                                                    </div>
+                                                <div class="fs-1 fw-bold mt-1">
+                                                {{ $card['amount'] }}
                                                 </div>
                                             </div>
-                                            <div class="row text-center mt-4">
-                                                <div class="col">
-                                                    <div class="text-secondary small">
-                                                        Invoice
-                                                    </div>
-                                                    <div class="fw-bold fs-3">
-                                                        356
-                                                    </div>
-                                                </div>
-                                                <div class="col border-start">
-                                                    <div class="text-secondary small">
-                                                        Growth
-                                                    </div>
-                                                    <div class="fw-bold text-success">
-                                                        +18%
-                                                    </div>
-                                                </div>
-                                                <div class="col border-start">
-                                                    <div class="text-secondary small">
-                                                        Today
-                                                    </div>
-                                                    <div class="fw-bold text-success">
-                                                        ₹18.5K
-                                                    </div>
+                                            <div class="ms-auto">
+                                                <div class="mini-icon bg-{{ $card['color'] }}-lt">
+                                                    {!! $card['svg'] !!}
                                                 </div>
                                             </div>
                                         </div>
+                                    <div class="row text-center mt-4">
+                                    @foreach($card['stats'] as $index=>$stat)
+                                    <div class="col 
+                                    {{ $index != 0 ? 'border-start':'' }}">
+                                    <div class="text-secondary small">
+                                    {{ $stat['label'] }}
+                                    </div>
+                                    <div class="fw-bold fs-3">
+                                    {{ $stat['value'] }}
                                     </div>
                                 </div>
-                                <!-- Purchase -->
-                                <div class="col-12 col-md-6 col-xl-4">
-                                    <div class="card rounded-4 h-100">
-                                        <div class="card-body">
-                                            <div class="d-flex align-items-center">
-                                                <div>
-                                                    <div class="text-secondary text-uppercase fw-bold small">
-                                                        Total Purchase
-                                                    </div>
-                                                    <div class="fs-1 fw-bold mt-1">
-                                                        ₹1,85,420
-                                                    </div>
-                                                </div>
-                                                <div class="ms-auto">
-                                                     <div class="mini-icon bg-primary-lt">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-shopping-bag">	<path stroke="none" d="M0 0h24v24H0z" fill="none" />	<path d="M6.331 8h11.339a2 2 0 0 1 1.977 2.304l-1.255 8.152a3 3 0 0 1 -2.966 2.544h-6.852a3 3 0 0 1 -2.965 -2.544l-1.255 -8.152a2 2 0 0 1 1.977 -2.304" />	<path d="M9 11v-5a3 3 0 0 1 6 0v5" /></svg>                     
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row text-center mt-4">
-                                                <div class="col">
-                                                    <div class="text-secondary small">
-                                                        Bills
-                                                    </div>
-                                                    <div class="fw-bold fs-3">
-                                                        120
-                                                    </div>
-                                                </div>
-                                                <div class="col border-start">
-                                                    <div class="text-secondary small">
-                                                        Growth
-                                                    </div>
-                                                    <div class="fw-bold text-primary">
-                                                        +12%
-                                                    </div>
-                                                </div>
-                                                <div class="col border-start">
-                                                    <div class="text-secondary small">
-                                                        Today
-                                                    </div>
-                                                    <div class="fw-bold text-primary">
-                                                        ₹12K
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Expenses -->
-                                <div class="col-12 col-md-6 col-xl-4">
-                                    <div class="card rounded-4 h-100" >
-                                        <div class="card-body">
-                                            <div class="d-flex align-items-center">
-                                                <div >
-                                                    <div class="text-secondary text-uppercase fw-bold small">
-                                                        Total Expenses
-                                                    </div>
-                                                    <div class="fs-1 fw-bold mt-1">
-                                                        ₹45,680
-                                                    </div>
-                                                </div>
-                                                <div class="ms-auto">
-                                                    <div class="mini-icon bg-danger-lt">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-shopping-bag">	<path stroke="none" d="M0 0h24v24H0z" fill="none" />	<path d="M6.331 8h11.339a2 2 0 0 1 1.977 2.304l-1.255 8.152a3 3 0 0 1 -2.966 2.544h-6.852a3 3 0 0 1 -2.965 -2.544l-1.255 -8.152a2 2 0 0 1 1.977 -2.304" />	<path d="M9 11v-5a3 3 0 0 1 6 0v5" /></svg> 
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row text-center mt-4">
-                                                <div class="col">
-                                                    <div class="text-secondary small">
-                                                        Entries
-                                                    </div>
-                                                    <div class="fw-bold fs-3">
-                                                        85
-                                                    </div>
-                                                </div>
-                                                <div class="col border-start">
-                                                    <div class="text-secondary small">
-                                                        Month
-                                                    </div>
-                                                    <div class="fw-bold text-danger">
-                                                        ₹45K
-                                                    </div>
-                                                </div>
-                                                <div class="col border-start">
-                                                    <div class="text-secondary small">
-                                                        Today
-                                                    </div>
-                                                    <div class="fw-bold text-danger">
-                                                        ₹2.5K
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            @endforeach
+                             </div>
                         </div>
                     </div>
-                    {{--  --}}
+                </div>
+                @endforeach
+        </div>
+    </div>
+</div>
                     <div class="row g-2 mb-3">
                         <!-- Revenue Projection -->
                         <div class="col-lg-6">
