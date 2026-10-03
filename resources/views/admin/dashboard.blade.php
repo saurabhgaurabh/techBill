@@ -263,40 +263,128 @@
             <div class="card rounded-3"
              {{-- style="background-color: #e7ebfb; " --}}
             >
-                <div class="card-body p-3">
+                <div class="card-body p-2">
                     <h3 class="card-title">Need help? We've got your back</h3>
                     <h5 class="card-subtitle text-muted">Perhaps you can find the answers in our collections.</h5>
-                    <div class="row row-cards align-items-center g-2 mt-3">
-                        <div class="col-md-6">
-                            <div class="card rounded-4">
-                                <div class="card-body text-center">
-                                    <span class="avatar avatar-sm bg-primary-lt mx-auto mb-3">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"fill="none"stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"class="icon icon-tabler icon-tabler-calendar-event"> <path stroke="none" d="M0 0h24v24H0z" fill="none"/> <path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"/><path d="M16 3v4"/><path d="M8 3v4"/> <path d="M4 11h16"/> <path d="M8 15h2v2h-2z"/></svg>
-                                    </span>
-                                    <h3 class="title mb-0">Book Demo</h3>
-                                    <span class="text-secondary mb-0">
-                                        Schedule your demo
-                                    </span>
+                    <div class="">
+                        {{-- <div class="row row-cards align-items-center g-2 mt-3">
+                            <div class="col-md-4">
+                                <div class="card rounded-3">
+                                    <div class="card-body text-center">
+                                        <span class="avatar avatar-sm bg-primary-lt mx-auto mb-3 rounded-4">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"fill="none"stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"class="icon icon-tabler icon-tabler-calendar-event"> <path stroke="none" d="M0 0h24v24H0z" fill="none"/> <path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"/><path d="M16 3v4"/><path d="M8 3v4"/> <path d="M4 11h16"/> <path d="M8 15h2v2h-2z"/></svg>
+                                        </span>
+                                        <span class="text-secondary mb-0 fw-bold">
+                                            Book Demo
+                                        </span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="card rounded-4">
-                                <div class="card-body text-center">
-                                    <span class="avatar avatar-sm bg-primary-lt mx-auto mb-3">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"fill="none"stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"class="icon icon-tabler icon-tabler-calendar-event"> <path stroke="none" d="M0 0h24v24H0z" fill="none"/> <path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"/><path d="M16 3v4"/><path d="M8 3v4"/> <path d="M4 11h16"/> <path d="M8 15h2v2h-2z"/></svg>
-                                    </span>
-                                    <h5 class="title mb-0">Book Demo</h5>
-                                    <p class="text-secondary mb-0">
-                                        Schedule your demo
-                                    </p>
+                            <div class="col-md-4">
+                                <div class="card rounded-3">
+                                    <div class="card-body text-center">
+                                        <span class="avatar avatar-sm bg-purple-lt mx-auto mb-3 rounded-4">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"fill="none"stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"class="icon icon-tabler icon-tabler-calendar-event"> <path stroke="none" d="M0 0h24v24H0z" fill="none"/> <path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"/><path d="M16 3v4"/><path d="M8 3v4"/> <path d="M4 11h16"/> <path d="M8 15h2v2h-2z"/></svg>
+                                        </span>
+                                        <span class="text-secondary mb-0 fw-bold">
+                                            Live Chat
+                                        </span>
+                                    </div>
                                 </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card rounded-3">
+                                    <div class="card-body text-center">
+                                        <span class="avatar avatar-sm bg-danger-lt mx-auto mb-3 rounded-4">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"fill="none"stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"class="icon icon-tabler icon-tabler-calendar-event"> <path stroke="none" d="M0 0h24v24H0z" fill="none"/> <path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"/><path d="M16 3v4"/><path d="M8 3v4"/> <path d="M4 11h16"/> <path d="M8 15h2v2h-2z"/></svg>
+                                        </span>                                   
+                                        <span class="text-secondary mb-0 fw-bold">
+                                            Video Guide
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> --}}
+                    </div>
+                </div>
+                {{-- Card Row --}}
+                <div class="row row-cards align-items-center g-2 p-2">
+                    <div class="col-md-4">
+                        <div class="card rounded-3">
+                            <div class="card-body text-center p-2">
+                                <span class="avatar avatar-sm bg-primary-lt mx-auto mb-2 rounded-4">
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"fill="none"stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"class="icon icon-tabler icon-tabler-calendar-event"> <path stroke="none" d="M0 0h24v24H0z" fill="none"/> <path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"/><path d="M16 3v4"/><path d="M8 3v4"/> <path d="M4 11h16"/> <path d="M8 15h2v2h-2z"/></svg>
+                                </span>
+                                <span class="text-secondary fw-bold">
+                                    Book Demo
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card rounded-3">
+                            <div class="card-body text-center p-2">
+                                <span class="avatar avatar-sm bg-purple-lt mx-auto mb-2 rounded-4">
+                                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-hipchat">	<path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M17.802 17.292s.077 -.055 .2 -.149c1.843 -1.425 3 -3.49 3 -5.789c0 -4.286 -4.03 -7.764 -9 -7.764c-4.97 0 -9 3.478 -9 7.764c0 4.288 4.03 7.646 9 7.646c.424 0 1.12 -.028 2.088 -.084c1.262 .82 3.104 1.493 4.716 1.493c.499 0 .734 -.41 .414 -.828c-.486 -.596 -1.156 -1.551 -1.416 -2.29l-.002 .001" /><path d="M7.5 13.5c2.5 2.5 6.5 2.5 9 0" /></svg>                                </span>
+                                <span class="text-secondary fw-bold">
+                                    Live Chat
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card rounded-3">
+                            <div class="card-body text-center p-2">
+                                <span class="avatar avatar-sm bg-cyan-lt mx-auto mb-2 rounded-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-video">   <path stroke="none" d="M0 0h24v24H0z" fill="none" />  <path d="M15 10l4.553 -2.276a1 1 0 0 1 1.447 .894v6.764a1 1 0 0 1 -1.447 .894l-4.553 -2.276v-4" />  <path d="M3 8a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2l0 -8" />  </svg>
+                                </span>
+                                <span class="text-secondary fw-bold">
+                                    Video Guide
+                                </span>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
+                <div class="row row-cards align-items-center g-2 p-2">
+                    <div class="col-md-4">
+                        <div class="card rounded-3">
+                            <div class="card-body text-center p-2">
+                                <span class="avatar avatar-sm bg-primary-lt mx-auto mb-2 rounded-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-mail">   <path stroke="none" d="M0 0h24v24H0z" fill="none" />  <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10" />  <path d="M3 7l9 6l9 -6" /></svg>
+                                </span>
+                                <span class="text-secondary fw-bold">
+                                    Email Support
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card rounded-3">
+                            <div class="card-body text-center p-2">
+                                <span class="avatar avatar-sm bg-success-lt mx-auto mb-2 rounded-4">
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-whatsapp"><path stroke="none" d="M0 0h24v24H0z" fill="none" />  <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" /><path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" /></svg>
+                                </span>
+                                <span class="text-secondary fw-bold">
+                                    Chat Support
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card rounded-3">
+                            <div class="card-body text-center p-2">
+                                <span class="avatar avatar-sm bg-dark-lt mx-auto mb-2 rounded-4">
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-info-octagon"> <path stroke="none" d="M0 0h24v24H0z" fill="none" /> <path d="M12.802 2.165l5.575 2.389c.48 .206 .863 .589 1.07 1.07l2.388 5.574c.22 .512 .22 1.092 0 1.604l-2.389 5.575c-.206 .48 -.589 .863 -1.07 1.07l-5.574 2.388c-.512 .22 -1.092 .22 -1.604 0l-5.575 -2.389a2.036 2.036 0 0 1 -1.07 -1.07l-2.388 -5.574a2.036 2.036 0 0 1 0 -1.604l2.389 -5.575c.206 -.48 .589 -.863 1.07 -1.07l5.574 -2.388a2.036 2.036 0 0 1 1.604 0" /> <path d="M12 9h.01" /><path d="M11 12h1v4h1" /> </svg>
+                                </span>
+                                <span class="text-secondary fw-bold">
+                                    Help Desk
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+        </div>        
     </div>
  </div>
        
