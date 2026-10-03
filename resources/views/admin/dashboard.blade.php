@@ -1,6 +1,9 @@
 @extends('admin.layouts.app')
 
 @section('title', 'TechNest Accounting Software - Dashboard')
+@push('styles')
+<link href="{{asset('dist/css/dashboard.css')}}" rel="stylesheet">    
+@endpush
 
 
 
@@ -8,242 +11,586 @@
  <div class="page-wrapper" style="background-color: #ebf1ff; min-height: 100vh; padding: 5px;"  >
     <div class="row">
         <div class="col-md-9">
-            <div class="card rounded-3">
-                <div class="page-header d-print-none">
-                    <div class="container-xl">
-                        <div class="row g-2 align-items-center">
-                            <div class="col">
-                                <h3 class="h3">Dashboard</h3>
+            <div class="dashboard-header card border-0 shadow-sm rounded-4 mb-3">
+                <div class="card-body py-3 px-4">
+                    <div class="row align-items-center g-3">
+
+                        <!-- Left -->
+                        <div class="col-lg-6 col-md-12">
+
+                            <span class="badge bg-orange-lt text-orange mb-2">
+                                Welcome Back
+                            </span>
+
+                            <h2 class="fw-bold mb-1">
+                                Good Morning,
+                                <span style="color:#eb5a25;">
+                                    Saurabh 👋
+                                </span>
+                            </h2>
+
+                            <div class="text-secondary">
+
+                                {{ now()->format('l, d F Y') }}
+
                             </div>
+
                         </div>
+
+                        <!-- Right -->
+
+                        <div class="col-lg-6">
+
+                            <div class="d-flex justify-content-lg-end align-items-center gap-2 flex-wrap">
+
+                                <div class="input-icon">
+
+                                    <span class="input-icon-addon">
+
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            class="icon"
+                                            width="20"
+                                            height="20"
+                                            viewBox="0 0 24 24"
+                                            stroke="currentColor"
+                                            fill="none">
+
+                                            <circle cx="10" cy="10" r="7"/>
+
+                                            <path d="M21 21l-6-6"/>
+
+                                        </svg>
+
+                                    </span>
+
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        placeholder="Search anything...">
+
+                                </div>
+
+                                <button class="btn btn-light">
+
+                                    🔔
+
+                                </button>
+
+                                <button class="btn btn-light">
+
+                                    🔄
+
+                                </button>
+
+                                <button class="btn btn-orange">
+
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        class="icon"
+                                        width="18"
+                                        height="18"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                        fill="none">
+
+                                        <circle cx="12" cy="7" r="4"/>
+
+                                        <path d="M5.5 21a6.5 6.5 0 0 1 13 0"/>
+
+                                    </svg>
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
                     </div>
                 </div>
             </div>
+
             <div class="page-body">
                 <div class="col-auto">
-                    <div class="card card-sm rounded-3">
+                    <div class="card card-sm rounded-4 mb-3">
                         <div class="card-body">
-                            <div class="row align-items-center">
-                                <div class="col-12">
-                                <h3 class="h3">Business Operations</h3>
-                                <div class="row row-cards">
-                                    <div class="col-sm-8 col-lg-4 col-md-4">
-                                        <div class="card rounded-4">
-                                            <div class="card-body">
-                                                <!-- Header -->
-                                                <div class="d-flex align-items-center mb-3">
-                                                    <div>
-                                                        <div class="text-secondary text-uppercase fw-bold small">
-                                                            Total Sales
-                                                        </div>
-                                                        <div class="fs-1 fw-bold text-dark mt-1">
-                                                            ₹2,45,680
-                                                        </div>
+                            <h3 class="h3 mb-3">
+                                Business Operations
+                            </h3>
+                            <div class="row row-cards">
+                                <!-- Sales -->
+                                <div class="col-12 col-md-6 col-xl-4">
+                                    <div class="card rounded-4 h-100">
+                                        <div class="card-body">
+                                            <div class="d-flex align-items-center">
+                                                <div>
+                                                    <div class="text-secondary text-uppercase fw-bold small">
+                                                        Total Sales
                                                     </div>
-                                                    <div class="ms-auto">
-                                                        <span class="avatar avatar-sm bg-success-lt rounded-4">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-lg text-success" width="18" height="18" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 5h-8" /><path d="M15 9h-8" /> <path d="M9 5c3 0 5 2 5 4s-2 4-5 4h-1l6 6" /></svg>
-                                                        </span>
+
+                                                    <div class="fs-1 fw-bold mt-1">
+                                                        ₹2,45,680
                                                     </div>
                                                 </div>
-                                                <!-- Stats -->
-                                                <div class="row text-center">
-                                                    <div class="col">
-                                                        <div class="text-secondary small">
-                                                            Invoices
-                                                        </div>
-                                                        <div class="fw-bold fs-3">
-                                                            356
-                                                        </div>
-                                                    </div>
-                                                    <div class="col border-start">
-                                                        <div class="text-secondary small">
-                                                            Growth
-                                                        </div>
-                                                        <div class="text-success fw-bold d-flex justify-content-center align-items-center">
-                                                            +18%
-                                                        </div>
-                                                    </div>
-                                                    <div class="col border-start">
-                                                        <div class="text-secondary small">
-                                                            Today
-                                                        </div>
-                                                        <div class="fw-bold fs-3 text-success">
-                                                            ₹18.5K
-                                                        </div>
-                                                    </div>
+                                                <div class="ms-auto">
+                                                    <span class="avatar bg-success-lt rounded-4">
+                                                      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-lg text-success" width="18" height="18" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 5h-8" /><path d="M15 9h-8" /> <path d="M9 5c3 0 5 2 5 4s-2 4-5 4h-1l6 6" /></svg>
+                                                    </span>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-8 col-lg-4 col-md-4">
-                                        <div class="card rounded-4">
-                                            <div class="card-body">
-                                                <!-- Header -->
-                                                <div class="d-flex align-items-center mb-3">
-                                                    <div>
-                                                        <div class="text-secondary text-uppercase fw-bold small">
-                                                            Total Purchases
-                                                        </div>
-                                                        <div class="fs-1 fw-bold text-dark mt-1">
-                                                            ₹2,45,680
-                                                        </div>
+                                            <div class="row text-center mt-4">
+                                                <div class="col">
+                                                    <div class="text-secondary small">
+                                                        Invoice
                                                     </div>
-                                                    <div class="ms-auto">
-                                                        <span class="avatar avatar-sm bg-primary-lt rounded-4">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-shopping-bag">	<path stroke="none" d="M0 0h24v24H0z" fill="none" />	<path d="M6.331 8h11.339a2 2 0 0 1 1.977 2.304l-1.255 8.152a3 3 0 0 1 -2.966 2.544h-6.852a3 3 0 0 1 -2.965 -2.544l-1.255 -8.152a2 2 0 0 1 1.977 -2.304" />	<path d="M9 11v-5a3 3 0 0 1 6 0v5" /></svg>                     
-                                                        </span>          
-                                                    </div>                                                
-                                                </div>  
-                                                <!-- Stats -->
-                                                <div class="row text-center">
-                                                        <div class="col">
-                                                            <div class="text-secondary small">
-                                                                Invoices
-                                                            </div>
-                                                            <div class="fw-bold fs-3">
-                                                                356
-                                                            </div>
-                                                        </div>
-                                                        <div class="col border-start">
-                                                            <div class="text-secondary small">
-                                                                Growth
-                                                            </div>
-                                                            <div class="text-success fw-bold d-flex justify-content-center align-items-center">
-                                                                +18%
-                                                            </div>
-                                                        </div>
-                                                        <div class="col border-start">
-                                                            <div class="text-secondary small">
-                                                                Today
-                                                            </div>
-                                                            <div class="fw-bold fs-3 text-primary">
-                                                                ₹18.5K
-                                                            </div>
-                                                        </div>
+                                                    <div class="fw-bold fs-3">
+                                                        356
                                                     </div>
                                                 </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-8 col-lg-4 col-md-4">
-                                        <div class="card rounded-4">
-                                            <div class="card-body" style="background-color: #fff1f3; border-radius: 10px;">
-                                                <!-- Header -->
-                                                <div class="d-flex align-items-center mb-3">
-                                                    <div>
-                                                        <div class="text-secondary text-uppercase fw-bold small">
-                                                            Total Expenses
-                                                        </div>
-                                                        <div class="fs-1 fw-bold text-dark mt-1">
-                                                            ₹2,45,680
-                                                        </div>
+                                                <div class="col border-start">
+                                                    <div class="text-secondary small">
+                                                        Growth
                                                     </div>
-                                                    <div class="ms-auto">
-                                                        <span class="avatar avatar-sm bg-danger-lt rounded-4">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-stack-middle">	<path stroke="none" d="M0 0h24v24H0z" fill="none" />	<path d="M16 10l4 -2l-8 -4l-8 4l4 2" />	<path d="M12 12l-4 -2l-4 2l8 4l8 -4l-4 -2l-4 2" fill="currentColor" />	<path d="M8 14l-4 2l8 4l8 -4l-4 -2" /></svg>
-                                                        </span>
+                                                    <div class="fw-bold text-success">
+                                                        +18%
                                                     </div>
                                                 </div>
-                                                <!-- Stats -->
-                                                <div class="row text-center">
-                                                    <div class="col">
-                                                        <div class="text-secondary small">
-                                                            Invoices
-                                                        </div>
-                                                        <div class="fw-bold fs-3">
-                                                            356
-                                                        </div>
+                                                <div class="col border-start">
+                                                    <div class="text-secondary small">
+                                                        Today
                                                     </div>
-                                                    <div class="col border-start">
-                                                        <div class="text-secondary small">
-                                                            Growth
-                                                        </div>
-                                                        <div class="text-success fw-bold d-flex justify-content-center align-items-center">
-                                                            +18%
-                                                        </div>
-                                                    </div>
-                                                    <div class="col border-start">
-                                                        <div class="text-secondary small">
-                                                            Today
-                                                        </div>
-                                                        <div class="fw-bold fs-3 text-danger">
-                                                            ₹18.5K
-                                                        </div>
+                                                    <div class="fw-bold text-success">
+                                                        ₹18.5K
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                <!-- Purchase -->
+                                <div class="col-12 col-md-6 col-xl-4">
+                                    <div class="card rounded-4 h-100">
+                                        <div class="card-body">
+                                            <div class="d-flex align-items-center">
+                                                <div>
+                                                    <div class="text-secondary text-uppercase fw-bold small">
+                                                        Total Purchase
+                                                    </div>
+                                                    <div class="fs-1 fw-bold mt-1">
+                                                        ₹1,85,420
+                                                    </div>
+                                                </div>
+                                                <div class="ms-auto">
+                                                    <span class="avatar bg-primary-lt rounded-4">
+                                                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-shopping-bag">	<path stroke="none" d="M0 0h24v24H0z" fill="none" />	<path d="M6.331 8h11.339a2 2 0 0 1 1.977 2.304l-1.255 8.152a3 3 0 0 1 -2.966 2.544h-6.852a3 3 0 0 1 -2.965 -2.544l-1.255 -8.152a2 2 0 0 1 1.977 -2.304" />	<path d="M9 11v-5a3 3 0 0 1 6 0v5" /></svg>                     
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="row text-center mt-4">
+                                                <div class="col">
+                                                    <div class="text-secondary small">
+                                                        Bills
+                                                    </div>
+                                                    <div class="fw-bold fs-3">
+                                                        120
+                                                    </div>
+                                                </div>
+                                                <div class="col border-start">
+                                                    <div class="text-secondary small">
+                                                        Growth
+                                                    </div>
+                                                    <div class="fw-bold text-primary">
+                                                        +12%
+                                                    </div>
+                                                </div>
+                                                <div class="col border-start">
+                                                    <div class="text-secondary small">
+                                                        Today
+                                                    </div>
+                                                    <div class="fw-bold text-primary">
+                                                        ₹12K
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Expenses -->
+                                <div class="col-12 col-md-6 col-xl-4">
+                                    <div class="card rounded-4 h-100" style="background-color: #fff1f3">
+                                        <div class="card-body">
+                                            <div class="d-flex align-items-center">
+                                                <div >
+                                                    <div class="text-secondary text-uppercase fw-bold small">
+                                                        Total Expenses
+                                                    </div>
+                                                    <div class="fs-1 fw-bold mt-1">
+                                                        ₹45,680
+                                                    </div>
+                                                </div>
+                                                <div class="ms-auto">
+                                                    <span class="avatar bg-danger-lt rounded-4">
+                                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-shopping-bag">	<path stroke="none" d="M0 0h24v24H0z" fill="none" />	<path d="M6.331 8h11.339a2 2 0 0 1 1.977 2.304l-1.255 8.152a3 3 0 0 1 -2.966 2.544h-6.852a3 3 0 0 1 -2.965 -2.544l-1.255 -8.152a2 2 0 0 1 1.977 -2.304" />	<path d="M9 11v-5a3 3 0 0 1 6 0v5" /></svg>                     
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="row text-center mt-4">
+                                                <div class="col">
+                                                    <div class="text-secondary small">
+                                                        Entries
+                                                    </div>
+                                                    <div class="fw-bold fs-3">
+                                                        85
+                                                    </div>
+                                                </div>
+                                                <div class="col border-start">
+                                                    <div class="text-secondary small">
+                                                        Month
+                                                    </div>
+                                                    <div class="fw-bold text-danger">
+                                                        ₹45K
+                                                    </div>
+                                                </div>
+                                                <div class="col border-start">
+                                                    <div class="text-secondary small">
+                                                        Today
+                                                    </div>
+                                                    <div class="fw-bold text-danger">
+                                                        ₹2.5K
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="card card-sm rounded-3 mt-1">
-                        <div class="card-body">
-                            <div class="row align-items-center">
-                                <div class="col-12">
-                                <h3 class="h3">Revenue Projection</h3>
-                                <div class="row row-cards">
-                                    <div class="col-sm-6 col-lg-6 col-md-6">
-                                        <div class="card card-sm rounded-3">
-                                            <div class="card-body p-3">
-                                            <div class="row align-items-center">
-                                                <div class="col-auto">
-                                                <span class="bg-green-lt avatar avatar-square rounded-5">
-                                                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-lg text-success" width="18" height="18" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 5h-8" /><path d="M15 9h-8" /> <path d="M9 5c3 0 5 2 5 4s-2 4-5 4h-1l6 6" /></svg>
-                                                </span>
-                                                </div>
-                                                <div class="col">
-                                                    <div class="subheader">Total Recievable Amount</div>
-                                                    <div class="h3 m-0 p-0">₹12</div>
-                                                </div>
-
-                                                <div class="col-auto">
-                                                     <span class="text-green d-inline-flex align-items-center lh-1">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-trending-up"> <path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M3 17l6 -6l4 4l8 -8" /><path d="M14 7l7 0l0 7" /></svg>
-                                                        100 %
-                                                    </span>
-                                                    <div class="text-muted">vs last month</div>
+                    {{--  --}}
+                    <div class="row g-2 mb-3">
+                        <!-- Revenue Projection -->
+                        <div class="col-lg-6">
+                            <div class="card border-0 shadow-sm rounded-4 h-100 dashboard-card">
+                                <div class="card-body p-4">
+                                    <div class="d-flex justify-content-between align-items-center mb-4">
+                                        <div class="d-flex align-items-center">
+                                            <div class="icon-box bg-orange-lt me-3">
+                                                <!-- Wallet SVG -->
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon text-orange" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                    <path d="M17 8V6a2 2 0 0 0-2-2H5a2 2 0 0 0 0 4h12"/>
+                                                    <rect x="3" y="8" width="18" height="12" rx="2"/>
+                                                    <circle cx="16" cy="14" r="1"/>
+                                                </svg>
+                                            </div>
+                                            <div>
+                                                <h3 class="mb-0">Revenue Projection</h3>
+                                                <small class="text-muted">
+                                                    Receivable & Payable Summary
+                                                </small>
+                                            </div>
+                                        </div>
+                                        <span class="badge bg-orange-lt text-orange">
+                                            This Month
+                                        </span>
+                                    </div>
+                                    <div class="row g-3">
+                                        <!-- Receivable -->
+                                        <div class="col-md-6">
+                                            <div class="mini-card success-card">
+                                                <div class="d-flex justify-content-between">
+                                                    <div>
+                                                        <small>Total Receivable</small>
+                                                        <h2>₹2,45,000</h2>
+                                                        <span class="text-success"> ▲ +18%</span>
+                                                    </div>
+                                                    <div class="mini-icon bg-green-lt">
+                                                        <!-- Arrow Down Circle -->
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon text-success" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                            <circle cx="12" cy="12" r="9"/>
+                                                            <path d="M12 8v8"/>
+                                                            <path d="M8 12l4 4l4-4"/>
+                                                        </svg>
+                                                    </div>
                                                 </div>
                                             </div>
+                                        </div>
+                                        <!-- Payable -->
+                                        <div class="col-md-6">
+                                            <div class="mini-card danger-card">
+                                                <div class="d-flex justify-content-between">
+                                                    <div>
+                                                        <small>Total Payable</small>
+                                                        <h2>₹84,500</h2>
+                                                        <span class="text-danger">
+                                                            ▲ +8%
+                                                        </span>
+                                                    </div>
+                                                    <div class="mini-icon bg-red-lt">
+                                                        <!-- Arrow Up Circle -->
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon text-danger" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                            <circle cx="12" cy="12" r="9"/>
+                                                            <path d="M12 16V8"/>
+                                                            <path d="M8 12l4-4l4 4"/>
+                                                        </svg>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-sm-6 col-lg-6 col-md-6">
-                                        <div class="card card-sm rounded-3">
-                                            <div class="card-body p-3">
-                                            <div class="row align-items-center">
-                                                <div class="col-auto">
-                                                <span class="bg-red-lt avatar avatar-square rounded-5">
-                                                  <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-lg text-danger" width="18" height="18" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 5h-8" /><path d="M15 9h-8" /> <path d="M9 5c3 0 5 2 5 4s-2 4-5 4h-1l6 6" /></svg>
-                                                </span>
-                                                </div>
-                                                    <div class="col">
-                                                    <div class="subheader">Total Payable Amount</div>
-                                                    <div class="h3 m-0 p-0">₹12</div>                                    
-                                                </div>
-
-                                                <div class="col-auto">
-                                                    <span class="text-green d-inline-flex align-items-center lh-1">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-trending-up"> <path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M3 17l6 -6l4 4l8 -8" /><path d="M14 7l7 0l0 7" /></svg>
-                                                    100 %
-                                                    </span>
-                                                    <div class="text-muted">vs last month</div>
-                                                </div>
-                                            </div>
-                                            </div>
-                                        </div>
-                                    </div>                                    
-                                </div>
                                 </div>
                             </div>
                         </div>
+                        <!-- Available Income -->
+                        <div class="col-lg-6">
+
+                            <div class="card border-0 shadow-sm rounded-4 h-100 dashboard-card">
+
+                                <div class="card-body p-4">
+
+                                    <div class="d-flex justify-content-between align-items-center mb-4">
+
+                                        <div class="d-flex align-items-center">
+
+                                            <div class="icon-box bg-blue-lt me-3">
+
+                                                <!-- Wallet -->
+
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon text-blue" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                    <path d="M17 8V6a2 2 0 0 0-2-2H5a2 2 0 0 0 0 4h12"/>
+                                                    <rect x="3" y="8" width="18" height="12" rx="2"/>
+                                                    <circle cx="16" cy="14" r="1"/>
+                                                </svg>
+
+                                            </div>
+
+                                            <div>
+
+                                                <h3 class="mb-0">
+                                                    Available Income
+                                                </h3>
+
+                                                <small class="text-muted">
+                                                    Income & Inventory Value
+                                                </small>
+
+                                            </div>
+
+                                        </div>
+
+                                        <span class="badge bg-green-lt text-success">
+                                            Live
+                                        </span>
+
+                                    </div>
+
+
+                                    <div class="row g-3">
+
+                                        <!-- Income -->
+
+                                        <div class="col-md-6">
+
+                                            <div class="mini-card blue-card">
+
+                                                <div class="d-flex justify-content-between">
+
+                                                    <div>
+
+                                                        <small>Total Income</small>
+
+                                                        <h2>₹8,45,000</h2>
+
+                                                        <span class="text-primary">
+                                                            ▲ +25%
+                                                        </span>
+
+                                                    </div>
+
+                                                    <div class="mini-icon bg-blue-lt">
+
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon text-blue" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                            <path d="M17 7l-10 10"/>
+                                                            <path d="M8 7h9v9"/>
+                                                        </svg>
+
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+
+
+                                        <!-- Stock -->
+
+                                        <div class="col-md-6">
+
+                                            <div class="mini-card purple-card">
+
+                                                <div class="d-flex justify-content-between">
+
+                                                    <div>
+
+                                                        <small>Stock On Hand</small>
+
+                                                        <h2>₹1,72,000</h2>
+
+                                                        <span class="text-purple">
+                                                            320 Items
+                                                        </span>
+
+                                                    </div>
+
+                                                    <div class="mini-icon bg-purple-lt">
+
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon text-purple" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                            <path d="M4 7l8-4l8 4l-8 4z"/>
+                                                            <path d="M4 12l8 4l8-4"/>
+                                                            <path d="M4 17l8 4l8-4"/>
+                                                        </svg>
+
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    
+                    {{-- quick access  --}}
+                    <div class="card card-sm rounded-3 mt-1 mb-4">
+                        <div class="card rounded-3">
+                            <div class="card-body p-3">
+                                <h3 class="card-title">Need help? We've got your back</h3>
+                                <h5 class="card-subtitle text-muted">Perhaps you can find the answers in our collections.</h5>
+                            </div>
+                            {{-- Card Row --}}
+                            <div class="row row-cards align-items-center g-2 p-2">
+                                <div class="col-md-2 col-sm-2 col-lg-2">
+                                    <div class="card rounded-3">
+                                        <div class="card-body text-center p-2">
+                                            <span class="avatar avatar-sm bg-primary-lt mx-auto mb-2 rounded-4">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"fill="none"stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"class="icon icon-tabler icon-tabler-calendar-event"> <path stroke="none" d="M0 0h24v24H0z" fill="none"/> <path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"/><path d="M16 3v4"/><path d="M8 3v4"/> <path d="M4 11h16"/> <path d="M8 15h2v2h-2z"/></svg>
+                                            </span>
+                                            <span class="text-secondary fw-bold">
+                                            Create Account
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2 col-lg-2">
+                                    <div class="card rounded-3">
+                                        <div class="card-body text-center p-2">
+                                            <span class="avatar avatar-sm bg-purple-lt mx-auto mb-2 rounded-4">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-hipchat">	<path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M17.802 17.292s.077 -.055 .2 -.149c1.843 -1.425 3 -3.49 3 -5.789c0 -4.286 -4.03 -7.764 -9 -7.764c-4.97 0 -9 3.478 -9 7.764c0 4.288 4.03 7.646 9 7.646c.424 0 1.12 -.028 2.088 -.084c1.262 .82 3.104 1.493 4.716 1.493c.499 0 .734 -.41 .414 -.828c-.486 -.596 -1.156 -1.551 -1.416 -2.29l-.002 .001" /><path d="M7.5 13.5c2.5 2.5 6.5 2.5 9 0" /></svg>                                </span>
+                                            <span class="text-secondary fw-bold">
+                                            Create Items
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2 col-lg-2">
+                                    <div class="card rounded-3">
+                                        <div class="card-body text-center p-2">
+                                            <span class="avatar avatar-sm bg-cyan-lt mx-auto mb-2 rounded-4">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-video">   <path stroke="none" d="M0 0h24v24H0z" fill="none" />  <path d="M15 10l4.553 -2.276a1 1 0 0 1 1.447 .894v6.764a1 1 0 0 1 -1.447 .894l-4.553 -2.276v-4" />  <path d="M3 8a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2l0 -8" />  </svg>
+                                            </span>
+                                            <span class="text-secondary fw-bold">
+                                            Create Sales Invoice
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2 col-lg-2">
+                                    <div class="card rounded-3">
+                                        <div class="card-body text-center p-2">
+                                            <span class="avatar avatar-sm bg-cyan-lt mx-auto mb-2 rounded-4">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-video">   <path stroke="none" d="M0 0h24v24H0z" fill="none" />  <path d="M15 10l4.553 -2.276a1 1 0 0 1 1.447 .894v6.764a1 1 0 0 1 -1.447 .894l-4.553 -2.276v-4" />  <path d="M3 8a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2l0 -8" />  </svg>
+                                            </span>
+                                            <span class="text-secondary fw-bold">
+                                                Create Purchase Invoice
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2 col-lg-2">
+                                    <div class="card rounded-3">
+                                        <div class="card-body text-center p-2">
+                                            <span class="avatar avatar-sm bg-cyan-lt mx-auto mb-2 rounded-4">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-video">   <path stroke="none" d="M0 0h24v24H0z" fill="none" />  <path d="M15 10l4.553 -2.276a1 1 0 0 1 1.447 .894v6.764a1 1 0 0 1 -1.447 .894l-4.553 -2.276v-4" />  <path d="M3 8a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2l0 -8" />  </svg>
+                                            </span>
+                                            <span class="text-secondary fw-bold">
+                                            Create Receipt
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2 col-lg-2">
+                                    <div class="card rounded-3">
+                                        <div class="card-body text-center p-2">
+                                            <span class="avatar avatar-sm bg-cyan-lt mx-auto mb-2 rounded-4">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-video">   <path stroke="none" d="M0 0h24v24H0z" fill="none" />  <path d="M15 10l4.553 -2.276a1 1 0 0 1 1.447 .894v6.764a1 1 0 0 1 -1.447 .894l-4.553 -2.276v-4" />  <path d="M3 8a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2l0 -8" />  </svg>
+                                            </span>
+                                            <span class="text-secondary fw-bold">
+                                            Create Payment
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2 col-lg-2">
+                                    <div class="card rounded-3">
+                                        <div class="card-body text-center p-2">
+                                            <span class="avatar avatar-sm bg-cyan-lt mx-auto mb-2 rounded-4">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-video">   <path stroke="none" d="M0 0h24v24H0z" fill="none" />  <path d="M15 10l4.553 -2.276a1 1 0 0 1 1.447 .894v6.764a1 1 0 0 1 -1.447 .894l-4.553 -2.276v-4" />  <path d="M3 8a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2l0 -8" />  </svg>
+                                            </span>
+                                            <span class="text-secondary fw-bold">
+                                            Create Expense
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2 col-lg-2">
+                                    <div class="card rounded-3">
+                                        <div class="card-body text-center p-2">
+                                            <span class="avatar avatar-sm bg-cyan-lt mx-auto mb-2 rounded-4">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-video">   <path stroke="none" d="M0 0h24v24H0z" fill="none" />  <path d="M15 10l4.553 -2.276a1 1 0 0 1 1.447 .894v6.764a1 1 0 0 1 -1.447 .894l-4.553 -2.276v-4" />  <path d="M3 8a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2l0 -8" />  </svg>
+                                            </span>
+                                            <span class="text-secondary fw-bold">
+                                            Create Contra
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2 col-lg-2">
+                                    <div class="card rounded-3">
+                                        <div class="card-body text-center p-2">
+                                            <span class="avatar avatar-sm bg-cyan-lt mx-auto mb-2 rounded-4">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-video">   <path stroke="none" d="M0 0h24v24H0z" fill="none" />  <path d="M15 10l4.553 -2.276a1 1 0 0 1 1.447 .894v6.764a1 1 0 0 1 -1.447 .894l-4.553 -2.276v-4" />  <path d="M3 8a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2l0 -8" />  </svg>
+                                            </span>
+                                            <span class="text-secondary fw-bold">
+                                            Create Journal
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>   
                     </div>
                 </div>
             </div>
         </div>
-            <div class="col-md-3 col-sm-3 col-lg-3">
+        {{-- side menues --}}
+        <div class="col-md-3 col-sm-3 col-lg-3">
                 <div class="card rounded-3"
                 {{-- style="background-color: #e7ebfb; " --}}
                 >
@@ -379,6 +726,8 @@
                     </div>
                 </div>
         </div>
+
+    </div>
  </div>
        
 @endsection

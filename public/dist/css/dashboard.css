@@ -1,0 +1,124 @@
+.dashboard-card{
+    transition:.3s;
+}
+
+.dashboard-card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 12px 35px rgba(0,0,0,.08)!important;
+}
+
+.icon-box{
+    width:58px;
+    height:58px;
+    border-radius:16px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.mini-card{
+    border:1px solid #ececec;
+    border-radius:16px;
+    padding:18px;
+    transition:.3s;
+    background:#fff;
+}
+
+.mini-card:hover{
+    border-color:#eb5a25;
+    background:#fffaf7;
+}
+
+.mini-card small{
+    color:#6c757d;
+    display:block;
+    margin-bottom:8px;
+    font-size:.82rem;
+}
+
+.mini-card h2{
+    margin:0;
+    font-size:28px;
+    font-weight:700;
+}
+
+.mini-icon{
+    width:48px;
+    height:48px;
+    border-radius:12px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.success-card{
+    border-left:4px solid #2fb344;
+}
+
+.danger-card{
+    border-left:4px solid #d63939;
+}
+
+.blue-card{
+    border-left:4px solid #206bc4;
+}
+
+.purple-card{
+    border-left:4px solid #8b5cf6;
+}
+
+.text-purple{
+    color:#8b5cf6;
+}
+.dashboard-header{
+    background:#fff;
+    border-radius:18px;
+}
+
+.dashboard-header .form-control{
+    min-width:260px;
+    border-radius:12px;
+}
+
+.dashboard-header .btn{
+    border-radius:12px;
+}
+
+.dashboard-header .btn-light{
+    background:#f8f9fa;
+    border:1px solid #ececec;
+}
+
+.dashboard-header .btn-light:hover{
+    background:#eb5a25;
+    color:#fff;
+}
+
+.dashboard-header .btn-orange{
+    background:#eb5a25;
+    color:#fff;
+    border:none;
+}
+
+.dashboard-header .btn-orange:hover{
+    background:#d94d1b;
+}
+
+@media(max-width:768px){
+
+    .dashboard-header .form-control{
+        min-width:100%;
+    }
+
+    .dashboard-header .d-flex{
+        justify-content:start !important;
+    }
+
+}
+.card {
+    transition: all .2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
