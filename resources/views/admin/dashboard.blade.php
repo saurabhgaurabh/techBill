@@ -5,6 +5,111 @@
 <link href="{{asset('dist/css/dashboard.css')}}" rel="stylesheet">    
 @endpush
 @php
+$dashboardCards = [
+    [
+        'title'=>'Revenue Projection',
+        'subtitle'=>'Receivable & Payable Summary',
+        'iconBg'=>'bg-orange-lt',
+        'badge'=>'This Month',
+        'badgeClass'=>'bg-orange-lt text-orange',
+        'icon'=>'
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon text-orange" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M17 8V6a2 2 0 0 0-2-2H5a2 2 0 0 0 0 4h12"/>
+        <rect x="3" y="8" width="18" height="12" rx="2"/>
+        <circle cx="16" cy="14" r="1"/>
+        </svg>
+        ',
+
+    'items'=>[
+        [
+            'title'=>'Total Receivable',
+            'amount'=>'₹2,45,000',
+            'trend'=>'▲ +18%',
+            'trendClass'=>'text-success',
+            'class'=>'success-card',
+            'iconBg'=>'bg-green-lt',
+            'icon'=>'
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon text-success" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="9"/>
+            <path d="M12 8v8"/>
+            <path d="M8 12l4 4l4-4"/>
+            </svg>
+            '
+        ],
+        [
+            'title'=>'Total Payable',
+            'amount'=>'₹84,500',
+            'trend'=>'▲ +8%',
+            'trendClass'=>'text-danger',
+            'class'=>'danger-card',
+            'iconBg'=>'bg-red-lt',
+
+            'icon'=>'
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon text-danger" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="9"/>
+            <path d="M12 16V8"/>
+            <path d="M8 12l4-4l4 4"/>
+            </svg>
+            '
+            ]
+
+        ]
+
+        ],
+        [
+            'title'=>'Available Income',
+            'subtitle'=>'Income & Inventory Value',
+            'iconBg'=>'bg-blue-lt',
+            'badge'=>'Live',
+            'badgeClass'=>'bg-green-lt text-success',
+            'icon'=>'
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon text-blue" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M17 8V6a2 2 0 0 0-2-2H5a2 2 0 0 0 0 4h12"/>
+            <rect x="3" y="8" width="18" height="12" rx="2"/>
+            <circle cx="16" cy="14" r="1"/>
+            </svg>
+            ',
+
+            'items'=>[
+
+            [
+            'title'=>'Total Income',
+            'amount'=>'₹8,45,000',
+            'trend'=>'▲ +25%',
+            'trendClass'=>'text-primary',
+            'class'=>'blue-card',
+            'iconBg'=>'bg-blue-lt',
+
+            'icon'=>'
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon text-blue" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M17 7l-10 10"/>
+            <path d="M8 7h9v9"/>
+            </svg>
+            '
+            ],
+
+            [
+                'title'=>'Stock On Hand',
+                'amount'=>'₹1,72,000',
+                'trend'=>'320 Items',
+                'trendClass'=>'text-purple',
+                'class'=>'purple-card',
+                'iconBg'=>'bg-purple-lt',
+
+                'icon'=>'
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon text-purple" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 7l8-4l8 4l-8 4z"/>
+                <path d="M4 12l8 4l8-4"/>
+                <path d="M4 17l8 4l8-4"/>
+                </svg>
+                '
+            ]
+
+        ]
+
+    ]
+
+];
 $quickActions = [
 
     [
@@ -71,7 +176,6 @@ $quickActions = [
     ],
 
 ];
-
 $businessCards = [
 
     [
@@ -325,8 +429,8 @@ $socialLinks = [
             <div class="page-body">
                 <div class="col-auto">
                       <div class="row g-2 mb-3">
-                        <!-- Revenue Projection -->
-                        <div class="col-lg-6">
+                   
+                        {{-- <div class="col-lg-6">
                             <div class="card border-0 shadow-sm rounded-4 h-100 dashboard-card">
                                 <div class="card-body p-4">
                                     <div class="d-flex justify-content-between align-items-center mb-4">
@@ -357,7 +461,7 @@ $socialLinks = [
                                                 <div class="d-flex justify-content-between">
                                                     <div>
                                                         <small>Total Receivable</small>
-                                                        <h2>₹2,45,000</h2>
+                                                        <h2 class="fs-1 fw-bold mt-1">₹2,45,000</h2>
                                                         <span class="text-success"> ▲ +18%</span>
                                                     </div>
                                                     <div class="mini-icon bg-green-lt">
@@ -377,7 +481,7 @@ $socialLinks = [
                                                 <div class="d-flex justify-content-between">
                                                     <div>
                                                         <small>Total Payable</small>
-                                                        <h2>₹84,500</h2>
+                                                        <h2 class="fs-1 fw-bold mt-1">₹84,500</h2>
                                                         <span class="text-danger">
                                                             ▲ +8%
                                                         </span>
@@ -397,7 +501,7 @@ $socialLinks = [
                                 </div>
                             </div>
                         </div>
-                        <!-- Available Income -->
+                    
                         <div class="col-lg-6">
                             <div class="card border-0 shadow-sm rounded-4 h-100 dashboard-card">
                                 <div class="card-body p-4">
@@ -431,7 +535,7 @@ $socialLinks = [
                                                 <div class="d-flex justify-content-between">
                                                     <div>
                                                         <small>Total Income</small>
-                                                        <h2>₹8,45,000</h2>
+                                                        <h2 class="fs-1 fw-bold mt-1">₹8,45,000</h2>
                                                         <span class="text-primary">
                                                             ▲ +25%
                                                         </span>
@@ -445,17 +549,13 @@ $socialLinks = [
                                                 </div>
                                             </div>
                                         </div>
-
-
-
                                         <!-- Stock -->
-
                                         <div class="col-md-6">
                                             <div class="mini-card purple-card">
                                                 <div class="d-flex justify-content-between">
                                                     <div>
                                                         <small>Stock On Hand</small>
-                                                        <h2>₹1,72,000</h2>
+                                                        <h2 class="fs-1 fw-bold mt-1">₹1,72,000</h2>
                                                         <span class="text-purple">
                                                             320 Items
                                                         </span>
@@ -473,7 +573,47 @@ $socialLinks = [
                                     </div>
                                 </div>
                             </div>
+                        </div> --}}
+                        @foreach($dashboardCards as $card)
+                        <div class="col-lg-6">
+                            <div class="card border-0 shadow-sm rounded-4 h-100 dashboard-card">
+                                <div class="card-body p-4">
+                                    <div class="d-flex justify-content-between align-items-center mb-4">
+                                        <div class="d-flex align-items-center">
+                                         <div class="icon-box {{ $card['iconBg'] ?? 'bg-orange-lt' }} me-3">
+                                              {!! $card['icon'] !!}
+                                        </div>
+                                        <div>
+                                        <h3 class="mb-0">{{ $card['title'] }}</h3>
+                                        <small class="text-muted">
+                                         {{ $card['subtitle'] }}
+                                        </small>
+                                    </div>
+                                </div>
+                                <span class="badge {{ $card['badgeClass'] }}">
+                                {{ $card['badge'] }}
+                                </span>
+                            </div>
+                            <div class="row g-3">
+                                @foreach($card['items'] as $item)
+                                <div class="col-md-6">
+                                    <div class="mini-card {{ $item['class'] }}">
+                                        <div class="d-flex justify-content-between"> 
+                                            <div>
+                                                <small>{{ $item['title'] }}</small>
+                                                <h2 class="fs-1 fw-bold mt-1"> {{ $item['amount'] }} </h2>
+                                                <span class="{{ $item['trendClass'] }}">{{ $item['trend'] }}</span>
+                                            </div>
+                                       <div class="mini-icon {{ $item['iconBg'] }}">
+                                            {!! $item['icon'] !!}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> @endforeach
                         </div>
+                    </div>
+                </div>
+            </div> @endforeach
                     </div>
                     {{-- Business Operations --}}
                  <div class="card card-sm rounded-4 mb-3">
@@ -538,10 +678,10 @@ $socialLinks = [
                         <a href="#" class="quick-card">
                             <div class="card rounded-4 h-100">
                                 <div class="card-body text-center p-3">
-                                <span class="avatar bg-{{ $action['color'] }}-lt rounded-3 mb-2">
-                                {!! $action['svg'] !!}
-                                </span>
-                                <div class="fw-bold text-secondary small">
+                                 <div class="mini-icon bg-{{ $action['color'] }}-lt mx-auto mb-2">
+                                    {!! $action['svg'] !!}
+                                </div>
+                                <div class="fw-bold text-secondary">
                                 {{ $action['title'] }}
                                 </div>
                             </div>
@@ -606,6 +746,12 @@ $socialLinks = [
                     </div>
                 </div>
             </div>
+             <div class="card card-sm rounded-3 mt-2 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">Recent Activity</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
         </div>
     </div>
  </div>
