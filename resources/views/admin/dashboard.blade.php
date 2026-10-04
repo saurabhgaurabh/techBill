@@ -429,151 +429,6 @@ $socialLinks = [
             <div class="page-body">
                 <div class="col-auto">
                       <div class="row g-2 mb-3">
-                   
-                        {{-- <div class="col-lg-6">
-                            <div class="card border-0 shadow-sm rounded-4 h-100 dashboard-card">
-                                <div class="card-body p-4">
-                                    <div class="d-flex justify-content-between align-items-center mb-4">
-                                        <div class="d-flex align-items-center">
-                                            <div class="icon-box bg-orange-lt me-3">
-                                                <!-- Wallet SVG -->
-                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon text-orange" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                                    <path d="M17 8V6a2 2 0 0 0-2-2H5a2 2 0 0 0 0 4h12"/>
-                                                    <rect x="3" y="8" width="18" height="12" rx="2"/>
-                                                    <circle cx="16" cy="14" r="1"/>
-                                                </svg>
-                                            </div>
-                                            <div>
-                                                <h3 class="mb-0">Revenue Projection</h3>
-                                                <small class="text-muted">
-                                                    Receivable & Payable Summary
-                                                </small>
-                                            </div>
-                                        </div>
-                                        <span class="badge bg-orange-lt text-orange">
-                                            This Month
-                                        </span>
-                                    </div>
-                                    <div class="row g-3">
-                                        <!-- Receivable -->
-                                        <div class="col-md-6">
-                                            <div class="mini-card success-card">
-                                                <div class="d-flex justify-content-between">
-                                                    <div>
-                                                        <small>Total Receivable</small>
-                                                        <h2 class="fs-1 fw-bold mt-1">₹2,45,000</h2>
-                                                        <span class="text-success"> ▲ +18%</span>
-                                                    </div>
-                                                    <div class="mini-icon bg-green-lt">
-                                                        <!-- Arrow Down Circle -->
-                                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon text-success" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                                            <circle cx="12" cy="12" r="9"/>
-                                                            <path d="M12 8v8"/>
-                                                            <path d="M8 12l4 4l4-4"/>
-                                                        </svg>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Payable -->
-                                        <div class="col-md-6">
-                                            <div class="mini-card danger-card">
-                                                <div class="d-flex justify-content-between">
-                                                    <div>
-                                                        <small>Total Payable</small>
-                                                        <h2 class="fs-1 fw-bold mt-1">₹84,500</h2>
-                                                        <span class="text-danger">
-                                                            ▲ +8%
-                                                        </span>
-                                                    </div>
-                                                    <div class="mini-icon bg-red-lt">
-                                                        <!-- Arrow Up Circle -->
-                                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon text-danger" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                                            <circle cx="12" cy="12" r="9"/>
-                                                            <path d="M12 16V8"/>
-                                                            <path d="M8 12l4-4l4 4"/>
-                                                        </svg>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    
-                        <div class="col-lg-6">
-                            <div class="card border-0 shadow-sm rounded-4 h-100 dashboard-card">
-                                <div class="card-body p-4">
-                                    <div class="d-flex justify-content-between align-items-center mb-4">
-                                        <div class="d-flex align-items-center">
-                                            <div class="icon-box bg-blue-lt me-3">
-                                                <!-- Wallet -->
-                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon text-blue" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                                    <path d="M17 8V6a2 2 0 0 0-2-2H5a2 2 0 0 0 0 4h12"/>
-                                                    <rect x="3" y="8" width="18" height="12" rx="2"/>
-                                                    <circle cx="16" cy="14" r="1"/>
-                                                </svg>
-                                            </div>
-                                            <div>
-                                                <h3 class="mb-0">
-                                                    Available Income
-                                                </h3>
-                                                <small class="text-muted">
-                                                    Income & Inventory Value
-                                                </small>
-                                            </div>
-                                        </div>
-                                        <span class="badge bg-green-lt text-success">
-                                            Live
-                                        </span>
-                                    </div>
-                                    <div class="row g-3">
-                                        <!-- Income -->
-                                        <div class="col-md-6">
-                                            <div class="mini-card blue-card">
-                                                <div class="d-flex justify-content-between">
-                                                    <div>
-                                                        <small>Total Income</small>
-                                                        <h2 class="fs-1 fw-bold mt-1">₹8,45,000</h2>
-                                                        <span class="text-primary">
-                                                            ▲ +25%
-                                                        </span>
-                                                    </div>
-                                                    <div class="mini-icon bg-blue-lt">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon text-blue" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                                            <path d="M17 7l-10 10"/>
-                                                            <path d="M8 7h9v9"/>
-                                                        </svg>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Stock -->
-                                        <div class="col-md-6">
-                                            <div class="mini-card purple-card">
-                                                <div class="d-flex justify-content-between">
-                                                    <div>
-                                                        <small>Stock On Hand</small>
-                                                        <h2 class="fs-1 fw-bold mt-1">₹1,72,000</h2>
-                                                        <span class="text-purple">
-                                                            320 Items
-                                                        </span>
-                                                    </div>
-                                                    <div class="mini-icon bg-purple-lt">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon text-purple" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                                            <path d="M4 7l8-4l8 4l-8 4z"/>
-                                                            <path d="M4 12l8 4l8-4"/>
-                                                            <path d="M4 17l8 4l8-4"/>
-                                                        </svg>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> --}}
                         @foreach($dashboardCards as $card)
                         <div class="col-lg-6">
                             <div class="card border-0 shadow-sm rounded-4 h-100 dashboard-card">
@@ -661,37 +516,69 @@ $socialLinks = [
                         </div>
                     </div>
                 </div>
-                    {{-- quick access  --}}
+                    {{-- quick access card --}}
                 <div class="card card-sm rounded-4 mt-2 mb-4">
                     <div class="card-body">
-                        <div class="mb-3">
-                            <h3 class="h3 mb-1">
-                            Quick Access
-                            </h3>
-                             <h5 class="text-muted">
-                                Get started quickly with these common actions.
-                            </h5>
-                        </div>
-                        <div class="row row-cards g-3">
-                        @foreach($quickActions as $action)
-                        <div class="col-6 col-md-4 col-lg-3 col-xl-2">
-                        <a href="#" class="quick-card">
-                            <div class="card rounded-4 h-100">
-                                <div class="card-body text-center p-3">
-                                 <div class="mini-icon bg-{{ $action['color'] }}-lt mx-auto mb-2">
-                                    {!! $action['svg'] !!}
-                                </div>
-                                <div class="fw-bold text-secondary">
-                                {{ $action['title'] }}
-                                </div>
+                        <div class="d-flex justify-content-between align-items-start mb-3">
+                            <div>
+                                <h3 class="h3 mb-1">
+                                    Quick Access
+                                </h3>
+                                <h5 class="text-muted">
+                                    Get started quickly with these common actions.
+                                </h5>
                             </div>
+                            <button class="btn btn-outline-light btn-sm"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#moreQuickActions"
+                                    aria-expanded="false">
+
+                                <span class="view-text btn btn-light">
+                                    View More
+                                </span>                                   
+                            </button>
                         </div>
-                    </a>
-                </div>
-            @endforeach
-        </div>
-    </div>
-</div>
+                            {{-- quick access menues  --}}
+                            <div class="row row-cards g-3">
+                                @foreach(array_slice($quickActions, 0, 6) as $action)
+                                <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                                    <a href="#" class="quick-card">
+                                        <div class="card rounded-4 h-100">
+                                            <div class="card-body text-center p-3">
+                                                <div class="mini-icon bg-{{ $action['color'] }}-lt mx-auto mb-2">
+                                                    {!! $action['svg'] !!}
+                                                </div>
+                                                <div class="fw-bold text-secondary">
+                                                    {{ $action['title'] }}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                @endforeach
+                            </div>
+                            <div class="collapse mt-3" id="moreQuickActions">
+                                <div class="row row-cards g-3">
+                                    @foreach(array_slice($quickActions, 6, 12) as $action)
+                                    <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                                        <a href="#" class="quick-card">
+                                            <div class="card rounded-4 h-100">
+                                                <div class="card-body text-center p-3">
+                                                    <div class="mini-icon bg-{{ $action['color'] }}-lt mx-auto mb-2">
+                                                        {!! $action['svg'] !!}
+                                                    </div>
+                                                    <div class="fw-bold text-secondary">
+                                                        {{ $action['title'] }}
+                                                </div>
+                                            </div>
+                                        </div>
+                                        </a>
+                                    </div>
+                                    @endforeach
+                                </div>
+                            </div>            
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -862,3 +749,18 @@ $socialLinks = [
     </div>
 </div>
 @endsection
+
+<script>
+    document
+    .querySelector('#moreQuickActions')
+    .addEventListener('show.bs.collapse', function () {
+    document.querySelector('.view-text').innerHTML = "View Less";
+    });
+    document
+    .querySelector('#moreQuickActions')
+    .addEventListener('hide.bs.collapse', function () {
+    document.querySelector('.view-text').innerHTML = "View More";
+    });
+
+
+</script>
