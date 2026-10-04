@@ -78,7 +78,6 @@ $businessCards = [
         'title'=>'Total Sales',
         'amount'=>'₹2,45,680',
         'color'=>'green',
-
         'svg'=>'
         <svg xmlns="http://www.w3.org/2000/svg" 
         width="24" height="24" 
@@ -88,18 +87,11 @@ $businessCards = [
         stroke-width="2" 
         stroke-linecap="round" 
         stroke-linejoin="round">
-
         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-
         <path d="M15 5h-8"/>
-
         <path d="M15 9h-8"/>
-
         <path d="M9 5c3 0 5 2 5 4s-2 4-5 4h-1l6 6"/>
-
-        </svg>
-        ',
-
+        </svg>',
         'stats'=>[
             ['label'=>'Invoice','value'=>'356'],
             ['label'=>'Growth','value'=>'+18%'],
@@ -148,7 +140,6 @@ $businessCards = [
         'title'=>'Total Expenses',
         'amount'=>'₹45,680',
         'color'=>'danger',
-
         'svg'=>'
         <svg xmlns="http://www.w3.org/2000/svg"
         width="24" height="24"
@@ -158,22 +149,138 @@ $businessCards = [
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round">
-
         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-
         <path d="M12 3v18"/>
-
         <path d="M17 7h-6a3 3 0 0 0 0 6h2a3 3 0 0 1 0 6h-6"/>
-
-        </svg>
-        ',
-
+        </svg>',
         'stats'=>[
             ['label'=>'Entries','value'=>'85'],
             ['label'=>'Month','value'=>'₹45K'],
             ['label'=>'Today','value'=>'₹2.5K'],
         ]
 
+    ],
+
+];
+$helpCards = [
+
+    [
+        'title' => 'Book Demo',
+        'url' => '#',
+        'color' => 'primary',
+        'svg' => '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"/>
+        <path d="M16 3v4"/>
+        <path d="M8 3v4"/>
+        <path d="M4 11h16"/>
+        <path d="M8 15h2v2h-2z"/>
+        </svg>'
+    ],
+
+    [
+        'title' => 'Live Chat',
+        'url' => '#',
+        'color' => 'purple',
+        'svg' => '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <path d="M17.802 17.292s.077 -.055 .2 -.149c1.843 -1.425 3 -3.49 3 -5.789c0 -4.286 -4.03 -7.764 -9 -7.764c-4.97 0 -9 3.478 -9 7.764c0 4.288 4.03 7.646 9 7.646"/>
+        <path d="M7.5 13.5c2.5 2.5 6.5 2.5 9 0"/>
+        </svg>'
+    ],
+
+    [
+        'title' => 'Video Guide',
+        'url' => '#',
+        'color' => 'cyan',
+        'svg' => '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <path d="M15 10l4.553 -2.276a1 1 0 0 1 1.447 .894v6.764a1 1 0 0 1 -1.447 .894l-4.553 -2.276v-4"/>
+        <path d="M3 8a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2z"/>
+        </svg>'
+    ],
+
+    [
+        'title' => 'Email Support',
+        'url' => 'mailto:support@example.com',
+        'color' => 'primary',
+        'svg' => '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10"/>
+        <path d="M3 7l9 6l9 -6"/>
+        </svg>'
+    ],
+
+    [
+        'title' => 'WhatsApp',
+        'url' => '#',
+        'color' => 'success',
+        'svg' => '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9"/>
+        <path d="M9 10a5 5 0 0 0 5 5"/>
+        </svg>'
+    ],
+
+    [
+        'title' => 'Help Desk',
+        'url' => '#',
+        'color' => 'dark',
+        'svg' => '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <path d="M12 9h.01"/>
+        <path d="M11 12h1v4h1"/>
+        <circle cx="12" cy="12" r="9"/>
+        </svg>'
+    ],
+
+];
+$socialLinks = [
+    [
+        'name'  => 'Facebook',
+        'url'   => '#',
+        'color' => 'facebook',
+        'svg'   => '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-meta">	<path stroke="none" d="M0 0h24v24H0z" fill="none" />	<path d="M12 10.174c1.766 -2.784 3.315 -4.174 4.648 -4.174c2 0 3.263 2.213 4 5.217c.704 2.869 .5 6.783 -2 6.783c-1.114 0 -2.648 -1.565 -4.148 -3.652a27.627 27.627 0 0 1 -2.5 -4.174" />	<path d="M12 10.174c-1.766 -2.784 -3.315 -4.174 -4.648 -4.174c-2 0 -3.263 2.213 -4 5.217c-.704 2.869 -.5 6.783 2 6.783c1.114 0 2.648 -1.565 4.148 -3.652c1 -1.391 1.833 -2.783 2.5 -4.174" /></svg>'
+    ],
+
+    [
+        'name'  => 'Instagram',
+        'url'   => '#',
+        'color' => 'instagram',
+        'svg'   => ' <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-instagram"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M4 8a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4l0 -8" /><path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" /><path d="M16.5 7.5v.01" /></svg> '
+    ],
+
+    [
+        'name'  => 'LinkedIn',
+        'url'   => '#',
+        'color' => 'linkedin',
+        'svg'   => '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-linkedin">	<path stroke="none" d="M0 0h24v24H0z" fill="none" />	<path d="M8 11v5" />	<path d="M8 8v.01" />	<path d="M12 16v-5" />	<path d="M16 16v-3a2 2 0 1 0 -4 0" />	<path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4l0 -10" /></svg>'
+    ],
+
+    [
+        'name'  => 'YouTube',
+        'url'   => '#',
+        'color' => 'youtube',
+        'svg'   => '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-youtube">	<path stroke="none" d="M0 0h24v24H0z" fill="none" />	<path d="M2 8a4 4 0 0 1 4 -4h12a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-12a4 4 0 0 1 -4 -4v-8" />	<path d="M10 9l5 3l-5 3l0 -6" /></svg>                            '
+    ],
+
+    [
+        'name'  => 'Twitter',
+        'url'   => '#',
+        'color' => 'twitter',
+        'svg'   => '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-x">	<path stroke="none" d="M0 0h24v24H0z" fill="none" />	<path d="M4 4l11.733 16h4.267l-11.733 -16l-4.267 0" />	<path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" /></svg>                            '
     ],
 
 ];
@@ -217,53 +324,7 @@ $businessCards = [
 
             <div class="page-body">
                 <div class="col-auto">
-                    {{-- Business Operations --}}
-                 <div class="card card-sm rounded-4 mb-3">
-                    <div class="card-body">
-                        <h3 class="h3 mb-3">
-                        Business Operations
-                        </h3>
-                        <div class="row row-cards">
-                        @foreach($businessCards as $card)
-                            <div class="col-12 col-md-6 col-xl-4">
-                                <div class="card rounded-4 h-100">
-                                    <div class="card-body">
-                                        <div class="d-flex align-items-center">
-                                            <div>
-                                                <div class="text-secondary text-uppercase fw-bold small">
-                                                {{ $card['title'] }}
-                                                </div>
-                                                <div class="fs-1 fw-bold mt-1">
-                                                {{ $card['amount'] }}
-                                                </div>
-                                            </div>
-                                            <div class="ms-auto">
-                                                <div class="mini-icon bg-{{ $card['color'] }}-lt">
-                                                    {!! $card['svg'] !!}
-                                                </div>
-                                            </div>
-                                        </div>
-                                    <div class="row text-center mt-4">
-                                    @foreach($card['stats'] as $index=>$stat)
-                                    <div class="col 
-                                    {{ $index != 0 ? 'border-start':'' }}">
-                                    <div class="text-secondary small">
-                                    {{ $stat['label'] }}
-                                    </div>
-                                    <div class="fw-bold fs-3">
-                                    {{ $stat['value'] }}
-                                    </div>
-                                </div>
-                            @endforeach
-                             </div>
-                        </div>
-                    </div>
-                </div>
-                @endforeach
-        </div>
-    </div>
-</div>
-                    <div class="row g-2 mb-3">
+                      <div class="row g-2 mb-3">
                         <!-- Revenue Projection -->
                         <div class="col-lg-6">
                             <div class="card border-0 shadow-sm rounded-4 h-100 dashboard-card">
@@ -338,83 +399,51 @@ $businessCards = [
                         </div>
                         <!-- Available Income -->
                         <div class="col-lg-6">
-
                             <div class="card border-0 shadow-sm rounded-4 h-100 dashboard-card">
-
                                 <div class="card-body p-4">
-
                                     <div class="d-flex justify-content-between align-items-center mb-4">
-
                                         <div class="d-flex align-items-center">
-
                                             <div class="icon-box bg-blue-lt me-3">
-
                                                 <!-- Wallet -->
-
                                                 <svg xmlns="http://www.w3.org/2000/svg" class="icon text-blue" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                                     <path d="M17 8V6a2 2 0 0 0-2-2H5a2 2 0 0 0 0 4h12"/>
                                                     <rect x="3" y="8" width="18" height="12" rx="2"/>
                                                     <circle cx="16" cy="14" r="1"/>
                                                 </svg>
-
                                             </div>
-
                                             <div>
-
                                                 <h3 class="mb-0">
                                                     Available Income
                                                 </h3>
-
                                                 <small class="text-muted">
                                                     Income & Inventory Value
                                                 </small>
-
                                             </div>
-
                                         </div>
-
                                         <span class="badge bg-green-lt text-success">
                                             Live
                                         </span>
-
                                     </div>
-
-
                                     <div class="row g-3">
-
                                         <!-- Income -->
-
                                         <div class="col-md-6">
-
                                             <div class="mini-card blue-card">
-
                                                 <div class="d-flex justify-content-between">
-
                                                     <div>
-
                                                         <small>Total Income</small>
-
                                                         <h2>₹8,45,000</h2>
-
                                                         <span class="text-primary">
                                                             ▲ +25%
                                                         </span>
-
                                                     </div>
-
                                                     <div class="mini-icon bg-blue-lt">
-
                                                         <svg xmlns="http://www.w3.org/2000/svg" class="icon text-blue" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                                             <path d="M17 7l-10 10"/>
                                                             <path d="M8 7h9v9"/>
                                                         </svg>
-
                                                     </div>
-
                                                 </div>
-
                                             </div>
-
                                         </div>
 
 
@@ -422,48 +451,76 @@ $businessCards = [
                                         <!-- Stock -->
 
                                         <div class="col-md-6">
-
                                             <div class="mini-card purple-card">
-
                                                 <div class="d-flex justify-content-between">
-
                                                     <div>
-
                                                         <small>Stock On Hand</small>
-
                                                         <h2>₹1,72,000</h2>
-
                                                         <span class="text-purple">
                                                             320 Items
                                                         </span>
-
                                                     </div>
-
                                                     <div class="mini-icon bg-purple-lt">
-
                                                         <svg xmlns="http://www.w3.org/2000/svg" class="icon text-purple" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                                             <path d="M4 7l8-4l8 4l-8 4z"/>
                                                             <path d="M4 12l8 4l8-4"/>
                                                             <path d="M4 17l8 4l8-4"/>
                                                         </svg>
-
                                                     </div>
-
                                                 </div>
-
                                             </div>
-
                                         </div>
-
                                     </div>
-
                                 </div>
-
                             </div>
-
                         </div>
                     </div>
-                    
+                    {{-- Business Operations --}}
+                 <div class="card card-sm rounded-4 mb-3">
+                    <div class="card-body">
+                        <h3 class="h3 mb-3">
+                        Business Operations
+                        </h3>
+                        <div class="row row-cards">
+                        @foreach($businessCards as $card)
+                            <div class="col-12 col-md-6 col-xl-4">
+                                <div class="card rounded-4 h-100">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center">
+                                            <div>
+                                                <div class="text-secondary text-uppercase fw-bold small">
+                                                {{ $card['title'] }}
+                                                </div>
+                                                <div class="fs-1 fw-bold mt-1">
+                                                {{ $card['amount'] }}
+                                                </div>
+                                            </div>
+                                            <div class="ms-auto">
+                                                <div class="mini-icon bg-{{ $card['color'] }}-lt">
+                                                    {!! $card['svg'] !!}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    <div class="row text-center mt-4">
+                                    @foreach($card['stats'] as $index=>$stat)
+                                    <div class="col 
+                                    {{ $index != 0 ? 'border-start':'' }}">
+                                    <div class="text-secondary small">
+                                    {{ $stat['label'] }}
+                                    </div>
+                                    <div class="fw-bold fs-3">
+                                    {{ $stat['value'] }}
+                                    </div>
+                                </div>
+                            @endforeach
+                             </div>
+                        </div>
+                    </div>
+                      </div>
+                    @endforeach
+                        </div>
+                    </div>
+                </div>
                     {{-- quick access  --}}
                 <div class="card card-sm rounded-4 mt-2 mb-4">
                     <div class="card-body">
@@ -481,15 +538,15 @@ $businessCards = [
                         <a href="#" class="quick-card">
                             <div class="card rounded-4 h-100">
                                 <div class="card-body text-center p-3">
-                                    <span class="avatar bg-{{ $action['color'] }}-lt rounded-4 mb-2">
-                                    {!! $action['svg'] !!}
-                                    </span>
-                                    <div class="fw-bold text-secondary small">
-                                    {{ $action['title'] }}
-                                    </div>
+                                <span class="avatar bg-{{ $action['color'] }}-lt rounded-3 mb-2">
+                                {!! $action['svg'] !!}
+                                </span>
+                                <div class="fw-bold text-secondary small">
+                                {{ $action['title'] }}
+                                </div>
                             </div>
                         </div>
-                        </a>
+                    </a>
                 </div>
             @endforeach
         </div>
@@ -500,142 +557,56 @@ $businessCards = [
         </div>
         {{-- side menues --}}
         <div class="col-md-3 col-sm-3 col-lg-3">
-                <div class="card rounded-3"
-                {{-- style="background-color: #e7ebfb; " --}}
-                >
-                    <div class="card-body p-3">
-                        <h3 class="card-title">Need help? We've got your back</h3>
-                        <h5 class="card-subtitle text-muted">Perhaps you can find the answers in our collections.</h5>
-                    </div>
-                    {{-- Card Row --}}
-                    <div class="row row-cards align-items-center g-2 p-2">
-                        <div class="col-md-4">
-                            <div class="card rounded-3">
-                                <div class="card-body text-center p-2">
-                                    <span class="avatar avatar-sm bg-primary-lt mx-auto mb-2 rounded-4">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"fill="none"stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"class="icon icon-tabler icon-tabler-calendar-event"> <path stroke="none" d="M0 0h24v24H0z" fill="none"/> <path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"/><path d="M16 3v4"/><path d="M8 3v4"/> <path d="M4 11h16"/> <path d="M8 15h2v2h-2z"/></svg>
-                                    </span>
-                                    <span class="text-secondary fw-bold">
-                                        Book Demo
-                                    </span>
+            <div class="card rounded-3">
+                <div class="card-body p-3">
+                    <h3 class="card-title">
+                        Need help? We've got your back
+                    </h3>
+                    <h5 class="card-subtitle text-muted">
+                        Perhaps you can find the answers in our collections.
+                    </h5>
+                </div>
+                {{-- help section --}}
+                <div class="row row-cards g-2 p-2">
+                    @foreach($helpCards as $help)
+                        <div class="col-6 col-md-4">                 
+                            <a href="{{ $help['url'] }}"
+                            class="quick-card">
+                                <div class="card rounded-4 h-100">
+                                    <div class="card-body text-center p-2">
+                                            <div class="mini-icon bg-{{ $help['color'] }}-lt mx-auto mb-2">
+                                                {!! $help['svg'] !!}
+                                            </div>
+                                        <div class="text-secondary fw-bold small">
+                                            {{ $help['title'] }}
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="card rounded-3">
-                                <div class="card-body text-center p-2">
-                                    <span class="avatar avatar-sm bg-purple-lt mx-auto mb-2 rounded-4">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-hipchat">	<path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M17.802 17.292s.077 -.055 .2 -.149c1.843 -1.425 3 -3.49 3 -5.789c0 -4.286 -4.03 -7.764 -9 -7.764c-4.97 0 -9 3.478 -9 7.764c0 4.288 4.03 7.646 9 7.646c.424 0 1.12 -.028 2.088 -.084c1.262 .82 3.104 1.493 4.716 1.493c.499 0 .734 -.41 .414 -.828c-.486 -.596 -1.156 -1.551 -1.416 -2.29l-.002 .001" /><path d="M7.5 13.5c2.5 2.5 6.5 2.5 9 0" /></svg>                                </span>
-                                    <span class="text-secondary fw-bold">
-                                        Live Chat
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="card rounded-3">
-                                <div class="card-body text-center p-2">
-                                    <span class="avatar avatar-sm bg-cyan-lt mx-auto mb-2 rounded-4">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-video">   <path stroke="none" d="M0 0h24v24H0z" fill="none" />  <path d="M15 10l4.553 -2.276a1 1 0 0 1 1.447 .894v6.764a1 1 0 0 1 -1.447 .894l-4.553 -2.276v-4" />  <path d="M3 8a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2l0 -8" />  </svg>
-                                    </span>
-                                    <span class="text-secondary fw-bold">
-                                        Video Guide
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row row-cards align-items-center g-2 p-2">
-                        <div class="col-md-4">
-                            <div class="card rounded-3">
-                                <div class="card-body text-center p-2">
-                                    <span class="avatar avatar-sm bg-primary-lt mx-auto mb-2 rounded-4">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-mail">   <path stroke="none" d="M0 0h24v24H0z" fill="none" />  <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10" />  <path d="M3 7l9 6l9 -6" /></svg>
-                                    </span>
-                                    <span class="text-secondary fw-bold">
-                                        Email Support
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="card rounded-3">
-                                <div class="card-body text-center p-2">
-                                    <span class="avatar avatar-sm bg-success-lt mx-auto mb-2 rounded-4">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-whatsapp"><path stroke="none" d="M0 0h24v24H0z" fill="none" />  <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" /><path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" /></svg>
-                                    </span>
-                                    <span class="text-secondary fw-bold">
-                                        Chat WhatsApp
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="card rounded-3">
-                                <div class="card-body text-center p-2">
-                                    <span class="avatar avatar-sm bg-dark-lt mx-auto mb-2 rounded-4">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-info-octagon"> <path stroke="none" d="M0 0h24v24H0z" fill="none" /> <path d="M12.802 2.165l5.575 2.389c.48 .206 .863 .589 1.07 1.07l2.388 5.574c.22 .512 .22 1.092 0 1.604l-2.389 5.575c-.206 .48 -.589 .863 -1.07 1.07l-5.574 2.388c-.512 .22 -1.092 .22 -1.604 0l-5.575 -2.389a2.036 2.036 0 0 1 -1.07 -1.07l-2.388 -5.574a2.036 2.036 0 0 1 0 -1.604l2.389 -5.575c.206 -.48 .589 -.863 1.07 -1.07l5.574 -2.388a2.036 2.036 0 0 1 1.604 0" /> <path d="M12 9h.01" /><path d="M11 12h1v4h1" /> </svg>
-                                    </span>
-                                    <span class="text-secondary fw-bold">
-                                        Help Desk
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>    
-                
-                <div class="card card-sm rounded-3 mt-2 shadow-sm">
-                    <div class="card-body p-3">
-                        <h3 class="card-title mb-1">Follow Us</h3>
-                        <h4 class="card-subtitle text-muted mb-3">
-                            Don't miss any updates.
-                        </h4>
-                        <div class="d-flex gap-5 flex-wrap">
-                            <!-- Facebook -->
-                            <a href="#" class="social-icon facebook" target="_blank" >
-                                <span class="avatar avatar-sm bg-facebook-lt rounded-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-meta">	<path stroke="none" d="M0 0h24v24H0z" fill="none" />	<path d="M12 10.174c1.766 -2.784 3.315 -4.174 4.648 -4.174c2 0 3.263 2.213 4 5.217c.704 2.869 .5 6.783 -2 6.783c-1.114 0 -2.648 -1.565 -4.148 -3.652a27.627 27.627 0 0 1 -2.5 -4.174" />	<path d="M12 10.174c-1.766 -2.784 -3.315 -4.174 -4.648 -4.174c-2 0 -3.263 2.213 -4 5.217c-.704 2.869 -.5 6.783 2 6.783c1.114 0 2.648 -1.565 4.148 -3.652c1 -1.391 1.833 -2.783 2.5 -4.174" /></svg>
-                                </span>
                             </a>
-
-                            <!-- Instagram -->
-                            <a href="#" class="social-icon instagram" target="_blank">
-                            <span class="avatar avatar-sm bg-instagram-lt rounded-4 ">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-instagram"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M4 8a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4l0 -8" /><path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" /><path d="M16.5 7.5v.01" /></svg>                        </a>
-                                </span>
-                            <!-- LinkedIn -->
-                            <a href="#" class="social-icon linkedin" target="_blank">
-                            <span class="avatar avatar-sm bg-linkedin-lt rounded-4">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-linkedin">	<path stroke="none" d="M0 0h24v24H0z" fill="none" />	<path d="M8 11v5" />	<path d="M8 8v.01" />	<path d="M12 16v-5" />	<path d="M16 16v-3a2 2 0 1 0 -4 0" />	<path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4l0 -10" /></svg>
-                            </span>
-                            </a>
-
-                            <!-- YouTube -->
-                            <a href="#" class="social-icon youtube" target="_blank">
-                                <span class="avatar avatar-sm bg-youtube-lt rounded-4">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-youtube">	<path stroke="none" d="M0 0h24v24H0z" fill="none" />	<path d="M2 8a4 4 0 0 1 4 -4h12a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-12a4 4 0 0 1 -4 -4v-8" />	<path d="M10 9l5 3l-5 3l0 -6" /></svg>                            
-                                </span>
-                            </a>
-
-                            <!-- WhatsApp -->
-                            <a href="#" class="social-icon whatsapp" target="_blank">
-                            <span class="avatar avatar-sm bg-twitter-lt rounded-4 ">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-x">	<path stroke="none" d="M0 0h24v24H0z" fill="none" />	<path d="M4 4l11.733 16h4.267l-11.733 -16l-4.267 0" />	<path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" /></svg>                            </span>
-                            </a>
-
                         </div>
-
+                    @endforeach
+                </div>
+            </div>
+            <div class="card card-sm rounded-3 mt-2 shadow-sm">
+                <div class="card-body p-3">
+                    <h3 class="card-title mb-1">Follow Us</h3>
+                    <h4 class="card-subtitle text-muted mb-3">
+                        Don't miss any updates.
+                    </h4>             
+                  <div class="d-flex gap-3 flex-wrap">
+                        @foreach($socialLinks as $social)
+                            <a href="{{ $social['url'] }}"
+                            class="social-icon {{ strtolower($social['name']) }}"
+                            target="_blank">
+                                <div class="mini-icon bg-{{ $social['color'] }}-lt mx-auto mb-2">
+                                    {!! $social['svg'] !!}
+                                </div>
+                            </a>
+                        @endforeach
                     </div>
                 </div>
-                <div class="card card-sm rounded-3 mt-2 shadow-sm">
-                    <div class="card-body">
-                        <h5 class="card-title">Recent Activity</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                </div>
+            </div>
         </div>
-
     </div>
  </div>
        
