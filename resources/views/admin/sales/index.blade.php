@@ -5,7 +5,13 @@
     <div class="">
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">Sales Invoices</h3>                  
+                <h3 class="card-title">Sales Invoices</h3>   
+                 <div class="col-lg-6">
+                            <div class="d-flex justify-content-lg-end align-items-center gap-2 flex-wrap">
+                                <button class="btn btn-light">Emport</button>
+                                <button class="btn btn-light">Export</button>
+                            </div>
+                        </div>    
             </div>
             <div class="card-body border-bottom py-3">
                 <div class="d-flex">
@@ -60,19 +66,6 @@
                     <span class="badge bg-success me-1"></span> Paid
                     </td>
                     <td>$887</td>
-                    <td class="text-end">
-                    <span class="dropdown">
-                        <button class="btn dropdown-toggle align-text-top" data-bs-boundary="viewport" data-bs-toggle="dropdown">Actions</button>
-                        <div class="dropdown-menu dropdown-menu-end">
-                        <a class="dropdown-item" href="#">
-                            Action
-                        </a>
-                        <a class="dropdown-item" href="#">
-                            Another action
-                        </a>
-                        </div>
-                    </span>
-                    </td>
                 </tr>
                 </tbody>
             </table>

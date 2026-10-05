@@ -34,13 +34,10 @@ class VenderController extends Controller
     public function search(Request $request)
     {
         $search = $request->search;
-
         $venders = VendersModal::where('name', 'like', "%$search%")
             ->orWhere('mobile', 'like', "%$search%")
             ->orWhere('company_name', 'like', "%$search%")
             ->get();
-
-
         return view('admin.venders.partials.table', compact('venders'));
     }
 
@@ -69,7 +66,7 @@ class VenderController extends Controller
             $venders = VendersModal::create($validated);
             // return redirect()->back()->with('success', 'Customer created successfully.');
             return redirect()->route('venders.index')->with('success', 'Vender Created Successfully.');
-        } catch (\Exception $e) {
+        } catch (\Exception $e) { 
             dd($e->getMessage());
         }
     }
@@ -94,9 +91,7 @@ class VenderController extends Controller
     public function destroy($vendor_id)
     {
         $vender = VendersModal::findOrFail($vendor_id);
-
         $vender->delete();
-
         return response()->json([
             'status' => true,
             'message' => 'Vendor deleted successfully.'

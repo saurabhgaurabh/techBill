@@ -20,60 +20,57 @@
       :root {
         --orange-color:#eb5a25;	--tblr-font-sans-serif: 'Inter Var', -apple-system, BlinkMacSystemFont, San Francisco, Segoe UI, Roboto, Helvetica Neue, sans-serif;
       }
+    .navbar-nav .nav-link.active{
+        color: #eb5a25 !important;
+        font-weight:600;
+    }
+    .navbar-nav .nav-link.active svg{
+        stroke:#eb5a25;
+    }
 
-/* Active Top Menu */
-.navbar-nav .nav-link.active{
-    color: #eb5a25 !important;
-    font-weight:600;
-}
+    .dropdown-item.active{
+        background:#fff1eb !important;
+        color:#b74921 !important;
+    }
+    .dropdown-item{
+        background:#092d44 !important;
+        color:#c1bfbd !important;
+    }
+    .nav-link:hover{
+        color:#eb5a25 !important;
+    }
+    .nav-link{
+      color: #f3f4f9 !important;
+    }
 
-
-/* Active icon */
-.navbar-nav .nav-link.active svg{
-    stroke:#eb5a25;
-}
-
-
-/* Dropdown active item */
-.dropdown-item.active{
-    background:#fff1eb !important;
-    color:#eb5a25 !important;
-}
-
-
-/* Hover */
-.nav-link:hover{
-    color:#eb5a25 !important;
-}
-
-
-.dropdown-item:hover{
-    color:#eb5a25 !important;
-    background:#fff7f3;
-}
+    .dropdown-item:hover{
+        color:#eb5a25 !important;
+        background:#fff7f3;
+    }
       body {
       	font-feature-settings: "cv03", "cv04", "cv11";
       }
+
     </style>
   </head>
   <body  class=" layout-fluid">
     <script src="{{ asset('dist/js/demo-theme.min.js?1684106062') }}"></script>
     <div class="page">
       <!-- Navbar -->
-      <header class="navbar navbar-expand-md d-print-none" >
+      <header class="navbar navbar-expand-md d-print-none" style="background-color: #092d44">
         <div class="container-xl">
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <h1 class="navbar-brand navbar-brand-autodark d-none-navbar-horizontal pe-0 pe-md-3">
             <a href="." >
-              <img src="{{asset('/dist/img/favicon.jpeg')}}" width="110" height="32" alt="TechNest Billing" class="navbar-brand-image">
-            </a><span style="color: #0b1b3f !important; font-weight:600;">TechNest Billing</span>
+              <img src="{{asset('/dist/img/favicon.jpeg')}}" width="110" height="32" alt="TechNest Billing" class="navbar-brand-image rounded-2">
+            </a><span style="color: #f3f4f9 !important; font-weight:600;">TechNest Billing</span>
           </h1>
           <div class="navbar-nav flex-row order-md-last">
             
             <div class="d-none d-md-flex">
-              <a href="" class="nav-link px-0" title="Quick Draft" data-bs-toggle="tooltip"
+              <a href="" class="nav-link px-0" title="Quick Draft" data-bs-toggle="tooltip" text-white
 		              data-bs-placement="bottom">
                 <!-- Download SVG icon from http://tabler-icons.io/i/moon -->
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-notes">   <path stroke="none" d="M0 0h24v24H0z" fill="none" /> <path d="M5 5a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2l0 -14" /><path d="M9 7l6 0" /><path d="M9 11l6 0" /><path d="M9 15l4 0" /></svg> </a>
@@ -161,7 +158,7 @@
                             </div>
                           </div>
                           <div class="col-auto">
-                            <a href="#" class="list-group-item-actions">
+                            <a href="#" class="list-group-item-actions" style="color: #f3f4f9 !important;">
                               <!-- Download SVG icon from http://tabler-icons.io/i/star -->
                               <svg xmlns="http://www.w3.org/2000/svg" class="icon text-muted" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" /></svg>
                             </a>
@@ -194,9 +191,9 @@
           </div>
         </div>
       </header>
-      <header class="navbar-expand-md">
+      <header class="navbar-expand-md" >
         <div class="collapse navbar-collapse" id="navbar-menu">
-          <div class="navbar">
+          <div class="navbar" style="background-color: #092d44">
             <div class="container-xl">
               <ul class="navbar-nav">
                 <li class="nav-item">

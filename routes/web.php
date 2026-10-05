@@ -32,7 +32,7 @@ Route::resource('withoutgstcustomer', UnregisterCustomerController::class);
 Route::resource('venders', VenderController::class);
 Route::resource('withoutgst', UnregisterVendorController::class );
 Route::get('/venders/search', [VenderController::class, 'search'])->name('venders.search');
-
+ 
 Route::resource('sales', SalesController::class);
 
 

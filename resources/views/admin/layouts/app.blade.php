@@ -3,6 +3,7 @@
 <head>
     <title>@yield('title')</title>
     {{-- <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}"> --}}
+    <link href="{{ asset('dist/css/variables.css') }}" rel="stylesheet">
       <link href="{{ asset('dist/css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('dist/css/tabler.min.css') }}" rel="stylesheet">
      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
