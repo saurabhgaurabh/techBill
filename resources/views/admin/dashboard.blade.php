@@ -127,14 +127,14 @@ $quickActions = [
     ],
 
     [
-        'title'=>'Create Sales Invoice',
+        'title'=>'Sales Invoice',
         'route'=>'sales.create',
         'color'=>'lime',
         'svg'=>' <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-receipt"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M5 21v-16a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v16l-3 -2l-2 2l-2 -2l-2 2l-2 -2l-3 2m4 -14h6m-6 4h6m-2 4h2" /></svg>'
     ],
 
     [
-        'title'=>'Create Purchase Invoice',
+        'title'=>'Purchase Invoice',
         'route'=>'purchase.create',
         'color'=>'orange',
         'svg'=>'<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-shopping-bag"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M6.331 8h11.339a2 2 0 0 1 1.977 2.304l-1.255 8.152a3 3 0 0 1 -2.966 2.544h-6.852a3 3 0 0 1 -2.965 -2.544l-1.255 -8.152a2 2 0 0 1 1.977 -2.304" /><path d="M9 11v-5a3 3 0 0 1 6 0v5" /></svg>'
@@ -181,7 +181,7 @@ $businessCards = [
     [
         'title'=>'Total Sales',
         'amount'=>'₹2,45,680',
-        'leftBorder' => 'border-success',
+        'class'=>'success-card',
         'color'=>'green',
         'svg'=>'
         <svg xmlns="http://www.w3.org/2000/svg" 
@@ -432,8 +432,8 @@ $socialLinks = [
                       <div class="row g-2 mb-3">
                         @foreach($dashboardCards as $card)
                         <div class="col-lg-6">
-                            <div class="card border-0 shadow-sm rounded-4 h-100 dashboard-card" style="background: var(--cardbg)">
-                                <div class="card-body p-4">
+                            <div class="card border-0 shadow-sm rounded-4 h-100 ">
+                                <div class="card-body p-4 dashboard-card rounded-4">
                                     <div class="d-flex justify-content-between align-items-center mb-4">
                                         <div class="d-flex align-items-center">
                                          <div class="icon-box {{ $card['iconBg'] ?? 'bg-orange-lt' }} me-3">
@@ -453,7 +453,7 @@ $socialLinks = [
                             <div class="row g-3">
                                 @foreach($card['items'] as $item)
                                 <div class="col-md-6">
-                                    <div class="mini-card {{ $item['class'] }}" style="background: var(--cardbg)">
+                                    <div class="mini-card {{ $item['class'] }}">
                                         <div class="d-flex justify-content-between"> 
                                             <div>
                                                 <small>{{ $item['title'] }}</small>
@@ -472,16 +472,16 @@ $socialLinks = [
             </div> @endforeach
                     </div>
                     {{-- Business Operations --}}
-                 <div class="card card-sm rounded-4 mb-3" style="background: var(--cardbg)">
-                    <div class="card-body">
+                 <div class="card card-sm mb-3 rounded-4" >
+                    <div class="card-body dashboard-card rounded-4">
                         <h3 class="h3 mb-3">
                         Business Operations
                         </h3>
                         <div class="row row-cards">
                         @foreach($businessCards as $card)
                             <div class="col-12 col-md-6 col-xl-4">
-                                <div class="card rounded-4 h-100" style="background: var(--cardbg)">
-                                    <div class="card-body">
+                                <div class="card h-100 rounded-4">
+                                    <div class="card-body dashboard-card rounded-4">
                                         <div class="d-flex align-items-center">
                                             <div>
                                                 <div class="text-secondary text-uppercase fw-bold small">
@@ -500,12 +500,12 @@ $socialLinks = [
                                     <div class="row text-center mt-4">
                                     @foreach($card['stats'] as $index=>$stat)
                                     <div class="col 
-                                    {{ $index != 0 ? 'border-start':'' }}">
-                                    <div class="text-secondary small">
-                                    {{ $stat['label'] }}
-                                    </div>
+                                       {{ $index != 0 ? 'border-start':'' }}">
+                                        <div class="text-secondary small">
+                                            {{ $stat['label'] }}
+                                        </div>
                                     <div class="fw-bold fs-3">
-                                    {{ $stat['value'] }}
+                                       {{ $stat['value'] }}
                                     </div>
                                 </div>
                             @endforeach
@@ -518,8 +518,8 @@ $socialLinks = [
                     </div>
                 </div>
                     {{-- quick access card --}}
-                <div class="card card-sm rounded-4 mt-2 mb-4" style="background: var(--cardbg)">
-                    <div class="card-body">
+                <div class="card card-sm rounded-4 mt-2 mb-4 ">
+                    <div class="card-body dashboard-card rounded-4">
                         <div class="d-flex justify-content-between align-items-start mb-3">
                             <div>
                                 <h3 class="h3 mb-1">
