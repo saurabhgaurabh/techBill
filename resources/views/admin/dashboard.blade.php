@@ -181,6 +181,7 @@ $businessCards = [
     [
         'title'=>'Total Sales',
         'amount'=>'₹2,45,680',
+        'leftBorder' => 'border-success',
         'color'=>'green',
         'svg'=>'
         <svg xmlns="http://www.w3.org/2000/svg" 
