@@ -4,39 +4,33 @@
 
 <div class="page-body">
     <div class="container-xl">
-        <div class="page-header d-print-none mb-3">
-            <div class="row align-items-center">
-                <div class="col">
-                    {{-- <h2 class="page-title">
-                        Create Vendor
-                    </h2> --}}
-                </div>
-                <div class="col-auto">
-                    <a href="{{ route('venders.index') }}" class="btn btn-orange">
-                        Back
-                    </a>
-                </div>
-            </div>
-        </div>
         <div class="card">
-          <div class="card-header">
-            <h3 class="card-title">
-                Create Vender
-            </h3>
-            <div class="ms-auto">
-                    
-                <label class="form-check form-switch">
-                    <input class="form-check-input"                      
-                     <a href="#" class="btn btn-primary d-none d-sm-inline-block" data-bs-toggle="modal" data-bs-target="#without-gst-modal-report">
-                    </a>
-                    <span class="form-check-label"> Without GSTIN </span>
-                </label>
+            <div class="card-header d-flex align-items-center">
+                <a href="{{ route('venders.index') }}"
+                class="btn btn-icon btn-ghost-secondary me-2"
+                aria-label="Back to Vendors"
+                title="Back to Vendors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-left">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M15 6l-6 6l6 6" />
+                    </svg>
+                </a>
+                <h3 class="card-title mb-0">
+                    Create Vender
+                </h3>
+                <div class="ms-auto">
+                    <label class="form-check form-switch">
+                        <input class="form-check-input"                      
+                        <a href="#" class="btn btn-primary d-none d-sm-inline-block" data-bs-toggle="modal" data-bs-target="#without-gst-modal-report">
+                        </a>
+                        <span class="form-check-label"> Without GSTIN </span>
+                    </label>
+                </div>
             </div>
-</div>
 
             <form action="{{ route('venders.store') }}" method="POST">
                 @csrf
-                <div class="card-body">
+                <div class="card-body" style="background : var(--cardbg)">
                     <div class="row">   
                         <h2 class="card-title">Basic Information</h2>
                         <div class="row">        
@@ -110,9 +104,8 @@
                     </div>  
                     <div class="modal-footer">
                         <button type="submit" class="btn btn-orange ms-auto">
-                            <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
                             <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 5l0 14" /><path d="M5 12l14 0" /></svg>
-                            Create Vender
+                            Save
                         </button>
                     </div>
             </form>     

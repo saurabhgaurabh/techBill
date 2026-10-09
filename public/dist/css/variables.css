@@ -13,7 +13,7 @@
 
     --bg:#f5f7fb;
 
-    --border:#e5e7eb;
+    /* --border:#e5e7eb; */
 
     --text:#1f2937;
 
@@ -25,6 +25,8 @@
     --backgroundlightred: #fff1f3; 
     --borderRed: #fecdd6;
     --cardbg :#F8F9FA;
+    --sectionbg:#f8fafc;
+    --border:#e9ecef;
 
 
 }
