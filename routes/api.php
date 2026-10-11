@@ -4,9 +4,21 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\CustomerController;
 use App\Models\Customers;
+use App\Http\Controllers\Api\Admin\ItemController;
+use App\Models\Item;
+use Illuminate\Session\Store;
 
 // Route::get('/customers', [CustomerController::class, 'index'])->name('customers.index');
 Route::post('/customers/store',[CustomerController::class,'store'])->name('customers.store');
+Route::post('/items/store', [ItemController::class, 'store']);
+
+// Route::prefix('items')->group(function () {
+//     Route::get('/', [ItemController::class, 'index']);
+//     Route::post('/', [ItemController::class, 'store']);
+//     Route::get('/{id}', [ItemController::class, 'show']);
+//     Route::put('/{id}', [ItemController::class, 'update']);
+//     Route::delete('/{id}', [ItemController::class, 'destroy']);
+// });
 
 // Route::prefix('customers')->name('customers.')->group(function(){
 //     Route::get('/customers', [CustomerController::class, 'index'])->name('index');

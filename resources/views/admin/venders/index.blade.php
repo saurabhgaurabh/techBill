@@ -9,8 +9,8 @@
     <div class="page-wrapper"> 
         <div class="page-body">
             <div class="container-xl">
-                <div class="card">
-                    <div class="page-header d-print-none">      
+                <div class="card shadow-sm border-0">
+                    {{-- <div class="page-header d-print-none">      
                         <div class="container-xl">
                             <div class="row g-2 align-items-center">
                                 <div class="col-md-12">
@@ -39,6 +39,25 @@
                                             </a>
                                         </div >
                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> --}}
+                    <div class="page-header d-print-none border-bottom pb-2 mb-1 bg-light">
+                        <div class="container-xl">
+                            <div class="d-flex align-items-center justify-content-between flex-wrap gap-2">
+                                <div class="d-flex align-items-center gap-2">
+                                    <h2 class="page-title mb-0 fw-semibold text-dark">Vendor</h2>
+                                    <i class="icon-tabler-star text-muted"></i>
+                                    <i class="icon-tabler-question-circle text-muted"></i>
+                                </div>
+                                <div class="d-flex align-items-center gap-2">
+                                    <div class="col-auto ms-auto d-print-none">   
+                                        <a href="{{ route('venders.create') }}" class="btn btn-orange btn-quare">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="18" height="18" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"><path stroke="none" d="M0 0h24v24H0z"/> <path d="M12 5l0 14"/>  <path d="M5 12l14 0"/>   </svg>
+                                            Create Vendor
+                                        </a>
+                                    </div >
                                 </div>
                             </div>
                         </div>
