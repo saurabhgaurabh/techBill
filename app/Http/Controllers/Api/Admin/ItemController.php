@@ -11,44 +11,33 @@ class ItemController extends Controller
     private function validation(Request $request)
     {
         return $request->validate([
-
             'item_name' => 'required|string|max:150',
-
             'hsn_code' => 'nullable|string|max:10',
-
             'gst_percent' => 'required|numeric',
-
             'new_mrp' => 'required|numeric',
-
             'old_mrp' => 'nullable|numeric',
-
             'max_stock' => 'nullable|integer',
-
             'min_stock' => 'nullable|integer',
-
             'opening_balance' => 'nullable|numeric',
-
             'closing_balance' => 'nullable|numeric',
-
             'status' => 'nullable|boolean'
-
         ]);
     }
 
     public function index()
     {
-        return response()->json([
-            'success' => true,
-            'data' => Item::orderBy('item_id', 'desc')->get()
-        ]);
+        // return response()->json([
+            // 'success' => true,
+            // 'data' => Item::orderBy('item_id', 'desc')->get()
+      
+        // ]);
+             return view('admin.items.index');
     }
 
     public function store(Request $request)
     {
         $data = $this->validation($request);
-
         $item = Item::create($data);
-
         return response()->json([
             'success' => true,
             'message' => 'Item Created Successfully',

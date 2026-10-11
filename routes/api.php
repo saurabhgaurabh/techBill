@@ -10,15 +10,16 @@ use Illuminate\Session\Store;
 
 // Route::get('/customers', [CustomerController::class, 'index'])->name('customers.index');
 Route::post('/customers/store',[CustomerController::class,'store'])->name('customers.store');
-Route::post('/items/store', [ItemController::class, 'store']);
+// Route::post('/items/store', [ItemController::class, 'store']);
 
-// Route::prefix('items')->group(function () {
-//     Route::get('/', [ItemController::class, 'index']);
-//     Route::post('/', [ItemController::class, 'store']);
-//     Route::get('/{id}', [ItemController::class, 'show']);
-//     Route::put('/{id}', [ItemController::class, 'update']);
-//     Route::delete('/{id}', [ItemController::class, 'destroy']);
-// });
+Route::prefix('items')->name('items.')->group(function () {
+    Route::get('/index', [ItemController::class, 'index'])->name('index');
+    Route::post('/store', [ItemController::class, 'store'])->name('store');
+    // Route::get('/{id}', [ItemController::class, 'show']);
+    // Route::put('/{id}', [ItemController::class, 'update']);
+    // Route::delete('/{id}', [ItemController::class, 'destroy']);
+});
+
 
 // Route::prefix('customers')->name('customers.')->group(function(){
 //     Route::get('/customers', [CustomerController::class, 'index'])->name('index');
