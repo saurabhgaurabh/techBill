@@ -10,6 +10,7 @@
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
      <link rel="stylesheet" href="{{ asset('assets/iconsax/css/iconsax.css') }}">
      <meta name="csrf-token" content="{{ csrf_token() }}">
+     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.17.4/dist/cdn.min.js"></script>
     @yield('css')
     @stack('styles')
 </head>

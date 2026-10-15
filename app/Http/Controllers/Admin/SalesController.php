@@ -7,7 +7,7 @@ use App\Models\VendersModal;
 
 class SalesController extends Controller
 {
-    public function index()
+    public function liveChat()
     {
      return view('admin.sales.index');
     }

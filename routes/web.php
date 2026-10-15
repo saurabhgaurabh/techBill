@@ -7,6 +7,7 @@ use App\Http\Controllers\Api\CustomerController;
 use App\Http\Controllers\Admin\VenderController;
 use App\Models\Customers;
 use App\Http\Controllers\Admin\SalesController;
+use App\Http\Controllers\Admin\AssistController;
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -20,11 +21,6 @@ Route::get('/dashboard', function () {
     return view('admin.dashboard');
 })->name('dashboard');
 
-// Route::get('/customers', function () {
-//     $customers = Customers::latest()->get();
-//     return view('admin.customers.index', compact('customers'));
-// })->name('customers');
-
 Route::resource('customers', CustomerController::class);
 Route::resource('withoutgstcustomer', UnregisterCustomerController::class);
 
@@ -34,7 +30,9 @@ Route::resource('withoutgst', UnregisterVendorController::class );
 Route::get('/venders/search', [VenderController::class, 'search'])->name('venders.search');
  
 Route::resource('sales', SalesController::class);
-
+Route::get('/admin/live-chat', function () {
+    return view('admin.assistance.live-chat');
+})->name('assistance.live-chat');
 
 
 
