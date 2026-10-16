@@ -7,6 +7,18 @@ use Illuminate\Database\Eloquent\Model;  // here class using the laravel Eloquen
 
 class ChatMessage extends Model
 {
+     protected $table = 'chat_messages'; // chat_messages is the table name
+
+    protected $fillable = [ // jab chat message send krenge 
+        'customer_id',
+        'user_id',
+        'sender',
+        'message',
+        'message_type',
+        'is_read',
+        'read_at'
+    ];
+    
     public function customer()
     {
         return $this->belongsTo(
@@ -25,16 +37,7 @@ class ChatMessage extends Model
         );
     }
 
-    protected $table = 'chat_messages';
-    protected $fillable = [
-        'customer_id',
-        'user_id',
-        'sender',
-        'message',
-        'message_type',
-        'is_read',
-        'read_at'
-    ];
+   
 }
 
 ?>

@@ -19,16 +19,9 @@
 <body class=" layout-fluid">
 
 @include('admin.layouts.header')
-
-{{-- @include('admin.layouts.sidebar') --}}
-
 <div class="content" style="background-color: #e2e6ff">
-    {{-- <div style="background-color: #e7ebfb; min-height: 100vh; padding: 20px;"> --}}
     @yield('content')
-    {{-- </div> --}}
 </div>
-
-{{-- @yield('customer-modal') --}}
 
 @include('admin.layouts.footer')
 
@@ -43,14 +36,12 @@
     }
 
 </script>
-
 @endif
-
 
 <script src="{{ asset('assets/js/app.js') }}"></script>
 {{-- <script src="{{ asset('dist/js/tabler.min.js') }}"></script> --}}
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
  @yield('script')
+ @livewireScripts
 </body>
-@livewireScripts
 </html>

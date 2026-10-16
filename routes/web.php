@@ -1,5 +1,6 @@
 <?php
 
+use App\Livewire\Admin\LiveChat;
 use App\Http\Controllers\Admin\UnregisterCustomerController;
 use App\Http\Controllers\Admin\UnregisterVendorController;
 use Illuminate\Support\Facades\Route;
@@ -30,12 +31,19 @@ Route::resource('withoutgst', UnregisterVendorController::class );
 Route::get('/venders/search', [VenderController::class, 'search'])->name('venders.search');
  
 Route::resource('sales', SalesController::class);
-Route::get('/admin/live-chat', function () {
-    return view('admin.assistance.live-chat');
-})->name('assistance.live-chat');
+
+// Route::get('/admin/live-chat', function () {
+//     return view('admin.assistance.live-chat');
+// })->name('assistance.live-chat');
 
 Route::livewire('/post/create', 'pages::post.create');
 
+// Route::get('/admin/live-chat', LiveChat::class)
+//     ->name('admin.live-chat');
+
+Route::get('/admin/live-chat', function(){
+    return view('admin.assistance.live-chat');
+})->name('admin.live-chat');
 
 
 

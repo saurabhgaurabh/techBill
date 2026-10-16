@@ -48,21 +48,21 @@
                             <table class="table vendor-table table-hover">
                             <thead>
                                 <tr class="table-primary">
-                                <th>Id</th>
-                                <th>Name</th>
-                                <th>Company Name</th>
-                                <th>Mobile</th>
-                                <th>E-mail</th>
-                                <th>Gst </th>
-                                <th>Pan</th>
-                                <th>Address One</th>
-                                <th>Address Two</th>
-                                <th>City</th>
-                                <th>State</th>
-                                <th>Pin Code</th>
-                                <th>Notes</th>
-                                <th>Status</th>
-                                <th class="sticky-action">Actions</th>
+                                    <th>Id</th>
+                                    <th>Name</th>
+                                    <th>Company Name</th>
+                                    <th>Mobile</th>
+                                    <th>E-mail</th>
+                                    <th>Gst </th>
+                                    <th>Pan</th>
+                                    <th>Address One</th>
+                                    <th>Address Two</th>
+                                    <th>City</th>
+                                    <th>State</th>
+                                    <th>Pin Code</th>
+                                    <th>Notes</th>
+                                    <th>Status</th>
+                                    <th class="sticky-action">Actions</th>
                                 </tr>
                             </thead>
                             {{-- <tbody class="table-tbody">  
