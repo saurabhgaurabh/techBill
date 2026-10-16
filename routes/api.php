@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\Admin\AuthController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\CustomerController;
@@ -8,7 +9,10 @@ use App\Http\Controllers\Api\Admin\ItemController;
 use App\Models\Item;
 use Illuminate\Session\Store;
 
-// Route::get('/customers', [CustomerController::class, 'index'])->name('customers.index');
+
+Route::get('/admin/auth/signup', function () {
+    return view('admin.auth.signup');
+})->name('signup');
 Route::post('/customers/store',[CustomerController::class,'store'])->name('customers.store');
 // Route::post('/items/store', [ItemController::class, 'store']);
 
@@ -19,6 +23,7 @@ Route::prefix('items')->name('items.')->group(function () {
     // Route::put('/{id}', [ItemController::class, 'update']);
     // Route::delete('/{id}', [ItemController::class, 'destroy']);
 });
+
 
 
 // Route::prefix('customers')->name('customers.')->group(function(){

@@ -34,6 +34,7 @@ Route::get('/admin/live-chat', function () {
     return view('admin.assistance.live-chat');
 })->name('assistance.live-chat');
 
+Route::livewire('/post/create', 'pages::post.create');
 
 
 

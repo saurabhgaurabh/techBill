@@ -34,6 +34,7 @@
             </div>
 </div>
 
+
             <form action="{{ route('customers.store') }}" method="POST">
                 @csrf
                 <div class="card-body">
@@ -152,6 +153,7 @@
         </div>
     </div>
 </div>
+{{-- <livewire:customer-create /> --}}
 
 @endsection
 

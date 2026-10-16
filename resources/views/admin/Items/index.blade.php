@@ -5,6 +5,7 @@
 <link href="{{asset('dist/css/vendors.css')}}" rel="stylesheet">
 @endpush --}}
 
+
 <div class="" style="background : var(--cardbg) min-height: 100vh; padding: 5px;">
     <div class="card">
         <div class="card-body rounded-3  box-shadow " style="background : var(--cardbg)">
@@ -125,5 +126,6 @@
             </div>
         </div>
     </div>
+      
 </div>
 @endsection

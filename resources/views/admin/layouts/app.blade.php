@@ -13,6 +13,7 @@
      <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.17.4/dist/cdn.min.js"></script>
     @yield('css')
     @stack('styles')
+    @livewireStyles
 </head>
 
 <body class=" layout-fluid">
@@ -51,4 +52,5 @@
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
  @yield('script')
 </body>
+@livewireScripts
 </html>

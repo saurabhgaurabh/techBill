@@ -1,12 +1,4 @@
 <!doctype html>
-<!--
-* Tabler - Premium and Open Source dashboard template with responsive and high quality UI.
-* @version 1.0.0-beta19
-* @link https://tabler.io
-* Copyright 2018-2023 The Tabler Authors
-* Copyright 2018-2023 codecalm.net Paweł Kuna
-* Licensed under MIT (https://github.com/tabler/tabler/blob/master/LICENSE)
--->
 <html lang="en">
   <head>
     <meta charset="utf-8"/>
@@ -15,11 +7,11 @@
     <title>Sign in - Tabler - Premium and Open Source dashboard template with responsive and high quality UI.</title>
     <link rel="icon" type="image/png" href="{{ asset('dist/img/favicon.png') }}">
     <!-- CSS files -->
-    <link href="./dist/css/tabler.min.css?1684106062" rel="stylesheet"/>
-    <link href="./dist/css/tabler-flags.min.css?1684106062" rel="stylesheet"/>
-    <link href="./dist/css/tabler-payments.min.css?1684106062" rel="stylesheet"/>
-    <link href="./dist/css/tabler-vendors.min.css?1684106062" rel="stylesheet"/>
-    <link href="./dist/css/demo.min.css?1684106062" rel="stylesheet"/>
+    <link href="{{asset('dist/css/tabler.min.css?1684106062')}}" rel="stylesheet"/>
+    <link href="{{asset('dist/css/tabler-flags.min.css?1684106062')}}" rel="stylesheet"/>
+    <link href="{{asset('dist/css/tabler-payments.min.css?1684106062')}}" rel="stylesheet"/>
+    <link href="{{asset('dist/css/tabler-vendors.min.css?1684106062')}}" rel="stylesheet"/>
+    <link href="{{asset('dist/css/demo.min.css?1684106062')}}" rel="stylesheet"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.birds.min.js"></script>
     <style>
@@ -174,7 +166,7 @@ input {
             </div>
           </div>
           <div class="text-center text-muted mt-3">
-            Don't have account yet? <a href="./sign-up.html" tabindex="-1">Sign up</a>
+            Don't have account yet? <a href="{{route('signup')}}" method="get" tabindex="-1">Sign up</a>
           </div>
         </div>
       </div>
