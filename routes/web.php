@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\VenderController;
 use App\Models\Customers;
 use App\Http\Controllers\Admin\SalesController;
 use App\Http\Controllers\Admin\AssistController;
+use App\Livewire\Admin\HelpDesk;
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -31,11 +32,6 @@ Route::resource('withoutgst', UnregisterVendorController::class );
 Route::get('/venders/search', [VenderController::class, 'search'])->name('venders.search');
  
 Route::resource('sales', SalesController::class);
-
-// Route::get('/admin/live-chat', function () {
-//     return view('admin.assistance.live-chat');
-// })->name('assistance.live-chat');
-
 Route::livewire('/post/create', 'pages::post.create');
 
 // Route::get('/admin/live-chat', LiveChat::class)
@@ -45,7 +41,12 @@ Route::get('/admin/live-chat', function(){
     return view('admin.assistance.live-chat');
 })->name('admin.live-chat');
 
+Route::get('/admin/help-desk', function () {
+    return view('admin.assistance.helpdesk');
+})->name('admin.help-desk');
 
+// Route::get('/admin/help-desk', HelpDesk::class)
+//     ->name('admin.help-desk');
 
 
 

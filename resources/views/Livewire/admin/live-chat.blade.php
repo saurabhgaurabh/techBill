@@ -2,7 +2,7 @@
     <div class="container-xl">
         <div class="row">
             <div class="col-md-4">
-                <div class="card">
+                <div class="card rounded-4">
                     <div class="card-header">
                             <h3>Customer List</h3>
                     </div>
@@ -25,7 +25,7 @@
                 </div>
             </div>
             <div class="col-md-8">
-                <div class="card">
+                <div class="card rounded-4">
                     <div class="card-header">
                         @if($selectedCustomer)
                             {{ $selectedCustomer->name }}
@@ -58,10 +58,10 @@
                     </div>
                 </div>
                 @if($selectedCustomer)
-                <div class="card-footer">
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Type message..." wire:model.live="newMessage" wire:key="message-input">
-                        <button class="btn btn-primary" wire:click="sendMessage">Send</button>
+                <div class="card-footer mt-1">
+                    <div class="input-group ">
+                        <input type="text" class="form-control rounded-4" placeholder="Type message..." wire:model.live="newMessage" wire:keydown.enter="sendMessage">
+                        <button class="btn btn-primary rounded-4" wire:click="sendMessage" @disabled(empty($newMessage))>Send</button>
                     </div>
                 </div>
                 @endif
@@ -69,3 +69,7 @@
         </div>
     </div>
 </div>
+
+{{-- @disabled(empty($newMessage))  to desable the send button --}}
+{{-- wire:keydown.enter="sendMessage" to send msg using Enter Key --}}
+{{-- wire:model.live="newMessage"     to send the messages --}}

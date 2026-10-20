@@ -18,6 +18,11 @@ class LiveChat extends Component
         $this->customers = Customers::all();
     }
 
+     public function render() // render to return the view
+        {
+         return view('livewire.admin.live-chat');
+        }
+
     public function selectCustomer($id) // particuler customer ko select krne ka function 
     {
         $this->selectedCustomer = Customers::find($id); // to find customers data from db
@@ -27,10 +32,6 @@ class LiveChat extends Component
             )->orderBy('created_at', 'asc')->get(); // to get the old chat/data/messages first
     }
 
-    public function render() // render to return the view
-    {
-        return view('livewire.admin.live-chat');
-    }
 
     public function sendMessage()
     {
