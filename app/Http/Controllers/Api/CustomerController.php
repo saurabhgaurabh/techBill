@@ -37,7 +37,13 @@ class CustomerController extends Controller
         ]);
         try {
             $customers = Customers::create($validated);
-            return redirect()->route('customers.index')->with('success', 'Customers Created Successfully.');
+            // return redirect()->route('customers.index')->with('success', 'Customers Created Successfully.');
+            return response()->json([
+            'status' => true,
+            'message' => 'Customer Created Successfully',
+            'data' => $customers
+        ], 201);
+            
         } catch (\Exception $e) {
             dd($e->getMessage());
         }

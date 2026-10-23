@@ -274,7 +274,7 @@
 </body>
 </html>
 
-<script>
+{{-- <script>
 $(document).on('click', '.deleteVendor', function () {
 
     let id = $(this).data('id');
@@ -314,4 +314,4 @@ document.getElementById('searchVendor').addEventListener('keyup', function () {
 });
 
 
-</script>
+</script> --}}

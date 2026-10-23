@@ -10,9 +10,12 @@ use App\Models\Item;
 use Illuminate\Session\Store;
 
 
-Route::get('/admin/auth/signup', function () {
-    return view('admin.auth.signup');
-})->name('signup');
+Route::post('/auth/login', [AuthController::class, 'login']);
+Route::post('/auth/signup', [AuthController::class, 'store']);
+// Route::get('/admin/auth/signup', function () {
+//     return view('admin.auth.signup');
+// })->name('signup');
+
 Route::post('/customers/store',[CustomerController::class,'store'])->name('customers.store');
 // Route::post('/items/store', [ItemController::class, 'store']);
 

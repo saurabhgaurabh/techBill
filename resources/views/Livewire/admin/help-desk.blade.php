@@ -45,7 +45,7 @@
                     </div>
                 </div>
                 @endif --}}
-                <div class="card">
+                <div class="card rounded-4">
                     <div class="card-header">
                         @if($selectedVendor)
                             Chat
@@ -77,7 +77,7 @@
                         @endif
                     </div>
                    @if($selectedVendor)
-                    <div class="card-footer border-top">
+                    <div class="card-footer border-top rounded-4">
                         <div class="d-flex gap-2">
                             <input 
                             type = "text"
