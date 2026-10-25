@@ -10,6 +10,8 @@ use App\Models\Customers;
 use App\Http\Controllers\Admin\SalesController;
 use App\Http\Controllers\Admin\AssistController;
 use App\Livewire\Admin\HelpDesk;
+use App\Http\Controllers\Vendor\AuthController;
+use App\Livewire\Admin\CustomerVendorChat;
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -49,6 +51,11 @@ Route::get('/admin/help-desk', function () {
 //     ->name('admin.help-desk');
 
 
+
+// Route::get('/admin/customer-vendor-chat', CustomerVendorChat::class)->name('admin.customer-vendor-chat');
+Route::get('/admin/customer-vendor-chat', function () {
+    return view('admin.assistance.customer-vendor-chat');
+})->name('admin.customer-vendor-chat');
 
 
 

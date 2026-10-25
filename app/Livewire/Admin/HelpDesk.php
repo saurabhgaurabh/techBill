@@ -40,7 +40,7 @@ class HelpDesk extends Component
         $this->validate(['newMessage' => 'required|string|min:1|max:1000' ]);
         ChatMessageVendor::create([ // to insert 
             'vendor_id' => $this->selectedVendor,
-            'user_id' => auth()->id() ?? 1,
+            'user_id' => auth()->id() ?? 2,
             'sender' => 'admin',
             'message' => $this->newMessage,
             'message_type' => 'text',

@@ -5,6 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\ChatMessage;
 
+
+
 class VendersModal extends Model
 {
     public function ChatMessages()
@@ -18,10 +20,13 @@ class VendersModal extends Model
     public $incrementing = true;
 
     protected $fillable = [
+        'sender_vendor_id',
+        'reciever_vendor_id',
         'name',
         'mobile',
         'company_name',
         'email',
+        'password',
         'gstin',
         'pan',
         'address_line1',

@@ -12,6 +12,7 @@ class ChatMessage extends Model
 
     protected $fillable = [ // jab chat message send krenge  or fillable batata h ki kon kon se column create ke dwara save honge
         'customer_id',
+        'vendor_id',
         'user_id',
         'sender',
         'message',

@@ -8,13 +8,13 @@ use App\Models\Customers;
 use App\Http\Controllers\Api\Admin\ItemController;
 use App\Models\Item;
 use Illuminate\Session\Store;
+// use App\Http\Controllers\Api\Vendor\AuthController;
 
 
 Route::post('/auth/login', [AuthController::class, 'login']);
 Route::post('/auth/signup', [AuthController::class, 'store']);
-// Route::get('/admin/auth/signup', function () {
-//     return view('admin.auth.signup');
-// })->name('signup');
+
+Route::post('/vendor/login',[AuthController::class,'login']);
 
 Route::post('/customers/store',[CustomerController::class,'store'])->name('customers.store');
 // Route::post('/items/store', [ItemController::class, 'store']);

@@ -35,22 +35,6 @@ class LiveChat extends Component
 
     public function sendMessage()
     {
-        // if($this->newMessage){ // if input is empty then don't save
-        //     return;
-        // }
-        // ChatMessage::create([ // this will insert the new row in db
-        //     'customer_id' => $this->selectedCustomer->customer_id, // to select the customer
-        //     'user_id' => $this->auth->id(), // kon sa admin bhej ra h msg uska name aayega
-        //     'sender' => 'admin', // ynha admin string esiliye liye h kyuki msg admin hi bhejega
-        //     'messages' => $this->newMessage, // new message
-        //     'message_type' => 'text',
-        //     'is_read' => 0
-        // ]);
-        // $this->newMessage = '';
-        // $this->messages = ChatMessage::where(
-        //     'customer_id',
-        //     $this->selectedCustomer->customer_id
-        // )->orderBy('created_at', 'asc')->get();
         if(empty($this->newMessage))
             {
                 return;
