@@ -34,7 +34,7 @@
                 <div class="card rounded-4">
                     <div class="card-header">
                         <h3 class="card-title">
-                            Vendor Chat
+                            Customer Chat
                         </h3>
                     </div>
                     <div class="card-body"
@@ -77,7 +77,7 @@
                 <div class="card rounded-4">
                     <div class="card-header">
                         <h3 class="card-title">
-                            Customer Chat
+                            Vendor Chat
                         </h3>
                     </div>
                     <div class="card-body"
