@@ -14,6 +14,24 @@
                     </option>
                     @endforeach
                 </select>
+                <div class="card-body">
+                    <table class="table">
+                        <thead>
+                            <tr class="table-primary">
+                                <td>Id</td>
+                                <td>Name</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach($customers as $customer)
+                            <tr wire:click="selectCustomer({{$customer->customer_id}})" style="curson:pointer">
+                                <td>{{$customer->customer_id}}</td>
+                                <td> {{$customer->name}}</td>
+                            </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
             </div>
             <div class="col-md-6">
                 <label class="form-label">
@@ -84,13 +102,13 @@
                          style="height:400px; overflow-y:auto;">
                         @foreach($messages as $message)
                             @if($message->sender == 'customer')
-                                <div class="d-flex justify-content-start mb-3">
+                                <div class="d-flex justify-content-end mb-3">
                                     <div class="bg-success text-white p-2 rounded">
                                         {{ $message->message }}
                                     </div>
                                 </div>
                             @else
-                                <div class="d-flex justify-content-end mb-3">
+                                <div class="d-flex justify-content-start mb-3">
                                     <div class="text-light bg-cyan p-2 rounded">
                                         {{ $message->message }}
                                     </div>
