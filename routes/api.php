@@ -11,10 +11,7 @@ use Illuminate\Session\Store;
 // use App\Http\Controllers\Api\Vendor\AuthController;
 
 
-Route::post('/auth/login', [AuthController::class, 'login']);
 Route::post('/auth/signup', [AuthController::class, 'store']);
-
-Route::post('/vendor/login',[AuthController::class,'login']);
 
 Route::post('/customers/store',[CustomerController::class,'store'])->name('customers.store');
 // Route::post('/items/store', [ItemController::class, 'store']);

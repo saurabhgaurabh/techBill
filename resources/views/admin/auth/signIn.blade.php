@@ -118,7 +118,9 @@ input {
             <div class="card-body">
               <h2 class="h2 text-center mb-4">Login to your account</h2>
               {{-- <form action="{{ route('dashboard') }}" method="get" autocomplete="off" novalidate> --}}
-              <form id="loginForm" method="get" autocomplete="off" novalidate>
+              {{-- <form id="loginForm" method="get" autocomplete="off" novalidate> --}}
+                <form action="{{ route('admin.login.submit') }}" method="POST">
+                    @csrf
                 <div class="mb-3">
                   <label class="form-label">Email address</label>
                   <input type="email" name="email" class="form-control" placeholder="your@email.com" autocomplete="off">
@@ -199,28 +201,3 @@ input {
      </script>
   </body>
 </html>
-
-<script>
-  document.getElementById('loginForm').addEventListener('submit', async function(e){
-      e.preventDefault();
-      let email = document.querySelector('[name="email"]').value;
-      let password = document.querySelector('[name="password"]').value;
-      let response = await fetch('/api/auth/login', {
-          method: 'POST',
-          headers: {
-              'Content-Type': 'application/json',
-              'Accept': 'application/json'
-          },
-          body: JSON.stringify({
-              email: email,
-              password: password
-          })
-      });
-      let data = await response.json();
-      if(data.status){
-          window.location.href = "/dashboard";
-      }else{
-          alert(data.message);
-      }
-  });
-</script>

@@ -1,25 +1,16 @@
 <div class="page-body">
     <div class="container-xl">
         <div class="row mb-3">
-            <div class="col-md-6">
+            <div class="col-md-3">
                 <label class="form-label">
                     Select Customer
                 </label>
-                <select class="form-select"
-                wire:change="selectCustomer($event.target.value)">
-                    @foreach($customers as $customer)
-                    <option value="{{ $customer->customer_id }}"
-                    @selected($customer_id == $customer->customer_id)>
-                        {{ $customer->name }}
-                    </option>
-                    @endforeach
-                </select>
                 <div class="card-body">
                     <table class="table">
                         <thead>
                             <tr class="table-primary">
                                 <td>Id</td>
-                                <td>Name</td>
+                                <td>Customers Name</td>
                             </tr>
                         </thead>
                         <tbody>
@@ -33,7 +24,7 @@
                     </table>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-3">
                 <label class="form-label">
                     Select Vendor
                 </label>
@@ -45,6 +36,82 @@
                     </option>
                     @endforeach
                 </select>
+                <div class="card-body">
+                    <table class="table">
+                        <thead>
+                            <tr class="table-primary">
+                                <td>Id</td>
+                                <td>Vendors Name</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach($vendors as $vendor)
+                                <tr wire:click="selectVendor({{$vendor->vendor_id}})" style="cursor: pointer">
+                                    <td>{{$vendor->vendor_id}}</td>
+                                    <td>{{$vendor->name}}</td>
+                                </tr>
+                            @endforeach 
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="col-md-3">
+                   <div class="card">
+                        <div class="card-header">
+                            <h4>Selected Customer</h4>
+                        </div>
+                    <div class="card-body">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Customer Id</th>
+                                    <th>Customer Name</th>
+                                </tr>
+                            </thead>
+                            <tbody >
+                                @if($selectedCustomer)
+                                    <tr class="table-primary">
+                                        <td>{{ $selectedCustomer->customer_id }}</td>
+                                        <td>{{ $selectedCustomer->name }}</td>
+                                    </tr>
+                                @else
+                                    <tr>
+                                        <td class="text-muted">No Customer Selected</td>
+                                    </tr>
+                                @endif
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                   <div class="card">
+                        <div class="card-header">
+                            <h4>Selected Vendor</h4>
+                        </div>
+                    <div class="card-body">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Vendor Id</th>
+                                    <th>Vendor Name</th>
+                                </tr>
+                            </thead>
+                            <tbody >
+                                @if($selectedVendor)
+                                    <tr class="table-primary">
+                                        <td>{{ $selectedVendor->vendor_id }}</td>
+                                        <td>{{ $selectedVendor->name }}</td>
+                                    </tr>
+                                @else
+                                    <tr>
+                                        <td class="text-muted">No Customer Selected</td>
+                                    </tr>
+                                @endif
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="row g-3">
@@ -52,7 +119,11 @@
                 <div class="card rounded-4">
                     <div class="card-header">
                         <h3 class="card-title">
-                            Customer Chat
+                          @if($selectedCustomer)
+                          {{$selectedCustomer->name}}
+                          @else
+                          Customer chat
+                          @endif
                         </h3>
                     </div>
                     <div class="card-body"
@@ -95,7 +166,11 @@
                 <div class="card rounded-4">
                     <div class="card-header">
                         <h3 class="card-title">
-                            Vendor Chat
+                           @if($selectedVendor)
+                           {{$selectedVendor->name}}
+                           @else
+                           Vendor Chat
+                           @endif
                         </h3>
                     </div>
                     <div class="card-body"

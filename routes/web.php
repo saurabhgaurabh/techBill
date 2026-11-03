@@ -10,8 +10,10 @@ use App\Models\Customers;
 use App\Http\Controllers\Admin\SalesController;
 use App\Http\Controllers\Admin\AssistController;
 use App\Livewire\Admin\HelpDesk;
-use App\Http\Controllers\Vendor\AuthController;
+use App\Http\Controllers\api\admin\AuthController;
 use App\Livewire\Admin\CustomerVendorChat;
+use App\Livewire\Admin\UserChat;
+
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -20,6 +22,11 @@ use App\Livewire\Admin\CustomerVendorChat;
 Route::get('/', function(){
     return view('admin.auth.signIn');
 });
+
+Route::post('/admin/login', [AuthController::class,'webLogin'])->name('admin.login.submit');
+
+
+
 
 Route::get('/dashboard', function () {
     return view('admin.dashboard');
@@ -35,10 +42,6 @@ Route::get('/venders/search', [VenderController::class, 'search'])->name('vender
  
 Route::resource('sales', SalesController::class);
 Route::livewire('/post/create', 'pages::post.create');
-
-// Route::get('/admin/live-chat', LiveChat::class)
-//     ->name('admin.live-chat');
-
 Route::get('/admin/live-chat', function(){
     return view('admin.assistance.live-chat');
 })->name('admin.live-chat');
@@ -47,12 +50,6 @@ Route::get('/admin/help-desk', function () {
     return view('admin.assistance.helpdesk');
 })->name('admin.help-desk');
 
-// Route::get('/admin/help-desk', HelpDesk::class)
-//     ->name('admin.help-desk');
-
-
-
-// Route::get('/admin/customer-vendor-chat', CustomerVendorChat::class)->name('admin.customer-vendor-chat');
 Route::get('/admin/customer-vendor-chat', function () {
     return view('admin.assistance.customer-vendor-chat');
 })->name('admin.customer-vendor-chat');
@@ -60,7 +57,8 @@ Route::get('/admin/customer-vendor-chat', function () {
 
 
 
-
+Route::get('/admin/assistance/user-chat', UserChat::class)
+    ->name('admin.user-chat'); 
 
 
 

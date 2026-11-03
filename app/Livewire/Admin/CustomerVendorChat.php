@@ -19,6 +19,8 @@ class CustomerVendorChat extends Component
     public $messages = [];
     public $vendorMessage = '';
     public $customerMessage = '';
+    public $selectedCustomer = null; // selected customer ka name show krane ke liye 
+    public $selectedVendor = null; // same sa above
 
     public function mount()
     {
@@ -30,12 +32,14 @@ class CustomerVendorChat extends Component
     public function selectCustomer($id)
     {
         $this->customer_id = $id;
+        $this->selectedCustomer = Customers::find($id);  // selected customer ka name print krane ke liye
         $this->loadMessages();
     }
 
     public function selectVendor($id)
     {
         $this->vendor_id = $id;
+        $this->selectedVendor = VendersModal::find($id);  // to select vendors name
         $this->loadMessages();
     }
 

@@ -45,29 +45,27 @@ class AuthController extends Controller
 
     }
 
-    public function login(Request $request)
+    public function webLogin(Request $request)
     {
-        $validator = Validator::make($request->all(), [
-            'email' => 'required|email',
-            'password' => 'required',
+        $request->validate([
+            'email'=>'required|email',
+            'password'=>'required',
         ]);
-        if($validator->fails()) {
-            return response()->json([
-                'status' => false,
-                'message' => $validator->errors(),
-            ],422);
+        if(Auth::attempt([
+            'email'=>$request->email,
+            'password'=>$request->password
+        ]))
+        {
+            $request->session()->regenerate();
+            return redirect()->route('dashboard');
         }
-        if(!Auth::attempt($request->only('email', 'password'))){
-            return response()->json([
-                'status' => false,
-                'message' => 'Invalid email or password',
-            ],401);
-        }
-        return response()->json([
-            'status' => 'true',
-            'message' => 'Login Successful',
-            'user' => Auth::user(),
-        ],200);
+        return back()->withErrors([
+            'email'=>'Invalid email or password'
+        ]);
+        // dd([
+        //     'id'=>Auth::id(),
+        //     'user'=>Auth::user()
+        // ]);
     }
 }
 

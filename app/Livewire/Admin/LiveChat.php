@@ -6,54 +6,80 @@ use Livewire\Component;
 use App\Models\Customers; // customer find krne ke liye
 use App\Models\ChatMessage; // chat messages find/add krne ke liye
 
+use App\Models\User;
+use App\Models\UserChatMessage;
+use Illuminate\Support\Facades\Auth;
+
+
 class LiveChat extends Component
 {
-    public $customers = []; // to get all customers
-    public $selectedCustomer = null; // only selected customers
+
+    public $users = []; // to get all users
+    public $selectedUser = null; // only selected users 
     public $messages = [];  // customer ki chat messages find krna
     public $newMessage = ''; // new messages/chat krne ke liye or input box se value send krega
 
     public function mount()
     {
-        $this->customers = Customers::all();
+        $this->users = User::where('id','!=',auth()->id())->get();
+        //  dd([
+        //     'auth_id'=>auth()->id(),
+        //     'user'=>auth()->user(),
+        //     'session'=>session()->all()
+        // ]);
     }
 
-     public function render() // render to return the view
-        {
-         return view('livewire.admin.live-chat');
-        }
-
-    public function selectCustomer($id) // particuler customer ko select krne ka function 
+    public function render()
     {
-        $this->selectedCustomer = Customers::find($id); // to find customers data from db
-        $this->messages = ChatMessage::where(  // to find via id
-            'customer_id',
-             $id
-            )->orderBy('created_at', 'asc')->get(); // to get the old chat/data/messages first
+        return view('livewire.admin.live-chat')
+            ->layout('admin.layouts.app');
+    }
+
+    public function selectUser($id)
+    {
+        $this->selectedUser = User::find($id);
+        if($this->selectedUser){
+            $this->loadMessages();
+        }
+    }
+
+    public function loadMessages()
+    {
+        if(!$this->selectedUser)
+        {
+            return;
+        }
+        $this->messages = UserChatMessage::where(function($query){
+            $query->where('sender_id',auth()->id())
+            ->where('receiver_id',$this->selectedUser->id);
+
+        })
+        ->orWhere(function($query){
+            $query->where('sender_id',$this->selectedUser->id)
+            ->where('receiver_id',auth()->id());
+        })
+        ->orderBy('created_at','asc')
+        ->get();
     }
 
 
     public function sendMessage()
     {
-        if(empty($this->newMessage))
-            {
-                return;
-            }
-        ChatMessage::create([
-            'customer_id' => $this->selectedCustomer->customer_id,
-            'user_id' => auth()->id() ?? 1,
-            'sender' => 'admin',
-            'message' => $this->newMessage,
-            'message_type' => 'text',
-            'is_read' => 0,
-        ]);
-        $this->newMessage = '';
-        $this->messages = ChatMessage::where(
-            'customer_id',
-            $this->selectedCustomer->customer_id
-            )->orderBy('created_at', 'asc')->get();
-             $this->reset('newMessage'); // to reset the input
+        if(empty($this->newMessage) || !$this->selectedUser)
+        {
+            return;
         }
+        UserChatMessage::create([
+            'user_id'     => auth()->id(),
+            'sender_id'=>auth()->id(),
+            'receiver_id'=>$this->selectedUser->id,
+            'message'=>$this->newMessage,
+            'is_read'=>0,
+        ]);
+        $this->newMessage='';
+        $this->loadMessages();
+        // dd(auth()->id());
+    }
 
     
 }
