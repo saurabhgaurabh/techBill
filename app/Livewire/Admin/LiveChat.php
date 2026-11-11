@@ -5,7 +5,6 @@ namespace App\Livewire\Admin;
 use Livewire\Component;
 use App\Models\Customers; // customer find krne ke liye
 use App\Models\ChatMessage; // chat messages find/add krne ke liye
-
 use App\Models\User;
 use App\Models\UserChatMessage;
 use Illuminate\Support\Facades\Auth;
@@ -13,7 +12,6 @@ use Illuminate\Support\Facades\Auth;
 
 class LiveChat extends Component
 {
-
     public $users = []; // to get all users
     public $selectedUser = null; // only selected users 
     public $messages = [];  // customer ki chat messages find krna

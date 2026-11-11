@@ -7,10 +7,19 @@ use App\Models\VendersModal;
 
 class SalesController extends Controller
 {
-    public function liveChat()
+    public function index()
     {
      return view('admin.sales.index');
     }
+
+   public function store(Request $request)
+   {
+       try{
+            
+       }catch(\Exception $e){
+           $this->message = $e->getMessage('created sales');
+       }        
+   } 
 }
 
 ?>

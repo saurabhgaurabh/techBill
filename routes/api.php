@@ -8,6 +8,7 @@ use App\Models\Customers;
 use App\Http\Controllers\Api\Admin\ItemController;
 use App\Models\Item;
 use Illuminate\Session\Store;
+use App\Http\Controllers\Admin\SalesController;
 // use App\Http\Controllers\Api\Vendor\AuthController;
 
 
@@ -24,11 +25,9 @@ Route::prefix('items')->name('items.')->group(function () {
     // Route::delete('/{id}', [ItemController::class, 'destroy']);
 });
 
-
-
-// Route::prefix('customers')->name('customers.')->group(function(){
-//     Route::get('/customers', [CustomerController::class, 'index'])->name('index');
-//     Route::post('/customers/store', [CustomerController::class, 'store'])->name('customers.store');
-// });
-
+// Route::post('/sales/store', [SalesController::class, 'store'])->name('sales.store');
+Route::prefix('sales')->name('sales.')->group(function () {
+    Route::get('/index', [SalesController::class, 'index'])->name('index');
+    Route::post('/store', [SalesController::class, 'store'])->name('store');
+});
 ?>

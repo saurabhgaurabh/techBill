@@ -40,7 +40,7 @@ Route::resource('venders', VenderController::class);
 Route::resource('withoutgst', UnregisterVendorController::class );
 Route::get('/venders/search', [VenderController::class, 'search'])->name('venders.search');
  
-Route::resource('sales', SalesController::class);
+// Route::resource('sales', SalesController::class);
 Route::livewire('/post/create', 'pages::post.create');
 Route::get('/admin/live-chat', function(){
     return view('admin.assistance.live-chat');

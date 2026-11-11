@@ -39,7 +39,7 @@
                             Select User
                         @endif
                     </div>
-                    <div class="card-body" 
+                    <div class="card-body" wire:poll.1000ms=loadMessages
                          style="height:400px;overflow-y:auto;">
                         @if($selectedUser)
                             @foreach($messages as $message)
@@ -54,7 +54,7 @@
                                     <div class="d-flex justify-content-start mb-3">
                                         <div class="bg-cyan text-light p-2 rounded">
                                             {{ $message->message }}
-                                        </div>
+                                        </div> 
                                     </div>
                                 @endif
                             @endforeach
@@ -90,3 +90,4 @@
 {{-- @disabled(empty($newMessage))  to desable the send button --}}
 {{-- wire:keydown.enter="sendMessage" to send msg using Enter Key --}}
 {{-- wire:model.live="newMessage"     to send the messages --}}
+{{-- wire:poll.1000ms=loadMessages  to refresh messages every 1 second mtlb msg load ni krne pdenge --}}
