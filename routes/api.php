@@ -8,7 +8,7 @@ use App\Models\Customers;
 use App\Http\Controllers\Api\Admin\ItemController;
 use App\Models\Item;
 use Illuminate\Session\Store;
-use App\Http\Controllers\Admin\SalesController;
+use App\Http\Controllers\Api\Admin\SalesController;
 // use App\Http\Controllers\Api\Vendor\AuthController;
 
 

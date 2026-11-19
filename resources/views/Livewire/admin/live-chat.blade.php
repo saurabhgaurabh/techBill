@@ -39,7 +39,8 @@
                             Select User
                         @endif
                     </div>
-                    <div class="card-body" wire:poll.1000ms=loadMessages
+                    <div class="chat-container card-body" 
+                    wire:poll.350ms="loadMessages"
                          style="height:400px;overflow-y:auto;">
                         @if($selectedUser)
                             @foreach($messages as $message)
@@ -68,15 +69,17 @@
                     <div class="card-footer">
                         <div class="input-group">
                             <input
+                                id="messageInput"
                                 type="text"
                                 class="form-control rounded-4"
                                 placeholder="Type message..."
                                 wire:model.live="newMessage"
-                                wire:keydown.enter="sendMessage"  >
+                                wire:keydown.enter.prevent="sendMessage">
                             <button
                                 class="btn btn-primary rounded-4"
                                 wire:click="sendMessage"
-                                @disabled(empty($newMessage)) >
+                                @disabled(empty($newMessage)) 
+                                >
                                 Send
                             </button>
                         </div>
@@ -91,3 +94,22 @@
 {{-- wire:keydown.enter="sendMessage" to send msg using Enter Key --}}
 {{-- wire:model.live="newMessage"     to send the messages --}}
 {{-- wire:poll.1000ms=loadMessages  to refresh messages every 1 second mtlb msg load ni krne pdenge --}}
+@script
+<script>
+        document.addEventListener("livewire:load", () => {
+            const chatBox = document.getElementById('chat-container');
+            
+            function scrollToBottom() {
+                if (chatBox) {
+                    chatBox.scrollTop = chatBox.scrollHeight;
+                }
+            }
+
+            scrollToBottom();
+
+            Livewire.hook('message.processed', (message, component) => {
+                scrollToBottom();
+            });
+        });
+    </script>
+    @endscript

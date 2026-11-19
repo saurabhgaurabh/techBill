@@ -63,7 +63,7 @@ class LiveChat extends Component
 
     public function sendMessage()
     {
-        if(empty($this->newMessage) || !$this->selectedUser)
+        if(empty(trim($this->newMessage)) || !$this->selectedUser)
         {
             return;
         }
@@ -74,8 +74,13 @@ class LiveChat extends Component
             'message'=>$this->newMessage,
             'is_read'=>0,
         ]);
-        $this->newMessage='';
+        // $this->newMessage='';
+        $this->js("
+            document.getElementById('messageInput').value = '';
+        ");
+        // $this->reset('newMessage');
         $this->loadMessages();
+        $this->dispatch('scroll-to-bottom');
         // dd(auth()->id());
     }
 
