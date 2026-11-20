@@ -9,6 +9,7 @@ use App\Http\Controllers\Api\Admin\ItemController;
 use App\Models\Item;
 use Illuminate\Session\Store;
 use App\Http\Controllers\Api\Admin\SalesController;
+use App\Http\Controllers\Api\Admin\PurchaseController;
 // use App\Http\Controllers\Api\Vendor\AuthController;
 
 
@@ -30,5 +31,10 @@ Route::prefix('items')->name('items.')->group(function () {
 Route::prefix('sales')->name('sales.')->group(function () {
     Route::get('/index', [SalesController::class, 'index'])->name('index');
     Route::post('/store', [SalesController::class, 'store'])->name('store');
+});
+
+Route::prefix('purchase')->name('purchase.')->group(function () {
+    // Route::get('/index', [PurchaseController::class, 'index'])->name('index');
+    Route::post('/store', [PurchaseController::class, 'store'])->name('store');
 });
 ?>
