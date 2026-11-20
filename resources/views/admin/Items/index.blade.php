@@ -34,7 +34,7 @@
                     </div>
                     </div>
 
-                    <a href="#" class="btn btn-orange rounded-3">
+                    <a href="{{ route('items.create') }}" class="btn btn-orange rounded-3">
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="18" height="18" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none">
                         <path stroke="none" d="M0 0h24v24H0z"/>
                         <path d="M12 5v14M5 12h14"/>
@@ -75,27 +75,35 @@
                 <div class="table-responsive">
                     <table class="table table-hover table-striped align-middle">
                         <thead class="table-light">
-                            <tr>
+                            <tr class="table-primary">
+                                <th>ID</th>
                                 <th>Name</th>
-                                <th>Type</th>
+                                <th>Description</th>
                                 <th>Unit</th>
-                                <th>Group</th>
+                                <th>Item Type</th>
                                 <th>Category</th>
-                                <th>Manage Stock</th>
-                                <th>MRP</th>
+                                <th>New MRP</th>
+                                <th>Old MRP</th>
+                                <th>Purchase Price</th>
+                                <th>Sale Price</th>
+                                <th>GST</th>
                                 <th>Actions</th>
                             </tr>
                         </thead>
                         <tbody>
                             @foreach($items as $item)
                             <tr>
+                                <td>{{$item->item_id}}</td>
                                 <td><a href="#" class="text-primary">{{$item->item_name}}</a></td>
-                                <td>{{$item->item_type}}</td>
+                                <td>{{$item->description}}</td>
                                 <td>{{$item->unit}}</td>
-                                <td></td>
+                                <td>{{$item->item_type}}</td>
                                 <td>{{$item->category}}</td>
-                                <td>Normal</td>
                                 <td>{{$item->new_mrp}}</td>
+                                <td>{{$item->old_mrp}}</td>
+                                <td>{{$item->purchase_price}}</td>
+                                <td>{{$item->sale_price}}</td>
+                                <td>{{$item->gst_percent}}</td>
                                 <td><a href="#" class="text-primary">Edit</a></td>
                             </tr>
                             @endforeach
@@ -103,7 +111,7 @@
                     </table>
                 </div>
                 <div class="card-footer text-muted small">
-                    1–3 of 3 Records
+                    {{ $items->withQueryString()->links() }}
                 </div>
             </div>
         </div>

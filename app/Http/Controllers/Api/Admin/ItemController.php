@@ -37,6 +37,11 @@ class ItemController extends Controller
         return view('admin.items.index', compact('items'));
     }
 
+    public function create()
+    {
+        return view('admin.items.create');
+    }
+
     public function store(Request $request)
     {
         try {

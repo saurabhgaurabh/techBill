@@ -19,6 +19,7 @@ Route::post('/customers/store',[CustomerController::class,'store'])->name('custo
 
 Route::prefix('items')->name('items.')->group(function () {
     Route::get('/index', [ItemController::class, 'index'])->name('index');
+    Route::get('/create', [ItemController::class, 'create'])->name('create');
     Route::post('/store', [ItemController::class, 'store'])->name('store');
     // Route::get('/{id}', [ItemController::class, 'show']);
     // Route::put('/{id}', [ItemController::class, 'update']);
