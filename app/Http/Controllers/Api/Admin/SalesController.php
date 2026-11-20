@@ -2,14 +2,14 @@
 namespace App\Http\Controllers\Api\Admin;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Https\Request;
-use App\Models\VendersModal;
+use Illuminate\Http\Request;
+use App\Models\SalesModel;
 
 class SalesController extends Controller
 {
     private function validation(Request $request)
     {
-        return $request->validation([
+        return $request->validate([
             'invoice_no' => 'required|string|max:50',
             'series_id' => 'required|numeric',
             'customer_id' => 'required|numeric',
@@ -29,24 +29,34 @@ class SalesController extends Controller
             'round_off' => 'nullable|numeric',
             'grand_total' => 'required|numeric',
             'remarks' => 'nullable|string|max:500',
-            'status' => 'nullable|boolean'            
+            'status' => 'nullable|boolean'
         ]);
     }
+
 
     public function index()
     {
      return view('admin.sales.index');
     }
 
-   public function store(Request $request)
-   {
-       try{
-        $saledata = $this->validation($request);
-        $sales = 
-            
-       }catch(\Exception $e){
-           $this->message = $e->getMessage('created sales');
-       }        
+     public function store(Request $request)
+    {
+        try {
+            $salesData = $this->validation($request);
+            $sales = SalesModel::create($salesData);
+            return response()->json([
+                'success' => true,
+                'message' => 'Sales Created Successfully',
+                'salesdata' => $sales
+            ], 201);
+
+        } catch (\Exception $e) {
+            return response()->json([
+                'success' => false,
+                'message' => 'Failed to create sales',
+                'error' => $e->getMessage()
+            ], 500);
+        }        
    } 
 }
 
