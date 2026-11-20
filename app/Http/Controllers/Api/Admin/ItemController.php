@@ -12,10 +12,16 @@ class ItemController extends Controller
     {
         return $request->validate([
             'item_name' => 'required|string|max:150',
+            'description' => 'nullable|string|max:500',
+            'unit' => 'required|numeric|max:50',
+            'item_type' => 'required|string|max:50',
+            'category' => 'nullable|string|max:50',
             'hsn_code' => 'nullable|string|max:10',
             'gst_percent' => 'required|numeric',
             'new_mrp' => 'required|numeric',
             'old_mrp' => 'nullable|numeric',
+            'purchase_price' => 'nullable|numeric',
+            'sale_price' => 'nullable|numeric',
             'max_stock' => 'nullable|integer',
             'min_stock' => 'nullable|integer',
             'opening_balance' => 'nullable|numeric',
@@ -26,23 +32,28 @@ class ItemController extends Controller
 
     public function index()
     {
-        // return response()->json([
-            // 'success' => true,
-            // 'data' => Item::orderBy('item_id', 'desc')->get()
-      
-        // ]);
-             return view('admin.items.index');
+       $query = Item::query();
+       $items = $query->paginate(10);
+        return view('admin.items.index', compact('items'));
     }
 
     public function store(Request $request)
     {
-        $data = $this->validation($request);
-        $item = Item::create($data);
-        return response()->json([
-            'success' => true,
-            'message' => 'Item Created Successfully',
-            'data' => $item
-        ], 201);
+        try {
+            $data = $this->validation($request);
+            $item = Item::create($data);    
+            return response()->json([
+                'success' => true,
+                'message' => 'Item Created Successfully',
+                'data' => $item
+            ], 201);
+        } catch (\Exception $e) {
+            return response()->json([
+                'success' => false,
+                'message' => 'Failed to create item',
+                'error' => $e->getMessage()
+            ], 500);
+        }
     }
 
     // public function show($id)

@@ -107,13 +107,6 @@
                                                 <span class="text-secondary">Unknown</span>
                                                 @endif
                                             </td>
-                                            {{-- <td class="text-center">
-                                                <div class="d-flex justify-content-center align-items-center gap-2">
-                                                    <a href="{{ route('customers.edit',$item->vendor_id) }}" class="" title="Edit">
-                                            Edit
-                                                    </a>
-                                                </div>
-                                            </td> --}}
                                             <td class="sticky-action text-center">
                                                 <div class="dropdown">
                                                     <!-- Three Dots Toggle Button -->

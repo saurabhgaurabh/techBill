@@ -75,48 +75,30 @@
                 <div class="table-responsive">
                     <table class="table table-hover table-striped align-middle">
                         <thead class="table-light">
-                        <tr>
-                            <th>Name</th>
-                            <th>Type</th>
-                            <th>Unit</th>
-                            <th>Group</th>
-                            <th>Category</th>
-                            <th>Manage Stock</th>
-                            <th>MRP</th>
-                            <th>Actions</th>
-                        </tr>
+                            <tr>
+                                <th>Name</th>
+                                <th>Type</th>
+                                <th>Unit</th>
+                                <th>Group</th>
+                                <th>Category</th>
+                                <th>Manage Stock</th>
+                                <th>MRP</th>
+                                <th>Actions</th>
+                            </tr>
                         </thead>
                         <tbody>
-                        <tr>
-                            <td><a href="#" class="text-primary">Foundary furnace</a></td>
-                            <td>Goods</td>
-                            <td>PCS</td>
-                            <td></td>
-                            <td></td>
-                            <td>Normal</td>
-                            <td></td>
-                            <td><a href="#" class="text-primary">Edit</a></td>
-                        </tr>
-                        <tr>
-                            <td><a href="#" class="text-primary">black powder</a></td>
-                            <td>Goods</td>
-                            <td>KGS</td>
-                            <td>Ceramic Pot</td>
-                            <td>japani Pot</td>
-                            <td>Normal</td>
-                            <td></td>
-                            <td><a href="#" class="text-primary">Edit</a></td>
-                        </tr>
-                        <tr>
-                            <td><a href="#" class="text-primary">Foundary repairing material</a></td>
-                            <td>Goods</td>
-                            <td>KGS</td>
-                            <td></td>
-                            <td></td>
-                            <td>Normal</td>
-                            <td></td>
-                            <td><a href="#" class="text-primary">Edit</a></td>
-                        </tr>
+                            @foreach($items as $item)
+                            <tr>
+                                <td><a href="#" class="text-primary">{{$item->item_name}}</a></td>
+                                <td>{{$item->item_type}}</td>
+                                <td>{{$item->unit}}</td>
+                                <td></td>
+                                <td>{{$item->category}}</td>
+                                <td>Normal</td>
+                                <td>{{$item->new_mrp}}</td>
+                                <td><a href="#" class="text-primary">Edit</a></td>
+                            </tr>
+                            @endforeach
                         </tbody>
                     </table>
                 </div>
