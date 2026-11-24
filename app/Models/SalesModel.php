@@ -2,6 +2,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Customers;
 
 class SalesModel extends Model
 {
@@ -31,4 +32,9 @@ class SalesModel extends Model
         'remarks',
         'status'
     ];
+    
+    public function customer()
+    {
+        return $this->belongsTo(Customers::class, 'customer_id', 'customer_id');
+    }
 }

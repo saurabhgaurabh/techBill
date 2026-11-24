@@ -34,9 +34,13 @@ class SalesController extends Controller
     }
 
 
-    public function index()
+   public function index()
     {
-     return view('admin.sales.index');
+        $salesdata = SalesModel::with('customer')
+                        // ->latest() to get the latest data
+                        ->orderBy('sale_id', 'asc')  // to get the data by asc order
+                        ->get();
+        return view('admin.sales.index', compact('salesdata'));
     }
 
      public function store(Request $request)

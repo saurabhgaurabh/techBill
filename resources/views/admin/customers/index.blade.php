@@ -65,21 +65,6 @@
                                     <th class="sticky-action">Actions</th>
                                 </tr>
                             </thead>
-                            {{-- <tbody class="table-tbody">  
-                                @foreach ($customers->sortBy('vendors_id') as $item)                    
-                                <tr>
-                                    <td>{{ $item->vendor_id }}</td>
-                                    <td>{{ $item->name }}</td>
-                                    <td>{{ $item->company_name }}</td>
-                                    <td>{{ $item->mobile }}</td>
-                                    <td>{{ $item->email }}</td>
-                                    <td>{{ $item->gstin }}</td>
-                                    <td>{{ $item->pan }}</td>
-                                    <td>{{ $item->address_line1 }}</td>
-                                    <td>{{ $item->notes }}</td>
-                                </tr>
-                                @endforeach
-                            </tbody> --}}
                             <tbody class="table-tbody" id="vendorTable">
                                 @forelse ($customers->sortBy('customer_id') as $item)  
                                     <tr>

@@ -15,8 +15,11 @@ use App\Http\Controllers\Api\Admin\PurchaseController;
 
 Route::post('/auth/signup', [AuthController::class, 'store']);
 
-Route::post('/customers/store',[CustomerController::class,'store'])->name('customers.store');
-// Route::post('/items/store', [ItemController::class, 'store']);
+// Route::post('/customers/store',[CustomerController::class,'store'])->name('customers.store');
+// Route::prefix('customers')->name('customers.')->group( function () {
+//     Route::get('/index', [CustomerController::class, 'index'])->name('index');
+//     Route::post('/store', [CustomerController::class, 'store'])->name('store');
+// });
 
 Route::prefix('items')->name('items.')->group(function () {
     Route::get('/index', [ItemController::class, 'index'])->name('index');
@@ -27,7 +30,7 @@ Route::prefix('items')->name('items.')->group(function () {
     // Route::delete('/{id}', [ItemController::class, 'destroy']);
 });
 
-// Route::post('/sales/store', [SalesController::class, 'store'])->name('sales.store');
+
 Route::prefix('sales')->name('sales.')->group(function () {
     Route::get('/index', [SalesController::class, 'index'])->name('index');
     Route::post('/store', [SalesController::class, 'store'])->name('store');
