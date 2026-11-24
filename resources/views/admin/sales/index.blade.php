@@ -7,7 +7,7 @@
         <div class="card-body rounded-3  box-shadow " style="background : var(--cardbg)">
             <div class="row g-2 align-items-center">
                 <div class="col">
-                    <h2 class="page-title mb-0">Sales</h2>
+                    <h2 class="page-title mb-0 text-secondary">Sales Listing</h2>
                 </div>
                 <div class="col-auto ms-auto d-print-none d-flex align-items-center gap-2">
                     <button type="button" class="btn btn-outline-secondary rounded-3">
@@ -30,7 +30,7 @@
                     </div>
                     </div>
 
-                    <a href="{{ route('items.create') }}" class="btn btn-orange rounded-3">
+                    <a href="" class="btn btn-orange rounded-3">
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="18" height="18" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none">
                         <path stroke="none" d="M0 0h24v24H0z"/>
                         <path d="M12 5v14M5 12h14"/>
@@ -89,15 +89,24 @@
                         <tbody>
                             @foreach($salesdata as $item)
                             <tr>
-                                <td class="text-secondary">{{$item->sale_id}}</td>
+                                <td class="text-secondary">{{$item->sale_id}}.</td>
                                 <td><a href="#" class="text-primary">{{$item->invoice_no}}</a></td>
                                 <td class="text-secondary">{{$item->series_id}}</td>
                                 <td class="text-secondary"> {{ $item->customer->name ?? '-' }}</td>
                                 <td class="text-secondary">{{$item->invoice_date}}</td>
                                 <td class="text-secondary">{{$item->place_of_supply}}</td>
                                 <td class="text-secondary">{{$item->supply_type}}</td>
-                                <td class="text-secondary">{{$item->payment_mode}}</td>
-                                <td class="text-secondary">{{$item->payment_status}}</td>
+                                <td class="text-cyan">{{$item->payment_mode}}</td>
+                                <td class="text-secondary">
+                                    @if($item->payment_status == 'Pending')
+                                    <span class="text-warning">Pending</span>
+                                    @elseif($item->payment_status == 'Partial')
+                                    <span class="text-primary">Partial</span>
+                                    @elseif($item->payment_status == 'Paid') 
+                                    <span class="text-success">Paid</span>
+                                    @else
+                                      <span class="text-secondary">Unknown</span>
+                                    @endif
                                 <td class="text-secondary">{{$item->subtotal}}</td>
                                 <td class="text-secondary">{{$item->discount_amount}}</td>
                                 <td><a href="#" class="text-primary">Edit</a></td>

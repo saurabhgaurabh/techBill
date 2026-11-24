@@ -1,54 +1,78 @@
 @extends('admin.layouts.app')
-@section('title','Vendors')
+@section('title','Customer Invoices')
 @section('content')
-@push('styles')
-<link href="{{asset('dist/css/vendors.css')}}" rel="stylesheet">
-@endpush
 
-<div style="background-color: #ebf1ff; ">
-    <div class="page-wrapper"> 
-        <div class="page-body">
-            <div class="container-xl">
-                <div class="card">
-                    <div class="page-header d-print-none">      
-                        <div class="container-xl">
-                            <div class="row g-2 align-items-center">
-                                <div class="col-md-12">
-                                <form action="{{ route('customers.index') }}" method="GET">
-                                    <div class="d-flex align-items-center gap-2">
-                                            <div class="input-icon">
-                                                <span class="input-icon-addon">
-                                                    {{-- <i class="ti ti-search"></i> --}}
-                                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="18" height="18" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"fill="none"><circle cx="10" cy="10" r="7"/> <line x1="21" y1="21" x2="15" y2="15"/> </svg>
-                                                </span>
-                                                <input
-                                                    type="text"
-                                                    name="search"
-                                                    id="searchVendor"
-                                                    class="form-control"
-                                                    placeholder="Search vendor..."
-                                                    value="{{ request('search') }}">
+<div class="" style="background : var(--cardbg) min-height: 100vh; padding: 5px;">
+    <div class="card">
+        <div class="card-body rounded-3  box-shadow " style="background : var(--cardbg)">
+            <div class="row g-2 align-items-center">
+                <div class="col">
+                    <h2 class="page-title mb-0 text-secondary">Customer Listing</h2>
+                </div>
+                <div class="col-auto ms-auto d-print-none d-flex align-items-center gap-2">
+                    <button type="button" class="btn btn-outline-secondary rounded-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-transfer-in">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M4 18v3h16v-14l-8 -4l-8 4v3" />
+                        <path d="M4 14h9" />
+                        <path d="M10 11l3 3l-3 3" />
+                    </svg>
+                    Import
+                    </button>
 
-                                                </form>
-                                </div>
-                                <!-- Search + Create Button -->
-                                <div class="col-auto ms-auto d-print-none">   
-                                        <a href="{{ route('customers.create') }}" class="btn btn-orange btn-quare">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="18" height="18" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"><path stroke="none" d="M0 0h24v24H0z"/> <path d="M12 5l0 14"/>  <path d="M5 12l14 0"/>   </svg>
-                                            Create Vendor
-                                        </a>
-                                        </div >
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="dropdown">
+                    <button class="btn btn-outline-secondary rounded-3 dropdown-toggle" data-bs-toggle="dropdown">
+                        More Report
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-end">
+                        <a class="dropdown-item" href="#">Items</a>
+                        <a class="dropdown-item" href="#">Inactive Items</a>
                     </div>
-                    {{-- <div class="card-body"> --}}
-                        <div id="table-default" class="table-responsive  vendor-table-wrapper">
-                            <table class="table vendor-table table-hover">
-                            <thead>
-                                <tr class="table-primary">
-                                    <th>Id</th>
+                    </div>
+
+                    <a href="{{ route('customers.create') }}" class="btn btn-orange rounded-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="18" height="18" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none">
+                        <path stroke="none" d="M0 0h24v24H0z"/>
+                        <path d="M12 5v14M5 12h14"/>
+                    </svg>
+                    Create Customer
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body" style="background : var(--cardbg)">
+            <div class="row mt-0 align-items-center">
+                <div class="col-md-3">
+                    <div class="input-icon">
+                    <span class="input-icon-addon">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="18" height="18" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none">
+                        <circle cx="10" cy="10" r="7"/>
+                        <line x1="21" y1="21" x2="15" y2="15"/>
+                        </svg>
+                    </span>
+                    <input type="text" class="form-control" placeholder="Search item..." name="search" id="searchItem">
+                    </div>
+                </div>
+
+                {{-- <div class="col-auto ms-auto d-flex align-items-center gap-2">
+                    <button class="btn btn-outline-secondary rounded-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="18" height="18" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none">
+                            <path stroke="none" d="M0 0h24v24H0z"/>
+                            <path d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div> --}}
+            </div>
+        </div>
+        <div class="container-xl mt-0">
+            <div class="card">
+                <div class="table-responsive">
+                    <table class="table table-hover table-striped align-middle">
+                        <thead class="table-light">
+                            <tr class="table-primary">
+                                 <th>Id</th>
                                     <th>Name</th>
                                     <th>Company Name</th>
                                     <th>Mobile</th>
@@ -63,9 +87,9 @@
                                     <th>Notes</th>
                                     <th>Status</th>
                                     <th class="sticky-action">Actions</th>
-                                </tr>
-                            </thead>
-                            <tbody class="table-tbody" id="vendorTable">
+                            </tr>
+                        </thead>
+                         <tbody class="table-tbody" id="vendorTable">
                                 @forelse ($customers->sortBy('customer_id') as $item)  
                                     <tr>
                                         <td>{{ $item->customer_id }}</td>
@@ -96,7 +120,7 @@
                                                 <div class="dropdown">
                                                     <!-- Three Dots Toggle Button -->
                                                     <button class="btn btn-light btn-icon" type="button" data-bs-toggle="dropdown" aria-expanded="false" title="Actions">
-                                                        <svg xmlns="http://w3.org" class="icon icon-tabler icon-tabler-dots-vertical" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                        <svg xmlns="http://w3.org" class="icon icon-tabler icon-tabler-dots-vertical" width="14" height="14" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                                             <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                                                             <circle cx="12" cy="12" r="1"></circle>
                                                             <circle cx="12" cy="19" r="1"></circle>
@@ -137,159 +161,18 @@
                                     </tr>
                                 @endforelse
                             </tbody>
-                            </table>
-                        </div>
-                    {{-- </div>                     --}}
-                    <div class="d-flex justify-content-end mt-3 custom-pagination">
-                        {{-- {{ $customers->links()}} --}}
-                        {{ $customers->withQueryString()->links() }}
-                    </div>
+
+                    </table>
                 </div>
-            </div>
-        </div>
-    </div>      
-    <div class="modal modal-blur fade" id="customer-modal-report" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="
-        modal-dialog modal-lg modal-dialog-centered
-        {{-- modal-dialog modal-full-width modal-dialog-centered --}}
-        " role="document">
-            <div class="modal-content">
-                <form action="{{ route('customers.store') }}" method="POST">
-                @csrf
-                <div class="modal-header">
-                <h5 class="modal-title">Create Customer</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="card-footer text-muted small">
+                    {{-- {{ $item->withQueryString()->links() }} --}}
                 </div>
-                <div class="modal-body">   
-                    <h2 class="card-title">Basic Information</h2>
-                    <div class="row">        
-                        <div class="col-md-3 mb-2">
-                            <label class="form-label">Name</label>
-                            <input type="text" class="form-control" name="name" placeholder="Your Name">
-                        </div>
-                        <div class="col-md-3 mb-2">
-                            <label class="form-label">Company Name</label>
-                            <input type="text" class="form-control" name="company_name" placeholder="Your Company Name">
-                        </div>
-                </div>
-                </br>
-                <div class="row">
-                    <h2 class="card-title">Contact Information</h2>
-                    <div class="col-lg-4 mb-2">
-                        <label class="form-label">Mobile</label>    
-                        <input type="number" class="form-control" name="mobile" placeholder="Your Mobile">
-                    </div>
-                    <div class="col-lg-4 mb-2">
-                        <label class="form-label">E-Mail</label>    
-                        <input type="email" class="form-control" name="email" placeholder="Your Customer E-Mail">
-                    </div>
-                </div></br>
-                <div class="row">
-                    <h2 class="card-title">GST/Tax/Identity</h2>
-                <div class="col-lg-6 mb-2">
-                    <label class="form-label">GSTIN</label>    
-                    <input type="text" class="form-control" name="gstin" placeholder="Your Customer GSTIN Number">
-                </div>
-                <div class=" col-lg-6 mb-2">
-                    <label class="form-label">Pan</label>    
-                    <input type="text" class="form-control" name="pan" placeholder="Your Permanent Account Number">
-                </div>
-                <div class=" col-lg-6 mb-2">
-                    <label class="form-label">Document ID</label>    
-                    <input type="file" class="form-control" name="document_id" placeholder="Your Document ID">
-                </div>
-                </div></br>
-                <div class="row">
-                    <h2 class="card-title">Address Information</h2>
-                    <div class="col-lg-6 mb-2">
-                        <label class="form-label">Address Line1</label>    
-                        <input type="longtext" class="form-control" name="address_line1" placeholder="Your AddressLine1">
-                    </div>
-                    <div class="col-lg-6 mb-2">
-                        <label class="form-label">Address Line2</label>    
-                        <input type="longtext" class="form-control" name="address_line2" placeholder="Your AddressLine2">
-                    </div>
-                    <div class="col-lg-6 mb-2">
-                        <label class="form-label">City</label>    
-                        <input type="text" class="form-control" name="city" placeholder="Your City">
-                    </div>
-                    <div class="col-lg-6 mb-2">
-                        <label class="form-label">State</label>    
-                        <input type="text" class="form-control" name="state" placeholder="Your State">
-                    </div>
-                    <div class="col-lg-6 mb-2">
-                        <label class="form-label">State Code</label>    
-                        <input type="number" class="form-control" name="state_code" placeholder="Your State Code">
-                    </div>
-                    <div class="col-lg-6 mb-2">
-                        <label class="form-label">Pin Code</label>    
-                        <input type="number" class="form-control" name="pin_code" placeholder="Your Pin Code">
-                    </div>
-                    <div class="mb-2">
-                        <label class="form-label">Notes</label>    
-                        <input type="longtext" class="form-control" name="notes" placeholder="Your Notes ">
-                    </div>
-                </div>  
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-link link-secondary" data-bs-dismiss="modal">
-                        Cancel
-                    </button>
-                    <button type="submit" class="btn btn-primary ms-auto">
-                        <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 5l0 14" /><path d="M5 12l14 0" /></svg>
-                        Create new report
-                    </button>
-                </div>
-                </form>
             </div>
         </div>
     </div>
+      
 </div>
+
+
+
 @endsection
-
-
-</body>
-</html>
-
-{{-- <script>
-$(document).on('click', '.deleteVendor', function () {
-
-    let id = $(this).data('id');
-
-    if (!confirm('Are you sure you want to delete this vendor?')) {
-        return;
-    }
-    $.ajax({
-        url: '/customers/' + id,
-        type: 'DELETE',
-        data: {
-            _token: $('meta[name="csrf-token"]').attr('content')
-        },
-        success: function (response) {
-            alert(response.message);
-            location.reload();
-        },
-        error: function () {
-            alert('Something went wrong.');
-        }
-    });
-
-});
-
-document.getElementById('searchVendor').addEventListener('keyup', function () {
-    let value = this.value.toLowerCase();
-    let rows = document.querySelectorAll('#vendorTable tr');
-    rows.forEach(function(row) {
-        let text = row.innerText.toLowerCase();
-        if(text.includes(value)) {
-            row.style.display = "";
-        } 
-        else {
-            row.style.display = "none";
-        }
-    });
-});
-
-
-</script> --}}
