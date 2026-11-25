@@ -227,22 +227,22 @@
                             <th >Actions</th>
                             </tr>
                         </thead>
-                        <tbody class="table-tbody" id="vendorTable">
+                        <tbody>
                             @forelse ($venders->sortBy('vendors_id') as $item)  
                                 <tr>
-                                    <td>{{ $item->vendor_id }}</td>
-                                        <td>{{ $item->name }}</td>
-                                        <td>{{ $item->company_name }}</td>
-                                        <td>{{ $item->mobile }}</td>
-                                        <td>{{ $item->email }}</td>
-                                        <td>{{ $item->gstin }}</td>
-                                        <td>{{ $item->pan }}</td>
-                                        <td>{{ $item->address_line1 }}</td>
-                                        <td>{{ $item->address_line2 }}</td>
-                                        <td>{{ $item->city }}</td>
-                                        <td>{{ $item->state }}</td>
-                                        <td>{{ $item->pincode }}</td>
-                                        <td>{{ $item->notes }}</td>
+                                    <td class="text-secondary">{{ $item->vendor_id }}.</td>
+                                        <td class="text-primary">{{ $item->name }}</td>
+                                        <td class="text-secondary">{{ $item->company_name }}</td>
+                                        <td class="text-secondary">{{ $item->mobile }}</td>
+                                        <td class="text-secondary">{{ $item->email }}</td>
+                                        <td class="text-secondary">{{ $item->gstin }}</td>
+                                        <td class="text-secondary">{{ $item->pan }}</td>
+                                        <td class="text-secondary">{{ $item->address_line1 }}</td>
+                                        <td class="text-secondary">{{ $item->address_line2 }}</td>
+                                        <td class="text-secondary">{{ $item->city }}</td>
+                                        <td class="text-secondary">{{ $item->state }}</td>
+                                        <td class="text-secondary">{{ $item->pincode }}</td>
+                                        <td class="text-secondary">{{ $item->notes }}</td>
                                         <td>
                                             @if($item->status == 1)
                                             <span class="text-green">Active</span>
