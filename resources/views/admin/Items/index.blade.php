@@ -11,7 +11,7 @@
         <div class="card-body rounded-3  box-shadow " style="background : var(--cardbg)">
             <div class="row g-2 align-items-center">
                 <div class="col">
-                    <h2 class="page-title mb-0">Item</h2>
+                    <h2 class="page-title mb-0 text-secondary">Items Listing</h2>
                 </div>
                 <div class="col-auto ms-auto d-print-none d-flex align-items-center gap-2">
                     <button type="button" class="btn btn-outline-secondary rounded-3">
@@ -93,17 +93,17 @@
                         <tbody>
                             @foreach($items as $item)
                             <tr>
-                                <td>{{$item->item_id}}</td>
+                                <td class="text-secondary">{{$item->item_id}}.</td>
                                 <td><a href="#" class="text-primary">{{$item->item_name}}</a></td>
-                                <td>{{$item->description}}</td>
-                                <td>{{$item->unit}}</td>
-                                <td>{{$item->item_type}}</td>
-                                <td>{{$item->category}}</td>
-                                <td>{{$item->new_mrp}}</td>
-                                <td>{{$item->old_mrp}}</td>
-                                <td>{{$item->purchase_price}}</td>
-                                <td>{{$item->sale_price}}</td>
-                                <td>{{$item->gst_percent}}</td>
+                                <td class="text-secondary">{{$item->description}}</td>
+                                <td class="text-secondary">{{$item->unit}}</td>
+                                <td class="text-secondary">{{$item->item_type}}</td>
+                                <td class="text-secondary">{{$item->category}}</td>
+                                <td class="text-secondary">{{$item->new_mrp}}</td>
+                                <td class="text-secondary">{{$item->old_mrp}}</td>
+                                <td class="text-secondary">{{$item->purchase_price}}</td>
+                                <td class="text-secondary">{{$item->sale_price}}</td>
+                                <td class="text-secondary">{{$item->gst_percent}}</td>
                                 <td><a href="#" class="text-primary">Edit</a></td>
                             </tr>
                             @endforeach

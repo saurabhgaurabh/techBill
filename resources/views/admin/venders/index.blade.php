@@ -1,4 +1,4 @@
-@extends('admin.layouts.app')
+{{-- @extends('admin.layouts.app')
 @section('title','Vendors')
 @section('content')
 @push('styles')
@@ -10,39 +10,6 @@
         <div class="page-body">
             <div class="container-xl">
                 <div class="card shadow-sm border-0">
-                    {{-- <div class="page-header d-print-none">      
-                        <div class="container-xl">
-                            <div class="row g-2 align-items-center">
-                                <div class="col-md-12">
-                                    <form action="{{ route('venders.index') }}" method="GET">
-                                        <div class="d-flex align-items-center gap-2">
-                                            <div class="input-icon">
-                                                <span class="input-icon-addon">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="18" height="18" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"fill="none"><circle cx="10" cy="10" r="7"/> <line x1="21" y1="21" x2="15" y2="15"/> </svg>
-                                                </span>
-                                                <input
-                                                    type="text"
-                                                    name="search"
-                                                    id="searchVendor"
-                                                    class="form-control"
-                                                    placeholder="Search vendor..."
-                                                    value="{{ request('search') }}">
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                                <!-- Search + Create Button -->
-                                         <div class="col-auto ms-auto d-print-none">   
-                                            <a href="{{ route('venders.create') }}" class="btn btn-orange btn-quare">
-                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="18" height="18" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"><path stroke="none" d="M0 0h24v24H0z"/> <path d="M12 5l0 14"/>  <path d="M5 12l14 0"/>   </svg>
-                                                Create Vendor
-                                            </a>
-                                        </div >
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div> --}}
                     <div class="page-header d-print-none border-bottom pb-2 mb-1 bg-light">
                         <div class="container-xl">
                             <div class="d-flex align-items-center justify-content-between flex-wrap gap-2">
@@ -111,13 +78,6 @@
                                                     <span class="text-secondary">Unknown</span>
                                                     @endif
                                                 </td>
-                                                {{-- <td class="text-center">
-                                                    <div class="d-flex justify-content-center align-items-center gap-2">
-                                                        <a href="{{ route('venders.edit',$item->vendor_id) }}" class="" title="Edit">
-                                                Edit
-                                                        </a>
-                                                    </div>
-                                                </td> --}}
                                                 <td class="sticky-action text-center">
                                                     <div class="dropdown">
                                                         <!-- Three Dots Toggle Button -->
@@ -167,112 +127,156 @@
                         </div>
                     </div>                    
                     <div class="d-flex justify-content-end mt-3 custom-pagination">
-                        {{-- {{ $venders->links()}} --}}
                         {{ $venders->withQueryString()->links() }}
                     </div>
                 </div>
             </div>
         </div>
     </div>
-      
-    <div class="modal modal-blur fade" id="customer-modal-report" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="
-        modal-dialog modal-lg modal-dialog-centered
-        {{-- modal-dialog modal-full-width modal-dialog-centered --}}
-        " role="document">
-            <div class="modal-content">
-                <form action="{{ route('venders.store') }}" method="POST">
-                @csrf
-                <div class="modal-header">
-                <h5 class="modal-title">Create Customer</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+@endsection --}}
+
+@extends('admin.layouts.app')
+@section('title','Vendor Invoices')
+@section('content')
+
+<div class="" style="background : var(--cardbg) min-height: 100vh; padding: 5px;">
+    <div class="card">
+        <div class="card-body rounded-3  box-shadow " style="background : var(--cardbg)">
+            <div class="row g-2 align-items-center">
+                <div class="col">
+                    <h2 class="page-title mb-0 text-secondary">Vendor Listing</h2>
                 </div>
-                <div class="modal-body">   
-                    <h2 class="card-title">Basic Information</h2>
-                    <div class="row">        
-                        <div class="col-md-3 mb-2">
-                            <label class="form-label">Name</label>
-                            <input type="text" class="form-control" name="name" placeholder="Your Name">
-                        </div>
-                        <div class="col-md-3 mb-2">
-                            <label class="form-label">Company Name</label>
-                            <input type="text" class="form-control" name="company_name" placeholder="Your Company Name">
-                        </div>
-                </div>
-                </br>
-                <div class="row">
-                    <h2 class="card-title">Contact Information</h2>
-                    <div class="col-lg-4 mb-2">
-                        <label class="form-label">Mobile</label>    
-                        <input type="number" class="form-control" name="mobile" placeholder="Your Mobile">
-                    </div>
-                    <div class="col-lg-4 mb-2">
-                        <label class="form-label">E-Mail</label>    
-                        <input type="email" class="form-control" name="email" placeholder="Your Customer E-Mail">
-                    </div>
-                </div></br>
-                <div class="row">
-                    <h2 class="card-title">GST/Tax/Identity</h2>
-                <div class="col-lg-6 mb-2">
-                    <label class="form-label">GSTIN</label>    
-                    <input type="text" class="form-control" name="gstin" placeholder="Your Customer GSTIN Number">
-                </div>
-                <div class=" col-lg-6 mb-2">
-                    <label class="form-label">Pan</label>    
-                    <input type="text" class="form-control" name="pan" placeholder="Your Permanent Account Number">
-                </div>
-                <div class=" col-lg-6 mb-2">
-                    <label class="form-label">Document ID</label>    
-                    <input type="file" class="form-control" name="document_id" placeholder="Your Document ID">
-                </div>
-                </div></br>
-                <div class="row">
-                    <h2 class="card-title">Address Information</h2>
-                    <div class="col-lg-6 mb-2">
-                        <label class="form-label">Address Line1</label>    
-                        <input type="longtext" class="form-control" name="address_line1" placeholder="Your AddressLine1">
-                    </div>
-                    <div class="col-lg-6 mb-2">
-                        <label class="form-label">Address Line2</label>    
-                        <input type="longtext" class="form-control" name="address_line2" placeholder="Your AddressLine2">
-                    </div>
-                    <div class="col-lg-6 mb-2">
-                        <label class="form-label">City</label>    
-                        <input type="text" class="form-control" name="city" placeholder="Your City">
-                    </div>
-                    <div class="col-lg-6 mb-2">
-                        <label class="form-label">State</label>    
-                        <input type="text" class="form-control" name="state" placeholder="Your State">
-                    </div>
-                    <div class="col-lg-6 mb-2">
-                        <label class="form-label">State Code</label>    
-                        <input type="number" class="form-control" name="state_code" placeholder="Your State Code">
-                    </div>
-                    <div class="col-lg-6 mb-2">
-                        <label class="form-label">Pin Code</label>    
-                        <input type="number" class="form-control" name="pin_code" placeholder="Your Pin Code">
-                    </div>
-                    <div class="mb-2">
-                        <label class="form-label">Notes</label>    
-                        <input type="longtext" class="form-control" name="notes" placeholder="Your Notes ">
-                    </div>
-                </div>  
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-link link-secondary" data-bs-dismiss="modal">
-                        Cancel
+                <div class="col-auto ms-auto d-print-none d-flex align-items-center gap-2">
+                    <button type="button" class="btn btn-outline-secondary rounded-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-transfer-in">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M4 18v3h16v-14l-8 -4l-8 4v3" />
+                        <path d="M4 14h9" />
+                        <path d="M10 11l3 3l-3 3" />
+                    </svg>
+                    Import
                     </button>
-                    <button type="submit" class="btn btn-primary ms-auto">
-                        <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 5l0 14" /><path d="M5 12l14 0" /></svg>
-                        Create new report
+
+                    <div class="dropdown">
+                    <button class="btn btn-outline-secondary rounded-3 dropdown-toggle" data-bs-toggle="dropdown">
+                        More Report
                     </button>
+                    <div class="dropdown-menu dropdown-menu-end">
+                        <a class="dropdown-item" href="#">Items</a>
+                        <a class="dropdown-item" href="#">Inactive Items</a>
+                    </div>
+                    </div>
+
+                    <a href="{{ route('venders.create') }}" class="btn btn-orange rounded-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="18" height="18" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none">
+                        <path stroke="none" d="M0 0h24v24H0z"/>
+                        <path d="M12 5v14M5 12h14"/>
+                    </svg>
+                    Create Vendor
+                    </a>
                 </div>
-                </form>
             </div>
         </div>
     </div>
+    <div class="card">
+        <div class="card-body" style="background : var(--cardbg)">
+            <div class="row mt-0 align-items-center">
+                <div class="col-md-3">
+                    <div class="input-icon">
+                    <span class="input-icon-addon">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="18" height="18" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none">
+                        <circle cx="10" cy="10" r="7"/>
+                        <line x1="21" y1="21" x2="15" y2="15"/>
+                        </svg>
+                    </span>
+                    <input type="text" class="form-control" placeholder="Search item..." name="search" id="searchItem">
+                    </div>
+                </div>
+
+                {{-- <div class="col-auto ms-auto d-flex align-items-center gap-2">
+                    <button class="btn btn-outline-secondary rounded-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="18" height="18" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none">
+                            <path stroke="none" d="M0 0h24v24H0z"/>
+                            <path d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div> --}}
+            </div>
+        </div>
+        <div class="container-xl mt-0">
+            <div class="card">
+                <div class="table-responsive">
+                    <table class="table table-hover table-striped align-middle">
+                        <thead class="table-light">
+                            <tr class="table-primary">
+                            <th>Id</th>
+                            <th>Name</th>
+                            <th>Company Name</th>
+                            <th>Mobile</th>
+                            <th>E-mail</th>
+                            <th>Gst </th>
+                            <th>Pan</th>
+                            <th>Address One</th>
+                            <th>Address Two</th>
+                            <th>City</th>
+                            <th>State</th>
+                            <th>Pin Code</th>
+                            <th>Notes</th>
+                            <th>Status</th>
+                            <th >Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody class="table-tbody" id="vendorTable">
+                            @forelse ($venders->sortBy('vendors_id') as $item)  
+                                <tr>
+                                    <td>{{ $item->vendor_id }}</td>
+                                        <td>{{ $item->name }}</td>
+                                        <td>{{ $item->company_name }}</td>
+                                        <td>{{ $item->mobile }}</td>
+                                        <td>{{ $item->email }}</td>
+                                        <td>{{ $item->gstin }}</td>
+                                        <td>{{ $item->pan }}</td>
+                                        <td>{{ $item->address_line1 }}</td>
+                                        <td>{{ $item->address_line2 }}</td>
+                                        <td>{{ $item->city }}</td>
+                                        <td>{{ $item->state }}</td>
+                                        <td>{{ $item->pincode }}</td>
+                                        <td>{{ $item->notes }}</td>
+                                        <td>
+                                            @if($item->status == 1)
+                                            <span class="text-green">Active</span>
+                                            @elseif($item->status == 0)
+                                            <span class="text-red">Inactive</span>
+                                            @elseif($item->status == 2)
+                                            <span class=" text-yellow">Pending</span>
+                                            @else
+                                            <span class="text-secondary">Unknown</span>
+                                            @endif
+                                        </td>
+                                        <td class="text-primary">Edit</td>
+                                    </tr>
+                            @empty
+                                <tr>
+                                    <td colspan="12" class="text-center">
+                                        No Data Found
+                                    </td>
+                                </tr>
+                            @endforelse
+                        </tbody>
+                    </table>
+                </div>
+                <div class="card-footer text-muted small">
+                    {{-- {{ $item->withQueryString()->links() }} --}}
+                </div>
+            </div>
+        </div>
+    </div>
+      
 </div>
+
+
+
 @endsection
 
 
