@@ -30,7 +30,7 @@
                     </div>
                     </div>
 
-                    <a href="" class="btn btn-orange rounded-3">
+                    <a href="{{route('sales.create')}}" class="btn btn-orange rounded-3">
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="18" height="18" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none">
                         <path stroke="none" d="M0 0h24v24H0z"/>
                         <path d="M12 5v14M5 12h14"/>

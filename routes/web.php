@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\CustomerController;
 use App\Http\Controllers\Admin\VenderController;
 use App\Models\Customers;
-use App\Http\Controllers\Admin\SalesController;
+use App\Http\Controllers\Api\Admin\SalesController;
 use App\Http\Controllers\Admin\AssistController;
 use App\Livewire\Admin\HelpDesk;
 use App\Http\Controllers\api\admin\AuthController;
@@ -40,7 +40,11 @@ Route::resource('venders', VenderController::class);
 Route::resource('withoutgst', UnregisterVendorController::class );
 Route::get('/venders/search', [VenderController::class, 'search'])->name('venders.search');
  
-// Route::resource('sales', SalesController::class);
+Route::prefix('sales')->name('sales.')->group( function () {
+    Route::get('/', [SalesController::class, 'index'])->name('index');
+    Route::get('/create', [SalesController::class, 'create'])->name('create');
+    // Route::get('/edit', [SalesController::class, 'edit'])->name('edit');
+});
 Route::livewire('/post/create', 'pages::post.create');
 Route::get('/admin/live-chat', function(){
     return view('admin.assistance.live-chat');
