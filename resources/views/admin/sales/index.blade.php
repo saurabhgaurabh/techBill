@@ -7,7 +7,7 @@
         <div class="card-body rounded-3  box-shadow " style="background : var(--cardbg)">
             <div class="row g-2 align-items-center">
                 <div class="col">
-                    <h2 class="page-title mb-0 text-secondary">Sales Listing</h2>
+                    <h2 class="page-title mb-0 text-dark">Sales Listing</h2>
                 </div>
                 <div class="col-auto ms-auto d-print-none d-flex align-items-center gap-2">
                     <button type="button" class="btn btn-outline-secondary rounded-3">
@@ -74,7 +74,7 @@
                             <tr class="table-primary">
                                 <th>ID</th>
                                 <th>Invoice No</th>
-                                <th>Series ID</th>
+                                <th>Series Type</th>
                                 <th>Customer ID</th>
                                 <th>Invoice Date</th>
                                 <th>Supply Place</th>
@@ -91,7 +91,7 @@
                             <tr>
                                 <td class="text-secondary">{{$item->sale_id}}.</td>
                                 <td><a href="#" class="text-primary">{{$item->invoice_no}}</a></td>
-                                <td class="text-secondary">{{$item->series_id}}</td>
+                                <td class="text-secondary">{{$item->series_type}}</td>
                                 <td class="text-secondary"> {{ $item->customer->name ?? '-' }}</td>
                                 <td class="text-secondary">{{$item->invoice_date}}</td>
                                 <td class="text-secondary">{{$item->place_of_supply}}</td>
