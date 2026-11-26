@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\SalesModel;
+use App\Models\Customers;
 
 class SalesController extends Controller
 {
@@ -44,7 +45,8 @@ class SalesController extends Controller
     }
      public function create()
     {
-        return view('admin.sales.create');
+        $customers = Customers::orderBy('name', 'asc')->get();
+        return view('admin.sales.create', compact('customers'));
     }
 
      public function store(Request $request)

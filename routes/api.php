@@ -32,9 +32,9 @@ Route::prefix('items')->name('items.')->group(function () {
 
 
 Route::prefix('sales')->name('sales.')->group(function () {
-    // Route::get('/index', [SalesController::class, 'index'])->name('index');
-    // Route::get('/create', [SalesController::class, 'create'])->name('create');
     Route::post('/store', [SalesController::class, 'store'])->name('store');
+    //  Route::put('/update/{id}', [SalesController::class, 'update'])->name('update');
+    // Route::delete('/delete/{id}', [SalesController::class, 'destroy'])->name('destroy');
 });
 
 Route::prefix('purchase')->name('purchase.')->group(function () {
