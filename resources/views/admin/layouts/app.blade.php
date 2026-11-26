@@ -19,7 +19,7 @@
 <body class=" layout-fluid">
 
 @include('admin.layouts.header')
-<div class="content" style="background-color: #e2e6ff">
+<div class="content" style="background-color: #e2e6ff; margin-top: 0px; padding-top: 0px;">
     @yield('content')
 </div>
 
