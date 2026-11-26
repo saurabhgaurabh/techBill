@@ -26,12 +26,7 @@
     </div>
     <div class="container-xl bg-white p-2 ">
         <div class="invoice-wrapper rounded-3 p-2">        
-            {{-- Customer Details --}}
             @include('admin.sales.partials.customer-card')
-            {{-- Invoice Details --}}
-            {{-- @include('admin.sales.partials.invoice-card') --}}
-            {{-- Items --}}
-            {{-- @include('admin.sales.partials.items-table') --}}
             <div class="row">
                 <div class="col-lg-8">
                     @include('admin.sales.partials.remarks-card')

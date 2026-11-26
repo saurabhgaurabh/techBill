@@ -1,12 +1,12 @@
 {{-- customer card start --}}
-<div class="card shadow-sm border-0 rounded-4 mb-4">
-    <div class="card-header bg-white border-0 py-3">
+<div class="card shadow-sm border-0 rounded-4 mb-4" >
+    <div class="card-header border-0 py-3" >
         <h4 class="mb-0 fw-bold text-dark">
             <i class="bi bi-person-circle text-warning me-2"></i>
             Customer Details
         </h4>
     </div>
-    <div class="card-body">
+    <div class="card-body" style="background: var(--cardbg)">
         <div class="row">
             <!-- Customer -->
             <div class="col-md-3 mb-3">
@@ -74,8 +74,8 @@
 {{-- customer card end --}}
 
 {{-- invoice card start --}}
-<div class="card shadow-sm border-0 rounded-4 mb-4">
-    <div class="card-header bg-white border-0 py-3">
+<div class="card shadow-sm border-0 rounded-4 mb-4" style="background: var(--cardbg)">
+    <div class="card-header border-0 py-3">
         <h4 class="mb-0 fw-bold text-dark">
             <i class="bi bi-receipt text-warning me-2"></i>
             Invoice Details
@@ -133,8 +133,8 @@
 {{-- invoice card end --}}
 
 {{-- item card --}}
-<div class="card shadow-sm border-0 rounded-4 mb-4">
-    <div class="card-header bg-white border-0 py-3 d-flex justify-content-between align-items-center">
+<div class="card shadow-sm border-0 rounded-4 mb-4" style="background: var(--cardbg)">
+    <div class="card-header border-0 py-3 d-flex justify-content-between align-items-center" >
         <h4 class="mb-0 fw-bold">
             <i class="bi bi-box-seam text-warning me-2"></i>
             Item Details
@@ -234,10 +234,10 @@
             </div>
         </div>
     </div>
-     <div class="col-lg-4">
-        <div class="card shadow-sm border-0 rounded-4 sticky-top" style="top:20px;">
-            <div class="card-header bg-white border-0 py-3">
-                <h4 class="mb-0 fw-bold text-dark">
+     <div class="col-lg-4" >
+        <div class="card shadow-sm border-0 rounded-4 sticky-top" style="top:20px; background: var(--cardbg)">
+            <div class="card-header border-0 py-3" style="background: var(--border-darkblue)" >
+                <h4 class="mb-0 fw-bold text-dark" >
                     <i class="bi bi-calculator text-warning me-2"></i>
                     Invoice Summary
                 </h4>
