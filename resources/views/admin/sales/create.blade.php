@@ -29,9 +29,9 @@
             {{-- Customer Details --}}
             @include('admin.sales.partials.customer-card')
             {{-- Invoice Details --}}
-            @include('admin.sales.partials.invoice-card')
+            {{-- @include('admin.sales.partials.invoice-card') --}}
             {{-- Items --}}
-            @include('admin.sales.partials.items-table')
+            {{-- @include('admin.sales.partials.items-table') --}}
             <div class="row">
                 <div class="col-lg-8">
                     @include('admin.sales.partials.remarks-card')
