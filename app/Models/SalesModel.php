@@ -13,6 +13,7 @@ class SalesModel extends Model
     protected $fillable = [
         'invoice_no',
         'series_type',
+        'item_name',
         'customer_id',
         'invoice_date',
         'due_date',
@@ -37,8 +38,12 @@ class SalesModel extends Model
         'status'
     ];
     
-    public function customer()
+    public function customer() // customers ka name call krane ke liye sales table me
     {
         return $this->belongsTo(Customers::class, 'customer_id', 'customer_id');
     }
+    // public function getItem()
+    // {
+    //     return $this->belongsTo(Items::class, 'item_id', 'item_id');
+    // }
 }

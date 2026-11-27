@@ -18,8 +18,8 @@
                 </h2>
             </div>
             <div>
-                <button class="btn btn-outline-secondary">Cancel</button>
-                <button class="btn text-white" style="background:#eb5a25;">Save Invoice</button>
+                <button class="btn btn-outline-secondary">Discart</button>
+                <button class="btn text-white" style="background:#eb5a25;" type="submit">Save Invoice</button>
             </div>
         </div>
     </div>
@@ -178,7 +178,7 @@
             <table class="table align-middle">
                 <thead >
                     <tr class="text-muted">
-                        <th width="18%">Item</th>
+                        <th width="18%">Item <span class="text-danger">*</span></th>
                         <th>HSN/SAC</th>
                         <th>Qty</th>
                         <th>New MRP</th>
@@ -192,10 +192,20 @@
                 <tbody>
                     <tr>
                         <td>
-                            <input 
+                            {{-- <input 
                             type="text"
                             class="form-control rounded-3"
-                            placeholder="Item Name">
+                            placeholder="Item Name"> --}}
+                             {{-- <div class="col-md-3 mb-3"> --}}
+                                <select class="form-select rounded-3" name="item_name" required>
+                                    <option>Select Item</option>
+                                    @foreach($getItem ?? [] as $item)
+                                        <option value="{{ $item->item_id }}">
+                                            {{ $item->item_name }}
+                                        </option>
+                                    @endforeach
+                                </select>
+                            {{-- </div> --}}
                         </td>
                         <td>
                             <input 

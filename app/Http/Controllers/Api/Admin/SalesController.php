@@ -5,6 +5,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\SalesModel;
 use App\Models\Customers;
+use App\Models\Item;
 
 class SalesController extends Controller
 {
@@ -13,6 +14,7 @@ class SalesController extends Controller
         return $request->validate([
             'invoice_no' => 'required|string|max:50',
             'series_type' => 'required|string|max:100',
+            'item_name' => 'required|string|max:50',
             'customer_id' => 'required|numeric|max:50',
             'invoice_date' => 'required|date',
             'due_date' => 'nullable|date',
@@ -50,7 +52,8 @@ class SalesController extends Controller
      public function create()
     {
         $customers = Customers::orderBy('name', 'asc')->get();
-        return view('admin.sales.create', compact('customers'));
+        $getItem = Item::orderBy('item_name','asc')->get();
+        return view('admin.sales.create', compact('customers', 'getItem'));
     }
 
      public function store(Request $request)
@@ -58,11 +61,12 @@ class SalesController extends Controller
         try {
             $salesData = $this->validation($request);
             $sales = SalesModel::create($salesData);
-            return response()->json([
-                'success' => true,
-                'message' => 'Sales Created Successfully',
-                'salesdata' => $sales
-            ], 201);
+            // return response()->json([
+            //     'success' => true,
+            //     'message' => 'Sales Created Successfully',
+            //     'salesdata' => $sales
+            // ], 201);
+            return redirect('sales.index')->back()->with('Success', 'Sales Create Successfully');
 
         } catch (\Exception $e) {
             return response()->json([
