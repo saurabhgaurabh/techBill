@@ -1,3 +1,29 @@
+<form action="{{ route('sales.store') }}" method="POST">
+    @csrf
+
+    <div class="card p-2 mb-2" style="background: var(--cardbg)">
+        <div class="d-flex justify-content-between align-items-center mt-2 pb-1">                
+            <div class="d-flex align-items-center">
+                <a href="{{ route('sales.index') }}"
+                class="btn btn-icon btn-ghost-secondary me-2"
+                aria-label="Back to Vendors"
+                title="Back to Vendors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-left">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M15 6l-6 6l6 6" />
+                    </svg>
+                </a>                
+                <h2 class="fw-bold mb-1">
+                    Create New Sales Invoice
+                </h2>
+            </div>
+            <div>
+                <button class="btn btn-outline-secondary">Cancel</button>
+                <button class="btn text-white" style="background:#eb5a25;">Save Invoice</button>
+            </div>
+        </div>
+    </div>
+
 {{-- customer card start --}}
 <div class="card shadow-sm border-0 rounded-4 mb-4" >
     <div class="card-header border-0 py-3" >
@@ -13,7 +39,7 @@
                 <label class="form-label fw-semibold">
                     Customer Name <span class="text-danger">*</span>
                 </label>
-                <select class="form-select rounded-3">
+                <select class="form-select rounded-3" name="customer_id" required>
                     <option>Select Customer</option>
                     @foreach($customers ?? [] as $customer)
                         <option value="{{ $customer->customer_id }}">
@@ -28,7 +54,7 @@
                     GSTIN / UIN
                 </label>
                 <input
-                    type="text"
+                    type="text" name="gst_number"
                     class="form-control rounded-3"
                     placeholder="GST Number">
             </div>
@@ -38,7 +64,7 @@
                     Mobile Number
                 </label>
                 <input
-                    type="text"
+                    type="text" name="mobile_number"
                     class="form-control rounded-3"
                     placeholder="Mobile">
             </div>
@@ -87,7 +113,7 @@
                 <label class="form-label fw-semibold">
                     Series Name <span class="text-danger">*</span>
                 </label>
-                <select class="form-select rounded-3">
+                <select class="form-select rounded-3" name="series_type" >
                     <option>Select Series</option>
                     <option>Manufacturing</option>
                     <option>GOODS</option>
@@ -98,19 +124,19 @@
                 <label class="form-label fw-semibold">
                     Invoice No
                 </label>
-                <input type="text" class="form-control rounded-3" placeholder="INV-000001">
+                <input type="text" name="invoice_no" class="form-control rounded-3" placeholder="INV-000001">
             </div>
             <div class="col-md-3 mb-3">
                 <label class="form-label fw-semibold">Invoice Date</label>
-                <input type="date" class="form-control rounded-3">
+                <input type="date" name="invoice_date" class="form-control rounded-3">
             </div>
             <div class="col-md-3 mb-3">
                 <label class="form-label fw-semibold">Due Date</label>
-                <input type="date" class="form-control rounded-3">
+                <input type="date" name="due_date" class="form-control rounded-3">
             </div>
             <div class="col-md-3 mb-3">
                 <label class="form-label fw-semibold"> Payment Status</label>
-                <select class="form-select rounded-3">
+                <select class="form-select rounded-3" wire:model="payment_status">
                     <option>Pending</option>
                     <option>Paid</option>
                     <option>Partial</option>
@@ -120,7 +146,7 @@
                 <label class="form-label fw-semibold">
                     Payment Mode
                 </label>
-                <select class="form-select rounded-3">
+                <select class="form-select rounded-3" wire:model="payment_mode">
                     <option>Cash</option>
                     <option>UPI</option>
                     <option>Card</option>
@@ -150,7 +176,7 @@
     <div class="card-body">
         <div class="table-responsive">
             <table class="table align-middle">
-                <thead>
+                <thead >
                     <tr class="text-muted">
                         <th width="18%">Item</th>
                         <th>HSN/SAC</th>
@@ -181,7 +207,8 @@
                             <input 
                             type="number"
                             class="form-control rounded-3"
-                            value="1">
+                            name="qty"
+                            placeholder="Qty">
                         </td>
                         <td>
                             <input 
@@ -197,22 +224,22 @@
                         </td>
                         <td>
                             <input 
-                            type="number"
+                            type="number" name="rate"
                             class="form-control rounded-3"
                             placeholder="Rate">
                         </td>
                         <td>
                             <input 
-                            type="number"
+                            type="number" name="gst_rate"
                             class="form-control rounded-3"
                             placeholder="%">
                         </td>
                         <td>
                             <input 
-                            type="number"
+                            type="number" name="amount"
                             class="form-control rounded-3"
-                            readonly
-                            value="0">
+                            
+                           >
                         </td>
                         <td><button class="btn btn-sm btn-danger rounded-3"><i class="bi bi-trash"></i></button></td>
                     </tr>
@@ -310,3 +337,4 @@
         </div>
     </div>
 </div>
+</form>

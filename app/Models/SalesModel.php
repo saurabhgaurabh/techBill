@@ -12,7 +12,7 @@ class SalesModel extends Model
 
     protected $fillable = [
         'invoice_no',
-        'series_id',
+        'series_type',
         'customer_id',
         'invoice_date',
         'due_date',
@@ -27,6 +27,10 @@ class SalesModel extends Model
         'sgst_amount',
         'igst_amount',
         'cess_amount',
+        'qty',
+        'rate',
+        'gst_rate',
+        'amount',
         'round_off',
         'grand_total',
         'remarks',
